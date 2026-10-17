@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Django Rest Framework de A a Z · Tiago Silva</title>
+<meta name="description" content="Aprenda a criar uma API REST segura, robusta e de alto desempenho com o Django REST Framework, preparada para ambientes reais de produção.. Neste livro,…">
+<meta name="theme-color" content="#16182c">
+<link rel="canonical" href="https://pythondeaaz.com.br/drf.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tiago Silva">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Python de A a Z">
+<meta property="og:title" content="Django Rest Framework de A a Z · Tiago Silva">
+<meta property="og:description" content="Aprenda a criar uma API REST segura, robusta e de alto desempenho com o Django REST Framework, preparada para ambientes reais de produção.. Neste livro,…">
+<meta property="og:url" content="https://pythondeaaz.com.br/drf.html">
+<meta property="og:image" content="https://pythondeaaz.com.br/assets/img/og-drf.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Django Rest Framework de A a Z · Tiago Silva">
+<meta name="twitter:description" content="Aprenda a criar uma API REST segura, robusta e de alto desempenho com o Django REST Framework, preparada para ambientes reais de produção.. Neste livro,…">
+<meta name="twitter:image" content="https://pythondeaaz.com.br/assets/img/og-drf.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Django Rest Framework de A a Z","url":"https://pythondeaaz.com.br/drf.html","image":"https://pythondeaaz.com.br/assets/img/og-home.jpg","description":"Aprenda a criar uma API REST segura, robusta e de alto desempenho com o Django REST Framework, preparada para ambientes reais de produção.","author":{"@type":"Person","name":"Tiago Silva","url":"https://www.linkedin.com/in/tiagoluizrs/"},"publisher":{"@type":"Organization","name":"Casa do Código","url":"https://www.casadocodigo.com.br"},"inLanguage":"pt-BR","datePublished":"2026-11"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://pythondeaaz.com.br/index.html"},{"@type":"ListItem","position":2,"name":"Outras obras","item":"https://pythondeaaz.com.br/outras.html"},{"@type":"ListItem","position":3,"name":"Django Rest Framework de A a Z","item":"https://pythondeaaz.com.br/drf.html"}]}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.min.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body style="--v-bg:#e48a8c;--v-tint:#f6d6d7;--v-ink:#2a0d0d;--v-accent:#a11d20">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="topo">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Python de A a Z, página inicial">Python <span>de</span> <b>A a Z</b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#trilha">Trilha</a>
+      <a href="index.html#autor">O autor</a>
+      <a class="btn btn--dark btn--sm" href="index.html#colecao">Ver a coleção</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<div class="wrap crumbs" aria-label="Você está em"><nav><a href="index.html">Início</a><span>/</span><a href="outras.html">Outras obras</a><span>/</span><b>Django Rest Framework de A a Z</b></nav></div>
+<section class="bookhero" aria-labelledby="titulo">
+  <div class="wrap bookhero__grid">
+    <div class="bookhero__cover reveal"><div class="soon-tile"><b>Em<br>breve</b><span>novembro de 2026</span></div></div>
+    <div class="bookhero__info">
+      <span class="pill pill--gold reveal">Lançamento · novembro de 2026</span>
+      <h1 class="display reveal" id="titulo" style="--i:1">Django Rest Framework de A a Z</h1>
+      <p class="by reveal" style="--i:2">por Tiago Silva · Casa do Código</p>
+      <p class="lead reveal" style="--i:3">Aprenda a criar uma API REST segura, robusta e de alto desempenho com o Django REST Framework, preparada para ambientes reais de produção.</p>
+      <div class="buybox reveal" style="--i:4">
+        <div><div class="price"><small>Formatos</small><b style="font-size:22px">Impresso e e-book (ePub)</b></div></div>
+        <div class="buybox__actions"><a class="btn btn--v" href="#" data-todo="avise-me-drf">Quero saber quando sair</a><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap about__grid">
+    <div class="about__text">
+      <p class="eyebrow reveal">Sobre este livro</p>
+      <h2 class="display reveal" style="--i:1">Uma API REST segura, robusta e de alto desempenho, pronta para produção</h2>
+      <p>Neste livro, você aprenderá a criar uma API RESTful com o Django REST Framework, o maior toolkit para APIs REST que existe para o ecossistema Django. Considerado uma das soluções mais robustas da atualidade para esse tipo de desenvolvimento, o framework permite criar APIs de alta performance com facilidade de implementação e uma documentação excelente e extremamente útil.</p>
+<p>Utilizaremos o projeto de um Sistema de Gestão de Produtos como base para explorar conceitos profundos. Ao final, você não terá apenas uma API funcionando, mas um portfólio de código que segue os padrões exigidos por grandes empresas de tecnologia.</p>
+<p>A estrutura é híbrida de propósito: capítulos inteiramente dedicados ao “mão na massa”, nos quais você constrói passo a passo o projeto ProductManager (com Docker, CI/CD, Redis e Celery), intercalados com capítulos de engenharia e arquitetura, sobre design de software, segurança ofensiva, performance e boas práticas.</p>
+      <div class="card-soft reveal"><h3>Para quem é</h3><p>Desenvolvedores que desejam não apenas “fazer funcionar”, mas entender a fundo como construir sistemas resilientes, seguros e escaláveis. Se você é iniciante, os primeiros capítulos dão uma base sólida; se já tem experiência, os capítulos finais sobre Docker, testes de carga, segurança ofensiva e Arquitetura Limpa vão desafiá-lo a elevar o nível técnico.</p></div>
+      <div class="card-soft reveal"><h3>Pré-requisitos</h3><p>Conhecimento básico em Python e Django (o livro Django de A a Z ajuda a reforçar) e familiaridade com a linha de comando.</p></div>
+      <div class="chips reveal"><span class="chip">Django REST Framework</span><span class="chip">JWT</span><span class="chip">Serialização</span><span class="chip">Docker</span><span class="chip">Celery</span><span class="chip">Redis</span><span class="chip">OpenAPI e Swagger</span><span class="chip">Arquitetura limpa</span></div>
+      <div class="card-soft reveal"><h3>O que você vai aprender</h3><ul>
+<li>Fundamentos: serialização, ViewSets, Routers e autenticação JWT.</li>
+<li>Qualidade: testes automatizados (unitários e integração), CI/CD e Clean Code.</li>
+<li>Infraestrutura: Docker, Docker Compose e preparação para cloud.</li>
+<li>Performance: caching com Redis, throttling, paginação e otimização de consultas (N+1).</li>
+<li>Segurança: proteção contra ataques comuns (OWASP), permissões personalizadas e boas práticas de mercado.</li>
+</ul></div>
+    </div>
+    <div class="toc-wrap" id="sumario">
+      <h2>Sumário</h2>
+      <p>Toque em um capítulo para ver as seções.</p>
+      <div class="toc"><div class="toc__scroll" data-lenis-prevent>
+<div class="toc__part">Parte 1: Configuração do ambiente</div>
+<details><summary><span class="toc__n">1</span><span class="toc__t">O universo das APIs: da origem à conectividade global</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O que é, afinal, uma API?</li><li>Uma breve história da integração</li><li>Arquitetura de Software: do monólito aos microsserviços</li><li>O protocolo da web: HTTP em profundidade</li><li>REST: as 6 restrições arquiteturais (constraints)</li></ul></div></details>
+<details><summary><span class="toc__n">2</span><span class="toc__t">Configuração do Python</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Instalando o Python e suas dependências</li><li>Escolhendo uma IDE</li><li>Testando o ambiente para começar</li></ul></div></details>
+<details><summary><span class="toc__n">3</span><span class="toc__t">Configurando o projeto Django</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Instalando o Django</li><li>Criando o projeto</li><li>Sobre o projeto</li><li>Arquivos de configuração do projeto</li></ul></div></details>
+<details><summary><span class="toc__n">4</span><span class="toc__t">Nosso primeiro run</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Criando as models do projeto</li><li>Configurando o Django REST Framework</li></ul></div></details>
+<div class="toc__part">Parte 2: O essencial do Django REST Framework</div>
+<details><summary><span class="toc__n">5</span><span class="toc__t">Serialização</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Serializando as models</li><li>Campos e argumentos da classe Serializer</li></ul></div></details>
+<details><summary><span class="toc__n">6</span><span class="toc__t">Validators: validações no serializador</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Tipos de validators</li><li>Padrões avançados de validators</li><li>Criando validators customizados</li></ul></div></details>
+<details><summary><span class="toc__n">7</span><span class="toc__t">Autenticação JWT e autorização no Django REST Framework</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Autenticação JWT no DRF</li><li>Endpoint de login com JWT</li><li>Customizando o login</li></ul></div></details>
+<details><summary><span class="toc__n">8</span><span class="toc__t">Views e paginação: criando nossas views no Django REST Framework</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Antes de começar</li><li>Model views</li><li>Generic views</li><li>Paginação</li></ul></div></details>
+<details><summary><span class="toc__n">9</span><span class="toc__t">Automatizando processos com signals</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O cenário</li><li>Criando nossos sinais em uma estrutura organizacional</li><li>Registrando os sinais na aplicação</li><li>Testando a automação</li><li>Aprofundando em signals (teoria avançada)</li></ul></div></details>
+<div class="toc__part">Parte 3: Deploy e outros recursos avançados do Django REST Framework</div>
+<details><summary><span class="toc__n">10</span><span class="toc__t">Testes unitários</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Exemplos de testes</li><li>Como executar os testes</li><li>Criando mais testes para nosso projeto</li><li>Indo além: testes avançados</li></ul></div></details>
+<details><summary><span class="toc__n">11</span><span class="toc__t">Documentação de APIs com OpenAPI e Swagger</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Documentando APIs no Django REST Framework</li><li>Personalizando a documentação</li></ul></div></details>
+<details><summary><span class="toc__n">12</span><span class="toc__t">Preparando seu projeto para o Docker</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Passo a passo: criando o Dockerfile</li><li>Passo a passo: criando o docker-compose.yml</li><li>Instalando o Docker no seu computador</li><li>Como rodar o projeto com Docker</li><li>Dicas avançadas</li><li>Bônus: fazendo o deploy da sua API</li></ul></div></details>
+<details><summary><span class="toc__n">13</span><span class="toc__t">Monitoramento e logging em APIs Django REST</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Configurando logging no Django</li><li>Registrando logs na sua API</li><li>Métricas em sua API: integrando Prometheus ao Django</li><li>Monitorando erros com Sentry</li><li>Boas práticas de monitoramento e logging</li></ul></div></details>
+<details><summary><span class="toc__n">14</span><span class="toc__t">Teste de estresse com Locust</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Locust</li><li>Executando testes visualmente via interface web</li><li>Estudos de caso</li></ul></div></details>
+<details><summary><span class="toc__n">15</span><span class="toc__t">Streaming e WebSocket</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O que é streaming?</li><li>Mãos na massa: exportação de produtos via streaming</li><li>O que é WebSocket?</li><li>Mãos na massa: notificações de estoque em tempo real</li><li>Dicas para projetos reais</li></ul></div></details>
+<details><summary><span class="toc__n">16</span><span class="toc__t">Recursos assíncronos e background tasks com Celery</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Por que processamento assíncrono?</li><li>O que é o Celery?</li><li>Mãos na massa: implementando o Celery</li><li>Automatizando no Docker Compose (dica avançada)</li><li>Monitoramento (opcional)</li></ul></div></details>
+<div class="toc__part">Parte 4: Arquitetura, segurança e outros recursos extras</div>
+<details><summary><span class="toc__n">17</span><span class="toc__t">Arquitetura Limpa e boas práticas: a arte da Engenharia de Software no Django</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Onde mora a lógica de negócios?</li><li>DRY (Don&#x27;t Repeat Yourself) de verdade</li><li>Tratamento de erros elegante (Exception Handling)</li><li>Segurança e controle: Throttling</li><li>Organização de código e “Code Smells”</li></ul></div></details>
+<details><summary><span class="toc__n">18</span><span class="toc__t">Segurança ofensiva e otimização extrema: o nível Principal Engineer</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Segurança: além do básico</li><li>Performance: o gargalo invisível</li><li>Caching com Redis: velocidade da luz</li></ul></div></details>
+<details><summary><span class="toc__n">A</span><span class="toc__t">Apêndice A: cheat sheet (folha de cola)</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Docker e Docker Compose</li><li>Django (gerenciamento)</li><li>HTTP status codes (os essenciais)</li><li>Django REST Framework (DRF)</li><li>Comandos de teste (Pytest/Unittest)</li></ul></div></details>
+<div style="display:flex;align-items:center;gap:14px;padding:14px 22px;border-bottom:1px solid rgba(22,24,44,.14)"><span class="toc__n">B</span><span class="toc__t">Apêndice B: o caminho para Staff Engineer e Principal Engineer (roadmap)</span></div>
+</div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="authorbox reveal">
+      <img src="assets/img/autor-360.webp" width="360" height="360" alt="Tiago Silva" loading="lazy">
+      <div><h3>Tiago Silva</h3><p>Graduado em Análise e Desenvolvimento de Sistemas, pós-graduado em Engenharia de Software e em Desenvolvimento Back-end, com MBA em Gestão de Projetos pela USP. Professor universitário, atualmente trabalha como Analista de Sistemas. Especialista em Python, Java e JavaScript.</p></div>
+      <a class="btn btn--gold btn--sm" href="https://www.linkedin.com/in/tiagoluizrs/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:clamp(48px,7vw,88px)">
+  <div class="more reveal">
+    <div class="more__intro"><small>Do mesmo autor</small><strong>Conheça outras obras</strong><span>Livros sobre frameworks web em Python, pela Casa do Código.</span></div>
+    <div class="more__list"><a class="mini" href="flask.html"><img src="assets/img/flask.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Flask de A a Z</strong><span>Casa do Código</span></div></a><a class="mini" href="django.html"><img src="assets/img/django.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Django de A a Z</strong><span>Casa do Código</span></div></a></div>
+    <a class="btn btn--chip btn--sm" href="index.html#colecao">Ver a coleção Python de A a Z</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="logo">Python de A a Z</span>
+    <nav aria-label="Rodapé">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#autor">O autor</a>
+      <a href="outras.html">Outras obras</a>
+      <a href="#" data-todo="contato">Contato</a>
+      <a href="#" data-todo="termos">Termos</a>
+    </nav>
+    <span>© 2026 Tiago Silva</span>
+  </div>
+</footer>
+<script src="js/app.min.js" defer></script>
+</body>
+</html>

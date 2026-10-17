@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python de A a Z · Volume 4: Dados, mundo real e produção</title>
+<meta name="description" content="Do banco de dados à produção: persistência, Python no mundo real e tudo o que leva o código para o ar, com números medidos e o critério de quando usar cada…">
+<meta name="theme-color" content="#16182c">
+<link rel="canonical" href="https://pythondeaaz.com.br/livro-4.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tiago Silva">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Python de A a Z">
+<meta property="og:title" content="Python de A a Z · Volume 4: Dados, mundo real e produção">
+<meta property="og:description" content="Do banco de dados à produção: persistência, Python no mundo real e tudo o que leva o código para o ar, com números medidos e o critério de quando usar cada…">
+<meta property="og:url" content="https://pythondeaaz.com.br/livro-4.html">
+<meta property="og:image" content="https://pythondeaaz.com.br/assets/img/og-livro-4.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Python de A a Z · Volume 4: Dados, mundo real e produção">
+<meta name="twitter:description" content="Do banco de dados à produção: persistência, Python no mundo real e tudo o que leva o código para o ar, com números medidos e o critério de quando usar cada…">
+<meta name="twitter:image" content="https://pythondeaaz.com.br/assets/img/og-livro-4.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Python de A a Z, Volume 4: Dados, mundo real e produção","url":"https://pythondeaaz.com.br/livro-4.html","image":"https://pythondeaaz.com.br/assets/img/capa-4-960.webp","description":"Do banco de dados à produção: persistência, Python no mundo real e tudo o que leva o código para o ar, com números medidos e o critério de quando usar cada ferramenta.","author":{"@type":"Person","name":"Tiago Silva","url":"https://www.linkedin.com/in/tiagoluizrs/"},"inLanguage":"pt-BR","bookFormat":"https://schema.org/Paperback","numberOfPages":486,"datePublished":"2026-10","isPartOf":{"@type":"BookSeries","name":"Python de A a Z"},"position":4,"workExample":[{"@type":"Book","bookFormat":"https://schema.org/Paperback","inLanguage":"pt-BR"},{"@type":"Book","bookFormat":"https://schema.org/EBook","inLanguage":"pt-BR"}],"offers":[{"@type":"Offer","name":"Impresso","price":"79.98","priceCurrency":"BRL","url":"https://pythondeaaz.com.br/livro-4.html"},{"@type":"Offer","name":"E-book","price":"43.98","priceCurrency":"BRL","url":"https://pythondeaaz.com.br/livro-4.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://pythondeaaz.com.br/index.html"},{"@type":"ListItem","position":2,"name":"Os livros","item":"https://pythondeaaz.com.br/index.html#colecao"},{"@type":"ListItem","position":3,"name":"Volume 4","item":"https://pythondeaaz.com.br/livro-4.html"}]}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.min.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-vol="4">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="topo">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Python de A a Z, página inicial">Python <span>de</span> <b>A a Z</b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#trilha">Trilha</a>
+      <a href="index.html#autor">O autor</a>
+      <a class="btn btn--dark btn--sm" href="index.html#colecao">Ver a coleção</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<div class="wrap crumbs" aria-label="Você está em"><nav><a href="index.html">Início</a><span>/</span><a href="index.html#colecao">Os livros</a><span>/</span><b>Volume 4</b></nav></div>
+<section class="bookhero" aria-labelledby="titulo">
+  <div class="wrap bookhero__grid">
+    <div class="bookhero__cover reveal"><img src="assets/img/capa-4-960.webp" srcset="assets/img/capa-4-480.webp 480w, assets/img/capa-4-960.webp 960w" sizes="(max-width: 640px) 80vw, 400px" width="960" height="1380" alt="Capa do Volume 4: Dados, mundo real e produção" fetchpriority="high"></div>
+    <div class="bookhero__info">
+      <span class="pill reveal">Volume 4 de 5</span>
+      <h1 class="display reveal" id="titulo" style="--i:1">Python de A a Z: <span>Dados, mundo real e produção</span></h1>
+      <p class="by reveal" style="--i:2">por Tiago Silva</p>
+      <!-- avaliações (estrelas, nota e contagem) ocultas por enquanto -->
+      <p class="lead reveal" style="--i:3">Do banco de dados à produção: persistência, Python no mundo real e tudo o que leva o código para o ar, com números medidos e o critério de quando usar cada ferramenta.</p>
+      <div class="buybox reveal" style="--i:4">
+        <div class="prices">
+          <div class="price"><small>Impresso</small><b>R$ 79,98</b></div>
+          <div class="price"><small>E-book</small><b>R$ 43,98</b></div>
+        </div>
+        <div class="buybox__actions">
+          <a class="btn btn--v" href="#" data-todo="loja-4">Comprar na loja <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          <a class="btn btn--white" href="#" data-todo="amostra-4">Ler amostra</a>
+        </div>
+      </div>
+      <dl class="ficha reveal" style="--i:5">
+        <div><dt>Páginas</dt><dd>486</dd></div>
+        <div><dt>Idioma</dt><dd>Português</dd></div>
+        <div><dt>Publicação</dt><dd>10/2026</dd></div>
+        <div><dt>Versão do Python</dt><dd>3.15</dd></div>
+        <div><dt>Formatos</dt><dd>Impresso e e-book (ePub)</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap about__grid">
+    <div class="about__text">
+      <p class="eyebrow reveal">Sobre este livro</p>
+      <h2 class="display reveal" style="--i:1">Do banco de dados à produção, com o Python do mundo real</h2>
+      <p>Este é o volume em que o Python encontra o mundo real. Você aprende SQL do zero e persiste dados com SQLite, PostgreSQL, MySQL, MariaDB, Oracle e SQL Server, usa SQLAlchemy e Alembic e sabe quando Redis ou MongoDB fazem mais sentido. Depois consome APIs com clientes HTTP, valida dados com Pydantic, analisa dados com NumPy, Pandas e Polars, automatiza a web e constrói ferramentas de linha de comando.</p>
+<p>Na terceira parte, o código vai para produção: observabilidade, Docker, arquitetura de projeto, filas, tarefas em segundo plano e pipelines de dados. Cada tecnologia vem com números medidos, as armadilhas que mais custam caro e o critério para decidir quando usá-la. Um apêndice reúne perguntas de entrevista técnica, com respostas.</p>
+<p>É aqui que estão as tecnologias que as vagas pedem: bancos de dados, APIs, análise de dados, Docker e filas aparecem em grande parte das descrições de vagas de back-end, dados e automação. Com este volume você ganha o repertório para trabalhar com tudo isso e dá um grande passo para se tornar um especialista Python completo.</p>
+      <div class="card-dark reveal"><h3>Por onde começar</h3><p>Se você nunca programou, comece pelo Volume 1. Este volume pressupõe o Python do dia a dia dos Volumes 1 e 2 e, para a parte de produção, noções de testes e de concorrência do Volume 3. SQL é ensinado do zero, e os capítulos de bancos de dados (1 a 8) podem ser lidos sozinhos, só com Python básico. Cada capítulo traz uma ficha com os pré-requisitos exatos. Os cinco volumes formam a coleção completa, mas cada um se sustenta sozinho.</p></div>
+      <div class="card-soft reveal"><h3>O que você vai aprender</h3><ul>
+<li>Persistir dados com SQLite, PostgreSQL, MySQL e MariaDB, Oracle e SQL Server</li>
+<li>Usar SQLAlchemy e Alembic, e saber quando escolher Redis ou MongoDB</li>
+<li>Modelar bancos relacionais e escrever SQL com boas práticas</li>
+<li>Consumir APIs com httpx e validar dados nas fronteiras com Pydantic</li>
+<li>Analisar dados com NumPy, Pandas e Polars e automatizar a web e a linha de comando</li>
+<li>Observar o sistema em produção e empacotá-lo com Docker</li>
+<li>Estruturar a arquitetura do projeto, filas, tarefas em segundo plano e pipelines de dados</li>
+<li>Preparar-se para entrevistas técnicas com 66 perguntas respondidas</li>
+</ul></div>
+    </div>
+    <div class="toc-wrap" id="sumario">
+      <h2>Sumário</h2>
+      <p>21 capítulos e 1 apêndice. Toque em um item para ver do que ele trata.</p>
+      <div class="toc"><div class="toc__scroll" data-lenis-prevent>
+<div class="toc__part">Parte 1: Persistência de Dados</div>
+<details><summary><span class="toc__n">1</span><span class="toc__t">SQLite</span><span class="toc__p">p. 41</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Um banco de dados completo em um único arquivo, já embutido no Python: a melhor porta de entrada para SQL.</div></details>
+<details><summary><span class="toc__n">2</span><span class="toc__t">PostgreSQL</span><span class="toc__p">p. 57</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">O banco relacional de código aberto mais completo: transações, tipos ricos como jsonb e recursos para sistemas reais.</div></details>
+<details><summary><span class="toc__n">3</span><span class="toc__t">MySQL e MariaDB</span><span class="toc__p">p. 73</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Os bancos mais usados na web, e as diferenças e armadilhas que não aparecem quando se trata os dois como iguais.</div></details>
+<details><summary><span class="toc__n">4</span><span class="toc__t">Bancos Corporativos: Oracle e SQL Server</span><span class="toc__p">p. 87</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Oracle e SQL Server, os bancos de grandes empresas, acessados com drivers modernos e sem instalações pesadas.</div></details>
+<details><summary><span class="toc__n">5</span><span class="toc__t">SQLAlchemy</span><span class="toc__p">p. 101</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">O Core e o ORM: uma API única para falar com todos os bancos, sem escrever tudo à mão.</div></details>
+<details><summary><span class="toc__n">6</span><span class="toc__t">Migrações com Alembic</span><span class="toc__p">p. 119</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Versionar o esquema do banco com scripts de migração, com upgrade e downgrade, em qualquer ambiente.</div></details>
+<details><summary><span class="toc__n">7</span><span class="toc__t">Redis e MongoDB</span><span class="toc__p">p. 135</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Redis para cache, filas e rankings; MongoDB para documentos: o que cada um resolve e quando escolher.</div></details>
+<details><summary><span class="toc__n">8</span><span class="toc__t">Modelagem e Boas Práticas de SQL</span><span class="toc__p">p. 153</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Normalizar, declarar regras no próprio banco e indexar: o que torna um banco correto, rápido e fácil de evoluir.</div></details>
+<div class="toc__part">Parte 2: Python no Mundo Real</div>
+<details><summary><span class="toc__n">9</span><span class="toc__t">Clientes HTTP com httpx</span><span class="toc__p">p. 177</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">O cliente HTTP moderno do Python: timeouts, sessões, streaming e como escrever clientes de API que não quebram.</div></details>
+<details><summary><span class="toc__n">10</span><span class="toc__t">Validação de Dados com Pydantic</span><span class="toc__p">p. 195</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Transformar anotações de tipo em validação em tempo de execução para tudo que entra no seu programa.</div></details>
+<details><summary><span class="toc__n">11</span><span class="toc__t">NumPy: Cálculo Numérico em Velocidade de C</span><span class="toc__p">p. 211</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Contas sobre milhões de números de uma vez, em velocidade de C: a base do Pandas e de boa parte do ecossistema de dados.</div></details>
+<details><summary><span class="toc__n">12</span><span class="toc__t">Pandas: Análise de Dados com Tabelas</span><span class="toc__p">p. 235</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">DataFrames: de &quot;percorrer linhas&quot; para &quot;descrever operações sobre colunas&quot;, para analisar dados com clareza.</div></details>
+<details><summary><span class="toc__n">13</span><span class="toc__t">Polars: Tabelas Rápidas, Preguiçosas e Paralelas</span><span class="toc__p">p. 259</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Tabelas rápidas, preguiçosas e paralelas, escritas em Rust, para dados que o Pandas já não aguenta com folga.</div></details>
+<details><summary><span class="toc__n">14</span><span class="toc__t">Automação Web: Scraping e Navegador</span><span class="toc__p">p. 279</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Raspar páginas e controlar um navegador de verdade por código, com os cuidados éticos e técnicos.</div></details>
+<details><summary><span class="toc__n">15</span><span class="toc__t">Ferramentas de Linha de Comando</span><span class="toc__p">p. 299</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Criar ferramentas de linha de comando que outras pessoas e programas conseguem usar.</div></details>
+<div class="toc__part">Parte 3: Python em Produção</div>
+<details><summary><span class="toc__n">16</span><span class="toc__t">Observabilidade</span><span class="toc__p">p. 323</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Logs, métricas e rastros: descobrir por que um sistema em produção se comporta como se comporta.</div></details>
+<details><summary><span class="toc__n">17</span><span class="toc__t">Contêineres e Docker</span><span class="toc__p">p. 345</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Empacotar o programa em imagens Docker para ele se comportar igual na sua máquina, no CI e em produção.</div></details>
+<details><summary><span class="toc__n">18</span><span class="toc__t">Arquitetura de Projetos</span><span class="toc__p">p. 365</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Separar as regras do negócio do banco, da rede e do terminal, para o sistema aguentar mudanças.</div></details>
+<details><summary><span class="toc__n">19</span><span class="toc__t">Filas e Tarefas em Segundo Plano</span><span class="toc__p">p. 387</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Responder na hora e fazer o trabalho pesado depois, em outro processo, com novas tentativas quando falha.</div></details>
+<details><summary><span class="toc__n">20</span><span class="toc__t">Pipelines e Transformação de Dados</span><span class="toc__p">p. 411</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Extrair, validar, transformar e carregar dados de forma confiável, mesmo quando os dados chegam sujos.</div></details>
+<details><summary><span class="toc__n">21</span><span class="toc__t">Conclusão: Do Código à Produção</span><span class="toc__p">p. 433</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">O fecho do volume: o que vem depois de o código funcionar, e as lições que ligam banco, rede e produção.</div></details>
+<div class="toc__part">Apêndices</div>
+<details><summary><span class="toc__n">A</span><span class="toc__t">Perguntas de Entrevista Técnica</span><span class="toc__p">p. 449</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">66 perguntas de entrevistas de Python, de júnior a sênior, com resposta curta, o que o entrevistador quer ouvir e onde estudar, mais exercícios de código ao vivo.</div></details>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Avaliações: ocultas por enquanto (remova o atributo hidden quando houver avaliações reais) -->
+<section class="reviews section" id="avaliacoes" hidden>
+  <div class="wrap">
+    <p class="eyebrow">Avaliações</p>
+    <h2 class="display" style="margin-top:10px;font-size:clamp(32px,5vw,44px)">O que os leitores dizem</h2>
+    <div class="reviews__grid"><figure class="review" style="margin:0"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote style="margin:0">Texto da avaliação.</blockquote><figcaption><b>Nome Sobrenome</b></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="section others">
+  <div class="wrap">
+    <h2 class="display reveal">Continue a trilha</h2>
+    <div class="others__grid">
+<a class="reveal" data-vol="1" style="--i:0" href="livro-1.html"><span class="card__cover"><img src="assets/img/capa-1-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 1: Fundamentos</strong></a>
+<a class="reveal" data-vol="2" style="--i:1" href="livro-2.html"><span class="card__cover"><img src="assets/img/capa-2-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 2: Domínio da linguagem</strong></a>
+<a class="reveal" data-vol="3" style="--i:2" href="livro-3.html"><span class="card__cover"><img src="assets/img/capa-3-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 3: Engenharia e concorrência</strong></a>
+<a class="reveal" data-vol="5" style="--i:3" href="livro-5.html"><span class="card__cover"><img src="assets/img/capa-5-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 5: Padrões de projeto</strong></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="logo">Python de A a Z</span>
+    <nav aria-label="Rodapé">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#autor">O autor</a>
+      <a href="outras.html">Outras obras</a>
+      <a href="#" data-todo="contato">Contato</a>
+      <a href="#" data-todo="termos">Termos</a>
+    </nav>
+    <span>© 2026 Tiago Silva</span>
+  </div>
+</footer>
+<script src="js/app.min.js" defer></script>
+</body>
+</html>

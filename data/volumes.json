@@ -1,0 +1,878 @@
+[
+ {
+  "n": 1,
+  "topic": "Fundamentos",
+  "short": "Do ambiente ao Python do dia a dia: tipos, estruturas de dados, funções, texto, arquivos e biblioteca padrão.",
+  "trail": "Instalar, programar e entender a memória.",
+  "lead": "O ponto de partida para quem quer aprender Python de verdade: do zero absoluto ao Python do dia a dia, entendendo o que acontece por baixo de cada linha.",
+  "headline": "Comece certo: Python do zero, entendendo o porquê de cada coisa",
+  "paras": [
+   "Muita gente aprende Python copiando código que funciona e trava no primeiro erro que ninguém explicou. Este volume faz o contrário: parte do zero, sem exigir nenhum conhecimento prévio de programação, e explica o motivo das coisas, não só o como. Você monta um ambiente de trabalho profissional, entende variáveis, tipos e o jeito como o Python usa a memória, e avança por operadores, listas, tuplas, dicionários, conjuntos, decisões, laços, funções, texto e Unicode, arquivos, datas, expressões regulares e a biblioteca padrão.",
+   "Cada capítulo traz exemplos que você executa, as pegadinhas que derrubam quem está começando, a seção \"Pythônico ou não?\", que ensina a escrever como os profissionais escrevem, e exercícios com gabarito e testes automatizados para você conferir o que aprendeu. Todo o código está em um repositório público, para você rodar e modificar enquanto lê. Fecham o volume uma referência rápida e um glossário.",
+   "No mercado de trabalho, base fraca é o que mais custa caro: é ela que separa quem só consegue seguir tutoriais de quem resolve problemas novos sozinho. Dominar estes fundamentos é o primeiro passo para passar em processos seletivos de Python, ler e manter o código de outras pessoas com segurança e crescer, volume a volume, até se tornar um especialista Python completo."
+  ],
+  "start": "Este é o volume de entrada. Se você nunca programou, ou programa em outra linguagem e quer aprender Python direito, comece por aqui: nenhum conhecimento prévio é necessário. Os Volumes 2 a 5 são independentes entre si, mas todos partem do Python do dia a dia que este volume ensina. Os cinco volumes formam a coleção completa, mas cada um se sustenta sozinho.",
+  "learn": [
+   "Instalar o Python e montar um ambiente de trabalho profissional, com ambientes virtuais e o uv",
+   "Entender variáveis, tipos de dados e o modelo de memória do Python, com medições",
+   "Dominar listas, tuplas, dicionários e conjuntos, sabendo o que cada operação custa",
+   "Controlar o fluxo do programa com if, match/case e laços",
+   "Escrever funções limpas e trabalhar com texto, bytes e Unicode sem surpresas",
+   "Ler e gravar arquivos com pathlib, tratar datas e fusos horários e usar expressões regulares",
+   "Escrever código idiomático, o que os profissionais chamam de \"pythônico\"",
+   "Consultar depressa o que precisa, com uma referência rápida e um glossário de 130 termos"
+  ],
+  "price_print": "79,98",
+  "price_ebook": "43,98",
+  "pages_total": 465,
+  "pages_miolo": 464,
+  "chapters_total": 14,
+  "parts": [
+   {
+    "name": "Parte 1: Fundamentos",
+    "chapters": [
+     {
+      "n": 1,
+      "title": "O Ecossistema Python",
+      "page": 39,
+      "desc": "O que é o Python, como ele roda o seu código e por que o ecossistema de bibliotecas, ferramentas e comunidade explica o sucesso da linguagem."
+     },
+     {
+      "n": 2,
+      "title": "Instalando o Python e Configurando um Ambiente Profissional",
+      "page": 53,
+      "desc": "Instale o Python do jeito certo e dê a cada projeto o seu próprio ambiente virtual, com venv, uv ou conda, sem sujar o Python do sistema."
+     },
+     {
+      "n": 3,
+      "title": "Variáveis, Tipos de Dados e Memória",
+      "page": 69,
+      "desc": "Variáveis como nomes que apontam para objetos, tipos básicos e quanto de memória cada um ocupa, com medições."
+     },
+     {
+      "n": 4,
+      "title": "Operadores e Expressões",
+      "page": 93,
+      "desc": "Operadores, precedência, curto-circuito e as expressões que parecem simples e surpreendem quem não conhece as regras."
+     },
+     {
+      "n": 5,
+      "title": "Estruturas de Dados: Sequências",
+      "page": 111,
+      "desc": "Listas, tuplas e ranges: como escolher entre elas sabendo o que cada operação custa."
+     },
+     {
+      "n": 6,
+      "title": "Estruturas de Dados: Coleções",
+      "page": 125,
+      "desc": "Dicionários e conjuntos: por que perguntar \"este item está aqui?\" custa o mesmo com dez ou com dez milhões de itens."
+     },
+     {
+      "n": 7,
+      "title": "Controle de Fluxo: Decisão (if e match/case)",
+      "page": 151,
+      "desc": "Decisões com if/elif/else e com match/case, que escolhe pela forma do dado e não é um simples switch."
+     },
+     {
+      "n": 8,
+      "title": "Controle de Fluxo: Iteração",
+      "page": 181,
+      "desc": "Como o for funciona com qualquer iterável, e o protocolo que sustenta laços, compreensões e geradores."
+     },
+     {
+      "n": 9,
+      "title": "Funções",
+      "page": 211,
+      "desc": "Funções do básico ao completo: argumentos, retorno, escopo e as armadilhas dos valores padrão."
+     },
+     {
+      "n": 10,
+      "title": "Texto: Strings, Bytes e Unicode",
+      "page": 239,
+      "desc": "Texto, bytes e Unicode: a diferença entre eles e a codificação que você precisa escolher de propósito."
+     },
+     {
+      "n": 11,
+      "title": "Arquivos, pathlib e Serialização",
+      "page": 287,
+      "desc": "Ler e gravar arquivos com segurança, manipular caminhos com pathlib e serializar dados em JSON, CSV, TOML e pickle."
+     },
+     {
+      "n": 12,
+      "title": "Datas, Horas e Fusos Horários",
+      "page": 333,
+      "desc": "Instantes, datas de calendário e fusos horários: como evitar o bug mais comum com datas, guardando tudo em UTC."
+     },
+     {
+      "n": 13,
+      "title": "Expressões Regulares",
+      "page": 367,
+      "desc": "O módulo re: como escrever padrões de texto legíveis e quando o retrocesso (backtracking) vira um problema de desempenho."
+     },
+     {
+      "n": 14,
+      "title": "Um Tour pela Biblioteca Padrão",
+      "page": 397,
+      "desc": "O mapa da biblioteca padrão (\"baterias inclusas\"): o que ela já resolve, para você não reinventar a roda nem instalar dependências à toa."
+     }
+    ]
+   }
+  ],
+  "appendices": [
+   {
+    "letter": "A",
+    "title": "Referência Rápida",
+    "page": 427,
+    "desc": "Uma cola para consultar depois de ler: tipos, operadores, texto, coleções, fluxo, funções, arquivos, datas, regex, ambiente e uma tabela de erros comuns com a causa e o capítulo que explica."
+   },
+   {
+    "letter": "B",
+    "title": "Glossário",
+    "page": 451,
+    "desc": "130 termos do volume em ordem alfabética, cada um com uma definição curta e o capítulo onde é explicado."
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "topic": "Domínio da linguagem",
+  "short": "Closures, geradores, o modelo de dados, orientação a objetos avançada e o CPython por dentro.",
+  "trail": "O modelo da linguagem a fundo.",
+  "lead": "O Python por dentro: o modelo de objetos, decoradores, geradores, orientação a objetos avançada e metaprogramação, para deixar de usar a linguagem no automático e passar a dominá-la.",
+  "headline": "Deixe de usar o Python no automático e passe a dominá-lo",
+  "paras": [
+   "Este volume é para quem já escreve scripts em Python, mas ainda não sabe explicar por que o código se comporta de certa forma. Aqui a caixa-preta se abre: funções como objetos, closures e decoradores, o sistema de imports, iteradores e geradores, como dicionários e conjuntos funcionam por dentro, referências, mutabilidade e coleta de lixo, tratamento de erros e gerenciadores de contexto, e o modelo de dados que faz um objeto se comportar como os tipos nativos.",
+   "Depois, orientação a objetos de verdade: herança e MRO, protocolos, properties, descritores, slots, dataclasses, metaprogramação, programação funcional e uma visão do CPython por dentro. Em vez de decorar regras, você entende o mecanismo que as explica, com o custo medido de cada escolha e exercícios com gabarito em todos os capítulos. Dois apêndices fecham o volume: as novidades de cada versão, do 3.8 ao 3.15, e as pegadinhas clássicas.",
+   "No mercado, é esse nível de domínio que aparece nas entrevistas técnicas e nas revisões de código: saber explicar por que um valor padrão mutável surpreende, quando usar um gerador, como funciona um decorador. É o que separa quem escreve Python que funciona de quem escreve Python que o time quer manter, e um passo decisivo para ser um especialista completo na linguagem."
+  ],
+  "start": "Se você nunca programou, comece pelo Volume 1. Se você já domina variáveis, tipos, if, match, laços, funções, coleções, texto e arquivos com pathlib (por exemplo, consegue escrever uma função que lê um arquivo, conta palavras em um dicionário e trata erros com try/except), pode começar direto por aqui, sem ler o Volume 1. Os cinco volumes formam a coleção completa, mas cada um se sustenta sozinho.",
+  "learn": [
+   "Tratar funções como objetos e escrever closures e decoradores",
+   "Organizar código com módulos, pacotes e o sistema de imports",
+   "Criar iteradores e geradores e entender dicionários e conjuntos por dentro",
+   "Compreender referências, mutabilidade e a coleta de lixo",
+   "Dominar o modelo de dados: sobrecarga de operadores, herança, MRO e protocolos",
+   "Usar properties, descritores, slots e dataclasses com segurança",
+   "Aplicar metaprogramação e programação funcional, e olhar por dentro do CPython",
+   "Acompanhar o que mudou em cada versão, do Python 3.8 ao 3.15, e evitar 25 pegadinhas clássicas"
+  ],
+  "price_print": "79,97",
+  "price_ebook": "43,98",
+  "pages_total": 569,
+  "pages_miolo": 568,
+  "chapters_total": 19,
+  "parts": [
+   {
+    "name": "Parte 1: Domínio da Linguagem",
+    "chapters": [
+     {
+      "n": 1,
+      "title": "Funções como Objetos de Primeira Classe",
+      "page": 41,
+      "desc": "Funções como valores comuns: guardá-las, passá-las e devolvê-las, e por que isso transforma muitos padrões de projeto em uma linha de código."
+     },
+     {
+      "n": 2,
+      "title": "Closures e Decoradores",
+      "page": 75,
+      "desc": "Closures e decoradores: funções que carregam o seu escopo e funções que embrulham outras funções."
+     },
+     {
+      "n": 3,
+      "title": "Módulos, Pacotes e o Sistema de Imports",
+      "page": 115,
+      "desc": "Como o Python encontra, carrega e guarda em cache módulos e pacotes, e como organizar código em pacotes sem dor de cabeça."
+     },
+     {
+      "n": 4,
+      "title": "Iteradores e Generators",
+      "page": 149,
+      "desc": "Iteradores e geradores: processar fluxos de qualquer tamanho com memória constante."
+     },
+     {
+      "n": 5,
+      "title": "Dicionários e Conjuntos por Dentro",
+      "page": 185,
+      "desc": "Tabelas de hash por dentro: o que explica a velocidade, o consumo de memória e a ordem de inserção do dict e do set."
+     },
+     {
+      "n": 6,
+      "title": "Referências, Mutabilidade e Coleta de Lixo",
+      "page": 207,
+      "desc": "Referências, mutabilidade e coleta de lixo: o que mantém um objeto vivo e como evitar o clássico bug do objeto mutável compartilhado."
+     },
+     {
+      "n": 7,
+      "title": "Tratamento de Erros e Exceções",
+      "page": 247,
+      "desc": "Exceções: capturar só o que você sabe resolver, preservar a causa do erro e garantir a limpeza dos recursos."
+     },
+     {
+      "n": 8,
+      "title": "Context Managers",
+      "page": 275,
+      "desc": "O with e os gerenciadores de contexto: preparar e desfazer recursos com segurança, de qualquer jeito que o bloco termine."
+     },
+     {
+      "n": 9,
+      "title": "O Modelo de Dados do Python",
+      "page": 299,
+      "desc": "O contrato entre os seus objetos e o interpretador: os métodos especiais que fazem uma classe se comportar como os tipos nativos."
+     },
+     {
+      "n": 10,
+      "title": "Sobrecarga de Operadores",
+      "page": 319,
+      "desc": "Sobrecarga de operadores: como o Python decide qual método chamar em a + b e quando devolver NotImplemented."
+     },
+     {
+      "n": 11,
+      "title": "Orientação a Objetos Avançada",
+      "page": 337,
+      "desc": "Onde cada atributo mora, como uma instância nasce e a diferença entre métodos de instância, de classe e estáticos."
+     },
+     {
+      "n": 12,
+      "title": "Herança, MRO e super()",
+      "page": 357,
+      "desc": "Herança, a ordem de busca de métodos (MRO) e o que o super() realmente faz."
+     },
+     {
+      "n": 13,
+      "title": "Protocolos, Duck Typing e Classes Abstratas",
+      "page": 377,
+      "desc": "Duck typing, classes abstratas e protocolos: três formas de declarar e verificar interfaces."
+     },
+     {
+      "n": 14,
+      "title": "Properties, Descritores e slots",
+      "page": 397,
+      "desc": "Properties, descritores e slots: o mecanismo por trás do acesso a atributos e por que ele economiza memória."
+     },
+     {
+      "n": 15,
+      "title": "Dataclasses e Modelagem de Dados",
+      "page": 419,
+      "desc": "Dataclasses: classes de dados sem código repetitivo, com ordenação, imutabilidade e validação."
+     },
+     {
+      "n": 16,
+      "title": "Metaprogramação",
+      "page": 441,
+      "desc": "Escrever código que cria ou modifica outro código, dos decoradores de classe às metaclasses, e quando cada um vale a pena."
+     },
+     {
+      "n": 17,
+      "title": "Programação Funcional: functools, itertools e operator",
+      "page": 463,
+      "desc": "Funções puras, composição e os módulos functools, itertools e operator para um estilo funcional em Python."
+     },
+     {
+      "n": 18,
+      "title": "Estruturas de Dados Eficientes da Biblioteca Padrão",
+      "page": 483,
+      "desc": "deque, Counter, defaultdict, heapq, bisect e companhia: estruturas que trocam generalidade por custos melhores."
+     },
+     {
+      "n": 19,
+      "title": "O CPython por Dentro",
+      "page": 503,
+      "desc": "O caminho do seu código até a máquina virtual do CPython: bytecode, otimizações e o que explica o desempenho."
+     }
+    ]
+   }
+  ],
+  "appendices": [
+   {
+    "letter": "A",
+    "title": "Novidades por Versão: do Python 3.8 ao 3.15",
+    "page": 527,
+    "desc": "O que chegou em cada versão do Python, de 3.8 a 3.15, com PEP, o que faz e onde o livro trata, para ler código antigo e novo."
+   },
+   {
+    "letter": "B",
+    "title": "Pegadinhas e Erros Clássicos",
+    "page": 545,
+    "desc": "25 armadilhas clássicas da linguagem, cada uma com código, saída real, a explicação e a correção."
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "topic": "Engenharia e concorrência",
+  "short": "Projetos, testes, tipagem, SOLID, segurança e performance; threads, processos e asyncio.",
+  "trail": "Software que se mantém e faz várias coisas ao mesmo tempo.",
+  "lead": "Escreva Python que outras pessoas conseguem manter e que faz várias coisas ao mesmo tempo: projetos, testes, tipagem, SOLID, segurança, performance, threads, processos e asyncio.",
+  "headline": "Do script que funciona ao software profissional",
+  "paras": [
+   "Escrever código que roda é só o começo. Fazê-lo sobreviver a anos de manutenção, a um time inteiro e a muitos usuários é engenharia. A primeira parte deste volume cobre estrutura de projetos, dependências, logging, testes automatizados, estilo, tipagem estática, os princípios SOLID, segurança, profiling, documentação, empacotamento e design de APIs: o que um projeto Python precisa ter para ser levado a sério.",
+   "A segunda parte é de concorrência: como escolher entre threads, multiprocessamento, concurrent.futures e asyncio, o que o GIL realmente limita e o que muda com o free-threading do Python 3.15. Tudo com medições, para você decidir com números, e não por moda.",
+   "É o volume que mais se aproxima do dia a dia de uma equipe: testes, qualidade, segurança e desempenho são cobrados em vagas de desenvolvimento Python plenas e sêniores. Dominar esses assuntos é o que transforma quem programa em quem projeta sistemas, e completa o caminho para ser um especialista Python."
+  ],
+  "start": "Se você nunca programou, comece pelo Volume 1. Este volume pressupõe a base dos Volumes 1 e 2, não os livros em si: se você já escreve classes com __init__, __repr__ e herança, usa decoradores e escreve geradores, pode começar daqui. Se faltar algo, o Volume 2 cobre. Os cinco volumes formam a coleção completa, mas cada um se sustenta sozinho.",
+  "learn": [
+   "Estruturar projetos, gerenciar dependências e configurar logging",
+   "Escrever testes automatizados e manter o estilo e a qualidade do código",
+   "Usar tipagem estática e aplicar os princípios SOLID em Python",
+   "Programar com segurança, medir a performance (profiling) e proteger segredos",
+   "Documentar, empacotar e publicar no PyPI, e projetar APIs que se refatoram bem",
+   "Escolher entre threads, multiprocessamento, concurrent.futures e asyncio",
+   "Decidir sobre concorrência com base em medições, incluindo o free-threading do Python 3.15"
+  ],
+  "price_print": "79,97",
+  "price_ebook": "43,98",
+  "pages_total": 427,
+  "pages_miolo": 426,
+  "chapters_total": 19,
+  "parts": [
+   {
+    "name": "Parte 1: Engenharia de Software",
+    "chapters": [
+     {
+      "n": 1,
+      "title": "Estrutura de Projetos",
+      "page": 39,
+      "desc": "O layout src/, o pyproject.toml e a separação das regras de negócio da entrada e saída: como organizar um projeto instalável."
+     },
+     {
+      "n": 2,
+      "title": "Gerenciamento de Dependências",
+      "page": 57,
+      "desc": "Declarar, resolver e travar dependências no uv.lock, para que o mesmo conjunto de pacotes rode em qualquer máquina."
+     },
+     {
+      "n": 3,
+      "title": "Logging",
+      "page": 77,
+      "desc": "Loggers, filtros, formatadores e handlers: registrar o que o programa faz de um jeito configurável e útil em produção."
+     },
+     {
+      "n": 4,
+      "title": "Testes Automatizados",
+      "page": 101,
+      "desc": "Escrever testes que dão uma rede de segurança para mudar o código sem medo."
+     },
+     {
+      "n": 5,
+      "title": "Estilo e Qualidade de Código",
+      "page": 125,
+      "desc": "PEP 8, formatador, linter e métricas: deixar as máquinas discutirem estilo para você discutir o que importa."
+     },
+     {
+      "n": 6,
+      "title": "Tipagem Estática",
+      "page": 147,
+      "desc": "Anotar o código com tipos e deixar o verificador achar os erros antes de executar."
+     },
+     {
+      "n": 7,
+      "title": "Princípios SOLID em Python",
+      "page": 171,
+      "desc": "Os cinco princípios SOLID aplicados em Python, com exemplos antes e depois."
+     },
+     {
+      "n": 8,
+      "title": "Segurança e Programação Defensiva",
+      "page": 193,
+      "desc": "As falhas de segurança mais comuns em código Python e como escrever código que não confia no que recebe."
+     },
+     {
+      "n": 9,
+      "title": "Profiling e Performance",
+      "page": 215,
+      "desc": "Medir antes de otimizar: onde o tempo e a memória realmente vão, e como achar o gargalo."
+     },
+     {
+      "n": 10,
+      "title": "Documentação de Código e de Projetos",
+      "page": 237,
+      "desc": "Docstrings, README e guias: escrever, junto do código, o que ele não consegue dizer sozinho."
+     },
+     {
+      "n": 11,
+      "title": "Empacotamento e Publicação no PyPI",
+      "page": 257,
+      "desc": "Gerar wheel e sdist e publicar no PyPI, para que qualquer pessoa rode pip install no seu pacote."
+     },
+     {
+      "n": 12,
+      "title": "Configuração e Gerenciamento de Segredos",
+      "page": 279,
+      "desc": "Separar a configuração do código e guardar segredos com segurança entre desenvolvimento e produção."
+     },
+     {
+      "n": 13,
+      "title": "Design de APIs e Refatoração",
+      "page": 301,
+      "desc": "Projetar interfaces fáceis de usar certo e difíceis de usar errado, e refatorar sem quebrar o que funciona."
+     }
+    ]
+   },
+   {
+    "name": "Parte 2: Concorrência e Paralelismo",
+    "chapters": [
+     {
+      "n": 14,
+      "title": "Escolhendo o Modelo de Concorrência",
+      "page": 329,
+      "desc": "Concorrência, paralelismo e como escolher entre threads, processos, asyncio, free-threading e subinterpretadores."
+     },
+     {
+      "n": 15,
+      "title": "Threads e Concorrência",
+      "page": 345,
+      "desc": "Threads: ótimas para esperar E/S, e como evitar corridas e deadlocks com travas, eventos e filas."
+     },
+     {
+      "n": 16,
+      "title": "Multiprocessamento",
+      "page": 363,
+      "desc": "Vários interpretadores, cada um com o seu GIL: usar todos os núcleos em tarefas de CPU e o preço disso."
+     },
+     {
+      "n": 17,
+      "title": "concurrent.futures",
+      "page": 379,
+      "desc": "Uma interface única para pools de threads, processos e subinterpretadores: troque o modelo trocando uma classe."
+     },
+     {
+      "n": 18,
+      "title": "Programação Assíncrona com asyncio",
+      "page": 393,
+      "desc": "Milhares de tarefas cooperativas em uma só thread: o laço de eventos, await e as armadilhas do código assíncrono."
+     },
+     {
+      "n": 19,
+      "title": "Free-Threading e Subinterpretadores",
+      "page": 411,
+      "desc": "O Python sem GIL e os subinterpretadores: paralelismo de verdade, e quando vale a pena usá-lo."
+     }
+    ]
+   }
+  ],
+  "appendices": []
+ },
+ {
+  "n": 4,
+  "topic": "Dados, mundo real e produção",
+  "short": "Bancos de dados, HTTP, Pandas e Polars, automação web, Docker, filas e pipelines.",
+  "trail": "Dos dados à produção.",
+  "lead": "Do banco de dados à produção: persistência, Python no mundo real e tudo o que leva o código para o ar, com números medidos e o critério de quando usar cada ferramenta.",
+  "headline": "Do banco de dados à produção, com o Python do mundo real",
+  "paras": [
+   "Este é o volume em que o Python encontra o mundo real. Você aprende SQL do zero e persiste dados com SQLite, PostgreSQL, MySQL, MariaDB, Oracle e SQL Server, usa SQLAlchemy e Alembic e sabe quando Redis ou MongoDB fazem mais sentido. Depois consome APIs com clientes HTTP, valida dados com Pydantic, analisa dados com NumPy, Pandas e Polars, automatiza a web e constrói ferramentas de linha de comando.",
+   "Na terceira parte, o código vai para produção: observabilidade, Docker, arquitetura de projeto, filas, tarefas em segundo plano e pipelines de dados. Cada tecnologia vem com números medidos, as armadilhas que mais custam caro e o critério para decidir quando usá-la. Um apêndice reúne perguntas de entrevista técnica, com respostas.",
+   "É aqui que estão as tecnologias que as vagas pedem: bancos de dados, APIs, análise de dados, Docker e filas aparecem em grande parte das descrições de vagas de back-end, dados e automação. Com este volume você ganha o repertório para trabalhar com tudo isso e dá um grande passo para se tornar um especialista Python completo."
+  ],
+  "start": "Se você nunca programou, comece pelo Volume 1. Este volume pressupõe o Python do dia a dia dos Volumes 1 e 2 e, para a parte de produção, noções de testes e de concorrência do Volume 3. SQL é ensinado do zero, e os capítulos de bancos de dados (1 a 8) podem ser lidos sozinhos, só com Python básico. Cada capítulo traz uma ficha com os pré-requisitos exatos. Os cinco volumes formam a coleção completa, mas cada um se sustenta sozinho.",
+  "learn": [
+   "Persistir dados com SQLite, PostgreSQL, MySQL e MariaDB, Oracle e SQL Server",
+   "Usar SQLAlchemy e Alembic, e saber quando escolher Redis ou MongoDB",
+   "Modelar bancos relacionais e escrever SQL com boas práticas",
+   "Consumir APIs com httpx e validar dados nas fronteiras com Pydantic",
+   "Analisar dados com NumPy, Pandas e Polars e automatizar a web e a linha de comando",
+   "Observar o sistema em produção e empacotá-lo com Docker",
+   "Estruturar a arquitetura do projeto, filas, tarefas em segundo plano e pipelines de dados",
+   "Preparar-se para entrevistas técnicas com 66 perguntas respondidas"
+  ],
+  "price_print": "79,98",
+  "price_ebook": "43,98",
+  "pages_total": 487,
+  "pages_miolo": 486,
+  "chapters_total": 21,
+  "parts": [
+   {
+    "name": "Parte 1: Persistência de Dados",
+    "chapters": [
+     {
+      "n": 1,
+      "title": "SQLite",
+      "page": 41,
+      "desc": "Um banco de dados completo em um único arquivo, já embutido no Python: a melhor porta de entrada para SQL."
+     },
+     {
+      "n": 2,
+      "title": "PostgreSQL",
+      "page": 57,
+      "desc": "O banco relacional de código aberto mais completo: transações, tipos ricos como jsonb e recursos para sistemas reais."
+     },
+     {
+      "n": 3,
+      "title": "MySQL e MariaDB",
+      "page": 73,
+      "desc": "Os bancos mais usados na web, e as diferenças e armadilhas que não aparecem quando se trata os dois como iguais."
+     },
+     {
+      "n": 4,
+      "title": "Bancos Corporativos: Oracle e SQL Server",
+      "page": 87,
+      "desc": "Oracle e SQL Server, os bancos de grandes empresas, acessados com drivers modernos e sem instalações pesadas."
+     },
+     {
+      "n": 5,
+      "title": "SQLAlchemy",
+      "page": 101,
+      "desc": "O Core e o ORM: uma API única para falar com todos os bancos, sem escrever tudo à mão."
+     },
+     {
+      "n": 6,
+      "title": "Migrações com Alembic",
+      "page": 119,
+      "desc": "Versionar o esquema do banco com scripts de migração, com upgrade e downgrade, em qualquer ambiente."
+     },
+     {
+      "n": 7,
+      "title": "Redis e MongoDB",
+      "page": 135,
+      "desc": "Redis para cache, filas e rankings; MongoDB para documentos: o que cada um resolve e quando escolher."
+     },
+     {
+      "n": 8,
+      "title": "Modelagem e Boas Práticas de SQL",
+      "page": 153,
+      "desc": "Normalizar, declarar regras no próprio banco e indexar: o que torna um banco correto, rápido e fácil de evoluir."
+     }
+    ]
+   },
+   {
+    "name": "Parte 2: Python no Mundo Real",
+    "chapters": [
+     {
+      "n": 9,
+      "title": "Clientes HTTP com httpx",
+      "page": 177,
+      "desc": "O cliente HTTP moderno do Python: timeouts, sessões, streaming e como escrever clientes de API que não quebram."
+     },
+     {
+      "n": 10,
+      "title": "Validação de Dados com Pydantic",
+      "page": 195,
+      "desc": "Transformar anotações de tipo em validação em tempo de execução para tudo que entra no seu programa."
+     },
+     {
+      "n": 11,
+      "title": "NumPy: Cálculo Numérico em Velocidade de C",
+      "page": 211,
+      "desc": "Contas sobre milhões de números de uma vez, em velocidade de C: a base do Pandas e de boa parte do ecossistema de dados."
+     },
+     {
+      "n": 12,
+      "title": "Pandas: Análise de Dados com Tabelas",
+      "page": 235,
+      "desc": "DataFrames: de \"percorrer linhas\" para \"descrever operações sobre colunas\", para analisar dados com clareza."
+     },
+     {
+      "n": 13,
+      "title": "Polars: Tabelas Rápidas, Preguiçosas e Paralelas",
+      "page": 259,
+      "desc": "Tabelas rápidas, preguiçosas e paralelas, escritas em Rust, para dados que o Pandas já não aguenta com folga."
+     },
+     {
+      "n": 14,
+      "title": "Automação Web: Scraping e Navegador",
+      "page": 279,
+      "desc": "Raspar páginas e controlar um navegador de verdade por código, com os cuidados éticos e técnicos."
+     },
+     {
+      "n": 15,
+      "title": "Ferramentas de Linha de Comando",
+      "page": 299,
+      "desc": "Criar ferramentas de linha de comando que outras pessoas e programas conseguem usar."
+     }
+    ]
+   },
+   {
+    "name": "Parte 3: Python em Produção",
+    "chapters": [
+     {
+      "n": 16,
+      "title": "Observabilidade",
+      "page": 323,
+      "desc": "Logs, métricas e rastros: descobrir por que um sistema em produção se comporta como se comporta."
+     },
+     {
+      "n": 17,
+      "title": "Contêineres e Docker",
+      "page": 345,
+      "desc": "Empacotar o programa em imagens Docker para ele se comportar igual na sua máquina, no CI e em produção."
+     },
+     {
+      "n": 18,
+      "title": "Arquitetura de Projetos",
+      "page": 365,
+      "desc": "Separar as regras do negócio do banco, da rede e do terminal, para o sistema aguentar mudanças."
+     },
+     {
+      "n": 19,
+      "title": "Filas e Tarefas em Segundo Plano",
+      "page": 387,
+      "desc": "Responder na hora e fazer o trabalho pesado depois, em outro processo, com novas tentativas quando falha."
+     },
+     {
+      "n": 20,
+      "title": "Pipelines e Transformação de Dados",
+      "page": 411,
+      "desc": "Extrair, validar, transformar e carregar dados de forma confiável, mesmo quando os dados chegam sujos."
+     },
+     {
+      "n": 21,
+      "title": "Conclusão: Do Código à Produção",
+      "page": 433,
+      "desc": "O fecho do volume: o que vem depois de o código funcionar, e as lições que ligam banco, rede e produção."
+     }
+    ]
+   }
+  ],
+  "appendices": [
+   {
+    "letter": "A",
+    "title": "Perguntas de Entrevista Técnica",
+    "page": 449,
+    "desc": "66 perguntas de entrevistas de Python, de júnior a sênior, com resposta curta, o que o entrevistador quer ouvir e onde estudar, mais exercícios de código ao vivo."
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "topic": "Padrões de projeto",
+  "short": "Os padrões de projeto clássicos e os do dia a dia, na forma pythônica e com o custo medido.",
+  "trail": "Desenhar código que dura.",
+  "lead": "Os padrões de projeto clássicos e os que aparecem em todo projeto, escritos como o Python os escreve: a versão clássica, a pythônica, quando não usar e o custo medido.",
+  "headline": "Padrões de projeto do jeito que o Python escreve",
+  "paras": [
+   "Os padrões de projeto nasceram em linguagens como C++ e Java, e muita gente os copia para o Python sem adaptar, gerando código verboso e pouco pythônico. Este volume mostra, para cada padrão, o problema que ele resolve, a versão clássica de orientação a objetos, a versão pythônica (muitas vezes bem menor, com funções, decoradores e protocolos), quando não usar e o custo medido de cada uma.",
+   "Você percorre os padrões de criação, estruturais e comportamentais, os compostos (como o MVC) e os do dia a dia que o catálogo clássico não traz: Object Pool, Null Object, Repository e Unit of Work, Specification, Registry e injeção de dependência. O livro termina com um guia para escolher o padrão certo, e para reconhecer quando a melhor escolha é não usar nenhum.",
+   "Em entrevistas e revisões de código para vagas plenas e sêniores, falar a linguagem dos padrões é o que mostra maturidade: é o vocabulário comum de quem projeta sistemas. Entender o porquê de cada um, e não só o nome, é o que fecha a formação de um especialista Python completo."
+  ],
+  "start": "Se você nunca programou, comece pelo Volume 1. Este volume pressupõe o Python do dia a dia dos Volumes 1 e 2 (classes, herança, Protocol, decoradores, geradores e dataclass) e noções de testes e tipagem do Volume 3. Se você já tem essa base, pode começar direto por aqui. Cada capítulo traz uma ficha com os pré-requisitos exatos. Os cinco volumes formam a coleção completa, mas cada um se sustenta sozinho.",
+  "learn": [
+   "Reconhecer o problema que cada padrão resolve, e quando ele só atrapalha",
+   "Criar objetos sem acoplar o código ao concreto: Factory Method, Abstract Factory, Builder, Singleton, Prototype e Object Pool",
+   "Combinar objetos em estruturas: Adapter, Facade, Decorator, Composite, Proxy, Bridge e Flyweight",
+   "Distribuir responsabilidades: Strategy, Observer, Command, State, Iterator, Visitor, Interpreter e outros",
+   "Aplicar os padrões do dia a dia: Null Object, Repository e Unit of Work, Specification, Registry e injeção de dependência",
+   "Comparar a versão clássica com a pythônica, com o custo medido de cada uma",
+   "Escolher o padrão certo, e reconhecer quando a melhor escolha é nenhum"
+  ],
+  "price_print": "79,98",
+  "price_ebook": "43,98",
+  "pages_total": 543,
+  "pages_miolo": 542,
+  "chapters_total": 32,
+  "parts": [
+   {
+    "name": "Parte 1: Fundamentos e Padrões de Criação",
+    "chapters": [
+     {
+      "n": 1,
+      "title": "O que São Padrões de Projeto",
+      "page": 43,
+      "desc": "O que é um padrão de projeto, de onde vieram, como ler cada um neste volume e o que o Python muda."
+     },
+     {
+      "n": 2,
+      "title": "Factory Method",
+      "page": 59,
+      "desc": "Tirar de quem usa a decisão de qual classe instanciar: quase sempre, em Python, um dicionário resolve."
+     },
+     {
+      "n": 3,
+      "title": "Abstract Factory",
+      "page": 71,
+      "desc": "Criar famílias de objetos que combinam entre si, sem que o código saiba a qual família pertencem."
+     },
+     {
+      "n": 4,
+      "title": "Singleton",
+      "page": 83,
+      "desc": "Uma única instância, e por que em Python o próprio módulo já faz esse papel."
+     },
+     {
+      "n": 5,
+      "title": "Builder",
+      "page": 97,
+      "desc": "Montar objetos complexos passo a passo, e quando argumentos nomeados e dataclasses já bastam."
+     },
+     {
+      "n": 6,
+      "title": "Prototype",
+      "page": 109,
+      "desc": "Criar objetos copiando um modelo: copy, deepcopy e copy.replace, e as armadilhas da cópia rasa."
+     },
+     {
+      "n": 7,
+      "title": "Object Pool",
+      "page": 121,
+      "desc": "Reaproveitar objetos caros de criar, como conexões e buffers, com uma fila e um gerenciador de contexto."
+     }
+    ]
+   },
+   {
+    "name": "Parte 2: Padrões Estruturais",
+    "chapters": [
+     {
+      "n": 8,
+      "title": "Adapter",
+      "page": 139,
+      "desc": "Fazer uma classe com a interface errada servir a quem espera outra, sem editar nenhuma das duas."
+     },
+     {
+      "n": 9,
+      "title": "Facade",
+      "page": 151,
+      "desc": "Uma porta de entrada simples para um subsistema complicado: muitas vezes, uma função ou o __init__.py."
+     },
+     {
+      "n": 10,
+      "title": "Decorator",
+      "page": 163,
+      "desc": "Acrescentar comportamento em camadas empilhadas, e a relação com o @decorador do Python."
+     },
+     {
+      "n": 11,
+      "title": "Composite",
+      "page": 177,
+      "desc": "Tratar um objeto e um grupo de objetos da mesma forma, em árvores como pastas e menus."
+     },
+     {
+      "n": 12,
+      "title": "Proxy",
+      "page": 191,
+      "desc": "Um substituto que controla o acesso ao objeto real: carga preguiçosa, proteção, cache e auditoria."
+     },
+     {
+      "n": 13,
+      "title": "Bridge",
+      "page": 205,
+      "desc": "Separar o que o objeto faz de como ele faz, para cada lado variar sozinho."
+     },
+     {
+      "n": 14,
+      "title": "Flyweight",
+      "page": 217,
+      "desc": "Economizar memória compartilhando o que se repete entre milhares de objetos."
+     }
+    ]
+   },
+   {
+    "name": "Parte 3: Padrões Comportamentais",
+    "chapters": [
+     {
+      "n": 15,
+      "title": "Strategy",
+      "page": 235,
+      "desc": "Algoritmos intercambiáveis: em Python, muitas vezes basta uma função."
+     },
+     {
+      "n": 16,
+      "title": "Observer",
+      "page": 247,
+      "desc": "Avisar vários interessados quando algo muda, sem acoplar quem avisa a quem escuta."
+     },
+     {
+      "n": 17,
+      "title": "Command",
+      "page": 261,
+      "desc": "Transformar uma ação em objeto para guardar, repetir, enfileirar e desfazer."
+     },
+     {
+      "n": 18,
+      "title": "Template Method",
+      "page": 275,
+      "desc": "Fixar o esqueleto de um algoritmo e deixar passos para outras partes preencherem."
+     },
+     {
+      "n": 19,
+      "title": "Iterator",
+      "page": 289,
+      "desc": "Percorrer uma coleção sem conhecer a sua estrutura: o protocolo embutido na linguagem e o gerador."
+     },
+     {
+      "n": 20,
+      "title": "State",
+      "page": 303,
+      "desc": "Mudar de comportamento conforme o estado, trocando a pilha de if por uma tabela de transições."
+     },
+     {
+      "n": 21,
+      "title": "Chain of Responsibility",
+      "page": 317,
+      "desc": "Passar um pedido por uma sequência de manipuladores, como nos middlewares de frameworks."
+     },
+     {
+      "n": 22,
+      "title": "Mediator",
+      "page": 331,
+      "desc": "Um objeto central que coordena colegas que não se conhecem, trocando uma teia por uma estrela."
+     },
+     {
+      "n": 23,
+      "title": "Memento",
+      "page": 347,
+      "desc": "Salvar e restaurar o estado de um objeto, o fundamento do desfazer, sem quebrar o encapsulamento."
+     },
+     {
+      "n": 24,
+      "title": "Visitor",
+      "page": 363,
+      "desc": "Acrescentar operações a uma hierarquia sem editar as classes, e como o singledispatch quase o faz desaparecer."
+     },
+     {
+      "n": 25,
+      "title": "Interpreter",
+      "page": 381,
+      "desc": "Representar a gramática de uma linguagem pequena e interpretá-la, e por que raramente você deve escrever tudo isso."
+     }
+    ]
+   },
+   {
+    "name": "Parte 4: Padrões Compostos e Padrões do Dia a Dia",
+    "chapters": [
+     {
+      "n": 26,
+      "title": "Padrões Compostos: MVC",
+      "page": 403,
+      "desc": "Como os padrões se combinam: o MVC como composição de Observer, Command e Memento, no estilo Elm."
+     },
+     {
+      "n": 27,
+      "title": "Null Object",
+      "page": 421,
+      "desc": "Representar a ausência com um comportamento neutro, para nunca mais perguntar if x is None."
+     },
+     {
+      "n": 28,
+      "title": "Repository e Unit of Work",
+      "page": 441,
+      "desc": "Esconder onde os dados vivem e agrupar mudanças em uma transação que dá certo por inteiro ou não acontece."
+     },
+     {
+      "n": 29,
+      "title": "Specification",
+      "page": 461,
+      "desc": "Transformar regras de negócio em objetos que se combinam com E, OU e NÃO, e se reaproveitam em filtros e validações."
+     },
+     {
+      "n": 30,
+      "title": "Registry e Plugins",
+      "page": 481,
+      "desc": "Um catálogo em que as peças se cadastram sozinhas, e plugins vindos de outros módulos e pacotes."
+     },
+     {
+      "n": 31,
+      "title": "Injeção de Dependência",
+      "page": 501,
+      "desc": "Receber de fora o que o código precisa, em vez de criar por dentro: o caminho para código fácil de testar."
+     },
+     {
+      "n": 32,
+      "title": "Conclusão: Escolhendo o Padrão Certo",
+      "page": 521,
+      "desc": "Um guia para escolher o padrão certo, e para reconhecer quando a melhor escolha é não usar nenhum."
+     }
+    ]
+   }
+  ],
+  "appendices": []
+ }
+]

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python de A a Z · Volume 5: Padrões de projeto</title>
+<meta name="description" content="Os padrões de projeto clássicos e os que aparecem em todo projeto, escritos como o Python os escreve: a versão clássica, a pythônica, quando não usar e o…">
+<meta name="theme-color" content="#16182c">
+<link rel="canonical" href="https://pythondeaaz.com.br/livro-5.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tiago Silva">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Python de A a Z">
+<meta property="og:title" content="Python de A a Z · Volume 5: Padrões de projeto">
+<meta property="og:description" content="Os padrões de projeto clássicos e os que aparecem em todo projeto, escritos como o Python os escreve: a versão clássica, a pythônica, quando não usar e o…">
+<meta property="og:url" content="https://pythondeaaz.com.br/livro-5.html">
+<meta property="og:image" content="https://pythondeaaz.com.br/assets/img/og-livro-5.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Python de A a Z · Volume 5: Padrões de projeto">
+<meta name="twitter:description" content="Os padrões de projeto clássicos e os que aparecem em todo projeto, escritos como o Python os escreve: a versão clássica, a pythônica, quando não usar e o…">
+<meta name="twitter:image" content="https://pythondeaaz.com.br/assets/img/og-livro-5.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Python de A a Z, Volume 5: Padrões de projeto","url":"https://pythondeaaz.com.br/livro-5.html","image":"https://pythondeaaz.com.br/assets/img/capa-5-960.webp","description":"Os padrões de projeto clássicos e os que aparecem em todo projeto, escritos como o Python os escreve: a versão clássica, a pythônica, quando não usar e o custo medido.","author":{"@type":"Person","name":"Tiago Silva","url":"https://www.linkedin.com/in/tiagoluizrs/"},"inLanguage":"pt-BR","bookFormat":"https://schema.org/Paperback","numberOfPages":542,"datePublished":"2026-10","isPartOf":{"@type":"BookSeries","name":"Python de A a Z"},"position":5,"workExample":[{"@type":"Book","bookFormat":"https://schema.org/Paperback","inLanguage":"pt-BR"},{"@type":"Book","bookFormat":"https://schema.org/EBook","inLanguage":"pt-BR"}],"offers":[{"@type":"Offer","name":"Impresso","price":"79.98","priceCurrency":"BRL","url":"https://pythondeaaz.com.br/livro-5.html"},{"@type":"Offer","name":"E-book","price":"43.98","priceCurrency":"BRL","url":"https://pythondeaaz.com.br/livro-5.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://pythondeaaz.com.br/index.html"},{"@type":"ListItem","position":2,"name":"Os livros","item":"https://pythondeaaz.com.br/index.html#colecao"},{"@type":"ListItem","position":3,"name":"Volume 5","item":"https://pythondeaaz.com.br/livro-5.html"}]}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.min.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-vol="5">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="topo">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Python de A a Z, página inicial">Python <span>de</span> <b>A a Z</b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#trilha">Trilha</a>
+      <a href="index.html#autor">O autor</a>
+      <a class="btn btn--dark btn--sm" href="index.html#colecao">Ver a coleção</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<div class="wrap crumbs" aria-label="Você está em"><nav><a href="index.html">Início</a><span>/</span><a href="index.html#colecao">Os livros</a><span>/</span><b>Volume 5</b></nav></div>
+<section class="bookhero" aria-labelledby="titulo">
+  <div class="wrap bookhero__grid">
+    <div class="bookhero__cover reveal"><img src="assets/img/capa-5-960.webp" srcset="assets/img/capa-5-480.webp 480w, assets/img/capa-5-960.webp 960w" sizes="(max-width: 640px) 80vw, 400px" width="960" height="1380" alt="Capa do Volume 5: Padrões de projeto" fetchpriority="high"></div>
+    <div class="bookhero__info">
+      <span class="pill reveal">Volume 5 de 5</span>
+      <h1 class="display reveal" id="titulo" style="--i:1">Python de A a Z: <span>Padrões de projeto</span></h1>
+      <p class="by reveal" style="--i:2">por Tiago Silva</p>
+      <!-- avaliações (estrelas, nota e contagem) ocultas por enquanto -->
+      <p class="lead reveal" style="--i:3">Os padrões de projeto clássicos e os que aparecem em todo projeto, escritos como o Python os escreve: a versão clássica, a pythônica, quando não usar e o custo medido.</p>
+      <div class="buybox reveal" style="--i:4">
+        <div class="prices">
+          <div class="price"><small>Impresso</small><b>R$ 79,98</b></div>
+          <div class="price"><small>E-book</small><b>R$ 43,98</b></div>
+        </div>
+        <div class="buybox__actions">
+          <a class="btn btn--v" href="#" data-todo="loja-5">Comprar na loja <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          <a class="btn btn--white" href="#" data-todo="amostra-5">Ler amostra</a>
+        </div>
+      </div>
+      <dl class="ficha reveal" style="--i:5">
+        <div><dt>Páginas</dt><dd>542</dd></div>
+        <div><dt>Idioma</dt><dd>Português</dd></div>
+        <div><dt>Publicação</dt><dd>10/2026</dd></div>
+        <div><dt>Versão do Python</dt><dd>3.15</dd></div>
+        <div><dt>Formatos</dt><dd>Impresso e e-book (ePub)</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap about__grid">
+    <div class="about__text">
+      <p class="eyebrow reveal">Sobre este livro</p>
+      <h2 class="display reveal" style="--i:1">Padrões de projeto do jeito que o Python escreve</h2>
+      <p>Os padrões de projeto nasceram em linguagens como C++ e Java, e muita gente os copia para o Python sem adaptar, gerando código verboso e pouco pythônico. Este volume mostra, para cada padrão, o problema que ele resolve, a versão clássica de orientação a objetos, a versão pythônica (muitas vezes bem menor, com funções, decoradores e protocolos), quando não usar e o custo medido de cada uma.</p>
+<p>Você percorre os padrões de criação, estruturais e comportamentais, os compostos (como o MVC) e os do dia a dia que o catálogo clássico não traz: Object Pool, Null Object, Repository e Unit of Work, Specification, Registry e injeção de dependência. O livro termina com um guia para escolher o padrão certo, e para reconhecer quando a melhor escolha é não usar nenhum.</p>
+<p>Em entrevistas e revisões de código para vagas plenas e sêniores, falar a linguagem dos padrões é o que mostra maturidade: é o vocabulário comum de quem projeta sistemas. Entender o porquê de cada um, e não só o nome, é o que fecha a formação de um especialista Python completo.</p>
+      <div class="card-dark reveal"><h3>Por onde começar</h3><p>Se você nunca programou, comece pelo Volume 1. Este volume pressupõe o Python do dia a dia dos Volumes 1 e 2 (classes, herança, Protocol, decoradores, geradores e dataclass) e noções de testes e tipagem do Volume 3. Se você já tem essa base, pode começar direto por aqui. Cada capítulo traz uma ficha com os pré-requisitos exatos. Os cinco volumes formam a coleção completa, mas cada um se sustenta sozinho.</p></div>
+      <div class="card-soft reveal"><h3>O que você vai aprender</h3><ul>
+<li>Reconhecer o problema que cada padrão resolve, e quando ele só atrapalha</li>
+<li>Criar objetos sem acoplar o código ao concreto: Factory Method, Abstract Factory, Builder, Singleton, Prototype e Object Pool</li>
+<li>Combinar objetos em estruturas: Adapter, Facade, Decorator, Composite, Proxy, Bridge e Flyweight</li>
+<li>Distribuir responsabilidades: Strategy, Observer, Command, State, Iterator, Visitor, Interpreter e outros</li>
+<li>Aplicar os padrões do dia a dia: Null Object, Repository e Unit of Work, Specification, Registry e injeção de dependência</li>
+<li>Comparar a versão clássica com a pythônica, com o custo medido de cada uma</li>
+<li>Escolher o padrão certo, e reconhecer quando a melhor escolha é nenhum</li>
+</ul></div>
+    </div>
+    <div class="toc-wrap" id="sumario">
+      <h2>Sumário</h2>
+      <p>32 capítulos. Toque em um item para ver do que ele trata.</p>
+      <div class="toc"><div class="toc__scroll" data-lenis-prevent>
+<div class="toc__part">Parte 1: Fundamentos e Padrões de Criação</div>
+<details><summary><span class="toc__n">1</span><span class="toc__t">O que São Padrões de Projeto</span><span class="toc__p">p. 43</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">O que é um padrão de projeto, de onde vieram, como ler cada um neste volume e o que o Python muda.</div></details>
+<details><summary><span class="toc__n">2</span><span class="toc__t">Factory Method</span><span class="toc__p">p. 59</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Tirar de quem usa a decisão de qual classe instanciar: quase sempre, em Python, um dicionário resolve.</div></details>
+<details><summary><span class="toc__n">3</span><span class="toc__t">Abstract Factory</span><span class="toc__p">p. 71</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Criar famílias de objetos que combinam entre si, sem que o código saiba a qual família pertencem.</div></details>
+<details><summary><span class="toc__n">4</span><span class="toc__t">Singleton</span><span class="toc__p">p. 83</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Uma única instância, e por que em Python o próprio módulo já faz esse papel.</div></details>
+<details><summary><span class="toc__n">5</span><span class="toc__t">Builder</span><span class="toc__p">p. 97</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Montar objetos complexos passo a passo, e quando argumentos nomeados e dataclasses já bastam.</div></details>
+<details><summary><span class="toc__n">6</span><span class="toc__t">Prototype</span><span class="toc__p">p. 109</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Criar objetos copiando um modelo: copy, deepcopy e copy.replace, e as armadilhas da cópia rasa.</div></details>
+<details><summary><span class="toc__n">7</span><span class="toc__t">Object Pool</span><span class="toc__p">p. 121</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Reaproveitar objetos caros de criar, como conexões e buffers, com uma fila e um gerenciador de contexto.</div></details>
+<div class="toc__part">Parte 2: Padrões Estruturais</div>
+<details><summary><span class="toc__n">8</span><span class="toc__t">Adapter</span><span class="toc__p">p. 139</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Fazer uma classe com a interface errada servir a quem espera outra, sem editar nenhuma das duas.</div></details>
+<details><summary><span class="toc__n">9</span><span class="toc__t">Facade</span><span class="toc__p">p. 151</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Uma porta de entrada simples para um subsistema complicado: muitas vezes, uma função ou o __init__.py.</div></details>
+<details><summary><span class="toc__n">10</span><span class="toc__t">Decorator</span><span class="toc__p">p. 163</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Acrescentar comportamento em camadas empilhadas, e a relação com o @decorador do Python.</div></details>
+<details><summary><span class="toc__n">11</span><span class="toc__t">Composite</span><span class="toc__p">p. 177</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Tratar um objeto e um grupo de objetos da mesma forma, em árvores como pastas e menus.</div></details>
+<details><summary><span class="toc__n">12</span><span class="toc__t">Proxy</span><span class="toc__p">p. 191</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Um substituto que controla o acesso ao objeto real: carga preguiçosa, proteção, cache e auditoria.</div></details>
+<details><summary><span class="toc__n">13</span><span class="toc__t">Bridge</span><span class="toc__p">p. 205</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Separar o que o objeto faz de como ele faz, para cada lado variar sozinho.</div></details>
+<details><summary><span class="toc__n">14</span><span class="toc__t">Flyweight</span><span class="toc__p">p. 217</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Economizar memória compartilhando o que se repete entre milhares de objetos.</div></details>
+<div class="toc__part">Parte 3: Padrões Comportamentais</div>
+<details><summary><span class="toc__n">15</span><span class="toc__t">Strategy</span><span class="toc__p">p. 235</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Algoritmos intercambiáveis: em Python, muitas vezes basta uma função.</div></details>
+<details><summary><span class="toc__n">16</span><span class="toc__t">Observer</span><span class="toc__p">p. 247</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Avisar vários interessados quando algo muda, sem acoplar quem avisa a quem escuta.</div></details>
+<details><summary><span class="toc__n">17</span><span class="toc__t">Command</span><span class="toc__p">p. 261</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Transformar uma ação em objeto para guardar, repetir, enfileirar e desfazer.</div></details>
+<details><summary><span class="toc__n">18</span><span class="toc__t">Template Method</span><span class="toc__p">p. 275</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Fixar o esqueleto de um algoritmo e deixar passos para outras partes preencherem.</div></details>
+<details><summary><span class="toc__n">19</span><span class="toc__t">Iterator</span><span class="toc__p">p. 289</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Percorrer uma coleção sem conhecer a sua estrutura: o protocolo embutido na linguagem e o gerador.</div></details>
+<details><summary><span class="toc__n">20</span><span class="toc__t">State</span><span class="toc__p">p. 303</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Mudar de comportamento conforme o estado, trocando a pilha de if por uma tabela de transições.</div></details>
+<details><summary><span class="toc__n">21</span><span class="toc__t">Chain of Responsibility</span><span class="toc__p">p. 317</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Passar um pedido por uma sequência de manipuladores, como nos middlewares de frameworks.</div></details>
+<details><summary><span class="toc__n">22</span><span class="toc__t">Mediator</span><span class="toc__p">p. 331</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Um objeto central que coordena colegas que não se conhecem, trocando uma teia por uma estrela.</div></details>
+<details><summary><span class="toc__n">23</span><span class="toc__t">Memento</span><span class="toc__p">p. 347</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Salvar e restaurar o estado de um objeto, o fundamento do desfazer, sem quebrar o encapsulamento.</div></details>
+<details><summary><span class="toc__n">24</span><span class="toc__t">Visitor</span><span class="toc__p">p. 363</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Acrescentar operações a uma hierarquia sem editar as classes, e como o singledispatch quase o faz desaparecer.</div></details>
+<details><summary><span class="toc__n">25</span><span class="toc__t">Interpreter</span><span class="toc__p">p. 381</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Representar a gramática de uma linguagem pequena e interpretá-la, e por que raramente você deve escrever tudo isso.</div></details>
+<div class="toc__part">Parte 4: Padrões Compostos e Padrões do Dia a Dia</div>
+<details><summary><span class="toc__n">26</span><span class="toc__t">Padrões Compostos: MVC</span><span class="toc__p">p. 403</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Como os padrões se combinam: o MVC como composição de Observer, Command e Memento, no estilo Elm.</div></details>
+<details><summary><span class="toc__n">27</span><span class="toc__t">Null Object</span><span class="toc__p">p. 421</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Representar a ausência com um comportamento neutro, para nunca mais perguntar if x is None.</div></details>
+<details><summary><span class="toc__n">28</span><span class="toc__t">Repository e Unit of Work</span><span class="toc__p">p. 441</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Esconder onde os dados vivem e agrupar mudanças em uma transação que dá certo por inteiro ou não acontece.</div></details>
+<details><summary><span class="toc__n">29</span><span class="toc__t">Specification</span><span class="toc__p">p. 461</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Transformar regras de negócio em objetos que se combinam com E, OU e NÃO, e se reaproveitam em filtros e validações.</div></details>
+<details><summary><span class="toc__n">30</span><span class="toc__t">Registry e Plugins</span><span class="toc__p">p. 481</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Um catálogo em que as peças se cadastram sozinhas, e plugins vindos de outros módulos e pacotes.</div></details>
+<details><summary><span class="toc__n">31</span><span class="toc__t">Injeção de Dependência</span><span class="toc__p">p. 501</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Receber de fora o que o código precisa, em vez de criar por dentro: o caminho para código fácil de testar.</div></details>
+<details><summary><span class="toc__n">32</span><span class="toc__t">Conclusão: Escolhendo o Padrão Certo</span><span class="toc__p">p. 521</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Um guia para escolher o padrão certo, e para reconhecer quando a melhor escolha é não usar nenhum.</div></details>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Avaliações: ocultas por enquanto (remova o atributo hidden quando houver avaliações reais) -->
+<section class="reviews section" id="avaliacoes" hidden>
+  <div class="wrap">
+    <p class="eyebrow">Avaliações</p>
+    <h2 class="display" style="margin-top:10px;font-size:clamp(32px,5vw,44px)">O que os leitores dizem</h2>
+    <div class="reviews__grid"><figure class="review" style="margin:0"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote style="margin:0">Texto da avaliação.</blockquote><figcaption><b>Nome Sobrenome</b></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="section others">
+  <div class="wrap">
+    <h2 class="display reveal">Continue a trilha</h2>
+    <div class="others__grid">
+<a class="reveal" data-vol="1" style="--i:0" href="livro-1.html"><span class="card__cover"><img src="assets/img/capa-1-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 1: Fundamentos</strong></a>
+<a class="reveal" data-vol="2" style="--i:1" href="livro-2.html"><span class="card__cover"><img src="assets/img/capa-2-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 2: Domínio da linguagem</strong></a>
+<a class="reveal" data-vol="3" style="--i:2" href="livro-3.html"><span class="card__cover"><img src="assets/img/capa-3-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 3: Engenharia e concorrência</strong></a>
+<a class="reveal" data-vol="4" style="--i:3" href="livro-4.html"><span class="card__cover"><img src="assets/img/capa-4-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 4: Dados, mundo real e produção</strong></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="logo">Python de A a Z</span>
+    <nav aria-label="Rodapé">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#autor">O autor</a>
+      <a href="outras.html">Outras obras</a>
+      <a href="#" data-todo="contato">Contato</a>
+      <a href="#" data-todo="termos">Termos</a>
+    </nav>
+    <span>© 2026 Tiago Silva</span>
+  </div>
+</footer>
+<script src="js/app.min.js" defer></script>
+</body>
+</html>

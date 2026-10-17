@@ -1,0 +1,690 @@
+[
+ {
+  "key": "flask",
+  "title": "Flask de A a Z",
+  "subtitle": "Crie aplicações web mais completas e robustas em Python",
+  "headline": "Um sistema de gerenciamento de produtos, do zero à área administrativa",
+  "paragraphs": [
+   "O Flask é um dos melhores frameworks Python da atualidade: flexível o bastante para as necessidades do usuário final e para o fluxo de trabalho de equipes, e com ótima integração com o SQLAlchemy, uma biblioteca ORM para trabalhar com diversos bancos de dados relacionais.",
+   "Neste livro você aprende a criar aplicações web e APIs REST robustas com Flask, SQLAlchemy e outras ferramentas Python. O projeto prático é um sistema de gerenciamento de produtos, com categorias, usuários e funções: um usuário pode ser limitado à API ou ter acesso também ao administrador, sempre com autenticação segura.",
+   "Ao final, a aplicação terá uma API e uma área administrativa completa, com templates personalizados."
+  ],
+  "audience": null,
+  "prereq": null,
+  "learn": [
+   "Montar um projeto Flask com Models, Routes, Controllers e Views (padrão MVC)",
+   "Trabalhar com banco de dados e migrações (SQLAlchemy e Flask-Migrate)",
+   "Fazer consultas com filtros, funções de agrupamento e cláusulas avançadas no SQLAlchemy",
+   "Criar e personalizar a área administrativa",
+   "Criar uma API REST que recebe e responde JSON",
+   "Proteger a aplicação com autenticação JWT e níveis de acesso",
+   "Enviar e-mails e implementar a recuperação de senha com token"
+  ],
+  "chips": [
+   "Flask",
+   "SQLAlchemy",
+   "API REST",
+   "JWT",
+   "Área administrativa",
+   "Padrão MVC",
+   "Flask-Migrate",
+   "Recuperação de senha por e-mail"
+  ],
+  "facts": [
+   [
+    "Páginas",
+    "223"
+   ],
+   [
+    "Publicação",
+    "10/2019"
+   ],
+   [
+    "ISBN",
+    "978-85-7254-033-9"
+   ],
+   [
+    "Versão do Python",
+    "3.7.x"
+   ],
+   [
+    "Formatos",
+    "Impresso, e-book (PDF e ePub) e e-book + impresso"
+   ]
+  ],
+  "buy": "https://www.casadocodigo.com.br/products/livro-flask-a-z",
+  "toc_link": "https://www.casadocodigo.com.br/pages/sumario-flask-a-z",
+  "toc": [
+   {
+    "label": "Parte 1",
+    "name": "Introdução",
+    "chapters": [
+     {
+      "n": "1",
+      "title": "Configuração do Python",
+      "sections": [
+       "Instalando o Python e suas dependências",
+       "Escolhendo uma IDE",
+       "Testando o ambiente para começar"
+      ]
+     },
+     {
+      "n": "2",
+      "title": "Primeiros passos com Flask",
+      "sections": [
+       "Instalando o Flask",
+       "Estrutura do projeto",
+       "Regra de negócios do sistema",
+       "Arquivos de configuração e execução",
+       "Nosso primeiro run"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 2",
+    "name": "Estrutura do projeto: padrão MVC",
+    "chapters": [
+     {
+      "n": "3",
+      "title": "Trabalhando com Models",
+      "sections": [
+       "Banco de dados",
+       "Criando a estrutura da Model",
+       "Instalando o Flask Migrate"
+      ]
+     },
+     {
+      "n": "4",
+      "title": "Trabalhando com Routes",
+      "sections": [
+       "Entendendo as rotas",
+       "Nossa primeira rota",
+       "Rotas dinâmicas"
+      ]
+     },
+     {
+      "n": "5",
+      "title": "Trabalhando com Controllers",
+      "sections": [
+       "Configurando nossa controller"
+      ]
+     },
+     {
+      "n": "6",
+      "title": "Área administrativa no Flask",
+      "sections": [
+       "Configurando nosso admin",
+       "Personalizando o admin",
+       "Personalizando a home do admin",
+       "Tema padrão do admin"
+      ]
+     },
+     {
+      "n": "7",
+      "title": "Trabalhando com o SQLAlchemy",
+      "sections": [
+       "Queries no SQLAlchemy",
+       "Filtros no SQLAlchemy",
+       "Funções de agrupamento",
+       "Cláusulas avançadas do SQL",
+       "Query execute"
+      ]
+     },
+     {
+      "n": "8",
+      "title": "Trabalhando com views",
+      "sections": [
+       "Criando uma view: tela de login",
+       "Personalizando a Home Admin"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 3",
+    "name": "Autenticação e requisição segura",
+    "chapters": [
+     {
+      "n": "9",
+      "title": "API Rest no Flask",
+      "sections": [
+       "Criando um Endpoint",
+       "Recebendo dados JSON"
+      ]
+     },
+     {
+      "n": "10",
+      "title": "Autenticação e segurança no Flask",
+      "sections": [
+       "JWT",
+       "Restringindo o painel Administrativo",
+       "Níveis de acesso no admin"
+      ]
+     },
+     {
+      "n": "11",
+      "title": "Trabalhando com serviços de e-mail",
+      "sections": [
+       "Introdução",
+       "Primeiros passos",
+       "Criando o serviço de envio",
+       "Solicitação de recuperação de senha",
+       "Validando o token de recuperação"
+      ]
+     }
+    ]
+   }
+  ],
+  "theme": {
+   "bg": "#fbe5ad",
+   "tint": "#fdf1cf",
+   "ink": "#1b2a3c",
+   "accent": "#9a5b00"
+  },
+  "prices": {
+   "print": "69,90",
+   "ebook": "39,90",
+   "combo": "84,90"
+  },
+  "cover": "assets/img/flask.webp",
+  "soon": false
+ },
+ {
+  "key": "django",
+  "title": "Django de A a Z",
+  "subtitle": "Crie aplicações web rápidas, seguras e escaláveis com Python",
+  "headline": "Uma aplicação de grande porte, completa e segura",
+  "paragraphs": [
+   "O Django é o framework mais popular do Python: uma ferramenta completa para criar aplicações web de forma rápida e consistente. Dominá-lo permite construir aplicações grandes, usadas por empresas de todos os portes, e avançar na carreira com Python.",
+   "No livro você cria uma aplicação de grande porte, completa e segura, que se comunica via client/server, com painel administrativo, telas HTML, views, templates e formulários, além de um mergulho no Django ORM para trabalhar com banco de dados de forma avançada. O autor inclui dicas da sua experiência para aumentar a produtividade no uso do Django."
+  ],
+  "audience": "Para quem quer atuar ou ingressar no mercado de Python, com foco em desenvolvimento web com Django.",
+  "prereq": null,
+  "learn": [
+   "Montar o projeto Django e as models, com upload de imagens",
+   "Personalizar o painel administrativo",
+   "Criar views, URLs, templates e formulários (incluindo model forms)",
+   "Consultar e alterar dados com o Django ORM e o QuerySet",
+   "Controlar o acesso com login_required e autenticação com redes sociais",
+   "Configurar o serviço de e-mail e a recuperação de senha",
+   "Escrever testes unitários, com TDD e cobertura de código",
+   "Fazer o deploy no Heroku"
+  ],
+  "chips": [
+   "Django ORM",
+   "Admin",
+   "Templates e forms",
+   "Autenticação social",
+   "Serviço de e-mail",
+   "Testes unitários",
+   "Deploy no Heroku"
+  ],
+  "facts": [
+   [
+    "Páginas",
+    "320"
+   ],
+   [
+    "Publicação",
+    "04/2021"
+   ],
+   [
+    "ISBN",
+    "978-65-86110-68-5"
+   ],
+   [
+    "Formatos",
+    "Impresso, e-book (PDF e ePub) e e-book + impresso"
+   ]
+  ],
+  "buy": "https://www.casadocodigo.com.br/products/livro-django-a-z",
+  "toc_link": "https://www.casadocodigo.com.br/pages/sumario-django-a-z",
+  "toc": [
+   {
+    "label": "Parte 1",
+    "name": "Primeiros passos com Django",
+    "chapters": [
+     {
+      "n": "1",
+      "title": "Configuração do Python",
+      "sections": [
+       "Instalando o Python e suas dependências",
+       "Escolhendo uma IDE",
+       "Testando o ambiente para começar"
+      ]
+     },
+     {
+      "n": "2",
+      "title": "Primeiros passos com Django",
+      "sections": [
+       "Instalando o Django",
+       "Criando um projeto no Django",
+       "Regra de negócios do sistema",
+       "Arquivos de configuração do projeto",
+       "Nosso primeiro Run"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 2",
+    "name": "Admin e persistência de dados",
+    "chapters": [
+     {
+      "n": "3",
+      "title": "Trabalhando com Models",
+      "sections": [
+       "Configurando nossa estrutura de banco de dados",
+       "Criando um app",
+       "Tipos de dados e campos",
+       "Criando e customizando as models restantes",
+       "Fluxo de criação de um usuário no admin",
+       "Upload de imagens"
+      ]
+     },
+     {
+      "n": "4",
+      "title": "Área administrativa",
+      "sections": [
+       "Customizando o admin",
+       "Customização avançada"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 3",
+    "name": "Django avançado",
+    "chapters": [
+     {
+      "n": "5",
+      "title": "Trabalhando com Views e Urls",
+      "sections": [
+       "Criando a primeira view",
+       "Customizando urls no Django",
+       "Nomes dinâmicos para os links"
+      ]
+     },
+     {
+      "n": "6",
+      "title": "Django ORM",
+      "sections": [
+       "Consultas no Django com QuerySet",
+       "Filtrando consultas no ORM do Django",
+       "Alterando dados com Django QuerySet"
+      ]
+     },
+     {
+      "n": "7",
+      "title": "Trabalhando com templates, parte I",
+      "sections": [
+       "Criando o nosso template base",
+       "Arquivo home.html",
+       "Configurando a pasta static",
+       "Criando o template de médicos"
+      ]
+     },
+     {
+      "n": "8",
+      "title": "Trabalhando com templates, parte II",
+      "sections": [
+       "Customizando um form no template",
+       "Criando o template de perfil"
+      ]
+     },
+     {
+      "n": "9",
+      "title": "Trabalhando com forms, parte I",
+      "sections": [
+       "Criando um model form",
+       "Integrando nosso form a nossa view",
+       "Criando a url da nossa view",
+       "Template de perfil"
+      ]
+     },
+     {
+      "n": "10",
+      "title": "Trabalhando com forms, parte II",
+      "sections": [
+       "Criando formulários customizados",
+       "Tela de cadastro",
+       "Avaliação do médico"
+      ]
+     },
+     {
+      "n": "11",
+      "title": "Trabalhando com autenticação",
+      "sections": [
+       "login_required",
+       "Urls do menu"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 4",
+    "name": "Conteúdo extra",
+    "chapters": [
+     {
+      "n": "12",
+      "title": "Autenticação com redes sociais",
+      "sections": [
+       "Instalação",
+       "Configurando a url",
+       "Configurando as redes sociais"
+      ]
+     },
+     {
+      "n": "13",
+      "title": "Serviços de e-mail",
+      "sections": [
+       "View de recuperação de senha",
+       "Configurando o serviço de e-mail"
+      ]
+     },
+     {
+      "n": "14",
+      "title": "Testes unitários",
+      "sections": [
+       "Introdução",
+       "O que são testes unitários",
+       "TDD",
+       "Testes unitários no Django",
+       "Primeiro teste unitário",
+       "Usando o Client para fazer requisições",
+       "Criando um teste de login",
+       "Cobertura de código"
+      ]
+     },
+     {
+      "n": "15",
+      "title": "Deploy no Heroku",
+      "sections": [
+       "Introdução",
+       "Criando uma conta no Heroku",
+       "Instalando o Heroku CLI",
+       "Preparando o projeto",
+       "Login e deploy no Heroku",
+       "Situações específicas"
+      ]
+     }
+    ]
+   }
+  ],
+  "theme": {
+   "bg": "#cfe9dc",
+   "tint": "#e3f3ea",
+   "ink": "#10291f",
+   "accent": "#0a6b49"
+  },
+  "prices": {
+   "print": "79,90",
+   "ebook": "39,90",
+   "combo": "94,90"
+  },
+  "cover": "assets/img/django.webp",
+  "soon": false
+ },
+ {
+  "key": "drf",
+  "title": "Django Rest Framework de A a Z",
+  "subtitle": "Aprenda a criar uma API REST segura, robusta e de alto desempenho com o Django REST Framework, preparada para ambientes reais de produção.",
+  "headline": "Uma API REST segura, robusta e de alto desempenho, pronta para produção",
+  "paragraphs": [
+   "Neste livro, você aprenderá a criar uma API RESTful com o Django REST Framework, o maior toolkit para APIs REST que existe para o ecossistema Django. Considerado uma das soluções mais robustas da atualidade para esse tipo de desenvolvimento, o framework permite criar APIs de alta performance com facilidade de implementação e uma documentação excelente e extremamente útil.",
+   "Utilizaremos o projeto de um Sistema de Gestão de Produtos como base para explorar conceitos profundos. Ao final, você não terá apenas uma API funcionando, mas um portfólio de código que segue os padrões exigidos por grandes empresas de tecnologia.",
+   "A estrutura é híbrida de propósito: capítulos inteiramente dedicados ao “mão na massa”, nos quais você constrói passo a passo o projeto ProductManager (com Docker, CI/CD, Redis e Celery), intercalados com capítulos de engenharia e arquitetura, sobre design de software, segurança ofensiva, performance e boas práticas."
+  ],
+  "audience": "Desenvolvedores que desejam não apenas “fazer funcionar”, mas entender a fundo como construir sistemas resilientes, seguros e escaláveis. Se você é iniciante, os primeiros capítulos dão uma base sólida; se já tem experiência, os capítulos finais sobre Docker, testes de carga, segurança ofensiva e Arquitetura Limpa vão desafiá-lo a elevar o nível técnico.",
+  "prereq": "Conhecimento básico em Python e Django (o livro Django de A a Z ajuda a reforçar) e familiaridade com a linha de comando.",
+  "learn": [
+   "Fundamentos: serialização, ViewSets, Routers e autenticação JWT.",
+   "Qualidade: testes automatizados (unitários e integração), CI/CD e Clean Code.",
+   "Infraestrutura: Docker, Docker Compose e preparação para cloud.",
+   "Performance: caching com Redis, throttling, paginação e otimização de consultas (N+1).",
+   "Segurança: proteção contra ataques comuns (OWASP), permissões personalizadas e boas práticas de mercado."
+  ],
+  "chips": [
+   "Django REST Framework",
+   "JWT",
+   "Serialização",
+   "Docker",
+   "Celery",
+   "Redis",
+   "OpenAPI e Swagger",
+   "Arquitetura limpa"
+  ],
+  "facts": [],
+  "buy": null,
+  "toc_link": null,
+  "toc": [
+   {
+    "label": "Parte 1",
+    "name": "Configuração do ambiente",
+    "chapters": [
+     {
+      "n": "1",
+      "title": "O universo das APIs: da origem à conectividade global",
+      "sections": [
+       "O que é, afinal, uma API?",
+       "Uma breve história da integração",
+       "Arquitetura de Software: do monólito aos microsserviços",
+       "O protocolo da web: HTTP em profundidade",
+       "REST: as 6 restrições arquiteturais (constraints)"
+      ]
+     },
+     {
+      "n": "2",
+      "title": "Configuração do Python",
+      "sections": [
+       "Instalando o Python e suas dependências",
+       "Escolhendo uma IDE",
+       "Testando o ambiente para começar"
+      ]
+     },
+     {
+      "n": "3",
+      "title": "Configurando o projeto Django",
+      "sections": [
+       "Instalando o Django",
+       "Criando o projeto",
+       "Sobre o projeto",
+       "Arquivos de configuração do projeto"
+      ]
+     },
+     {
+      "n": "4",
+      "title": "Nosso primeiro run",
+      "sections": [
+       "Criando as models do projeto",
+       "Configurando o Django REST Framework"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 2",
+    "name": "O essencial do Django REST Framework",
+    "chapters": [
+     {
+      "n": "5",
+      "title": "Serialização",
+      "sections": [
+       "Serializando as models",
+       "Campos e argumentos da classe Serializer"
+      ]
+     },
+     {
+      "n": "6",
+      "title": "Validators: validações no serializador",
+      "sections": [
+       "Tipos de validators",
+       "Padrões avançados de validators",
+       "Criando validators customizados"
+      ]
+     },
+     {
+      "n": "7",
+      "title": "Autenticação JWT e autorização no Django REST Framework",
+      "sections": [
+       "Autenticação JWT no DRF",
+       "Endpoint de login com JWT",
+       "Customizando o login"
+      ]
+     },
+     {
+      "n": "8",
+      "title": "Views e paginação: criando nossas views no Django REST Framework",
+      "sections": [
+       "Antes de começar",
+       "Model views",
+       "Generic views",
+       "Paginação"
+      ]
+     },
+     {
+      "n": "9",
+      "title": "Automatizando processos com signals",
+      "sections": [
+       "O cenário",
+       "Criando nossos sinais em uma estrutura organizacional",
+       "Registrando os sinais na aplicação",
+       "Testando a automação",
+       "Aprofundando em signals (teoria avançada)"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 3",
+    "name": "Deploy e outros recursos avançados do Django REST Framework",
+    "chapters": [
+     {
+      "n": "10",
+      "title": "Testes unitários",
+      "sections": [
+       "Exemplos de testes",
+       "Como executar os testes",
+       "Criando mais testes para nosso projeto",
+       "Indo além: testes avançados"
+      ]
+     },
+     {
+      "n": "11",
+      "title": "Documentação de APIs com OpenAPI e Swagger",
+      "sections": [
+       "Documentando APIs no Django REST Framework",
+       "Personalizando a documentação"
+      ]
+     },
+     {
+      "n": "12",
+      "title": "Preparando seu projeto para o Docker",
+      "sections": [
+       "Passo a passo: criando o Dockerfile",
+       "Passo a passo: criando o docker-compose.yml",
+       "Instalando o Docker no seu computador",
+       "Como rodar o projeto com Docker",
+       "Dicas avançadas",
+       "Bônus: fazendo o deploy da sua API"
+      ]
+     },
+     {
+      "n": "13",
+      "title": "Monitoramento e logging em APIs Django REST",
+      "sections": [
+       "Configurando logging no Django",
+       "Registrando logs na sua API",
+       "Métricas em sua API: integrando Prometheus ao Django",
+       "Monitorando erros com Sentry",
+       "Boas práticas de monitoramento e logging"
+      ]
+     },
+     {
+      "n": "14",
+      "title": "Teste de estresse com Locust",
+      "sections": [
+       "Locust",
+       "Executando testes visualmente via interface web",
+       "Estudos de caso"
+      ]
+     },
+     {
+      "n": "15",
+      "title": "Streaming e WebSocket",
+      "sections": [
+       "O que é streaming?",
+       "Mãos na massa: exportação de produtos via streaming",
+       "O que é WebSocket?",
+       "Mãos na massa: notificações de estoque em tempo real",
+       "Dicas para projetos reais"
+      ]
+     },
+     {
+      "n": "16",
+      "title": "Recursos assíncronos e background tasks com Celery",
+      "sections": [
+       "Por que processamento assíncrono?",
+       "O que é o Celery?",
+       "Mãos na massa: implementando o Celery",
+       "Automatizando no Docker Compose (dica avançada)",
+       "Monitoramento (opcional)"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 4",
+    "name": "Arquitetura, segurança e outros recursos extras",
+    "chapters": [
+     {
+      "n": "17",
+      "title": "Arquitetura Limpa e boas práticas: a arte da Engenharia de Software no Django",
+      "sections": [
+       "Onde mora a lógica de negócios?",
+       "DRY (Don't Repeat Yourself) de verdade",
+       "Tratamento de erros elegante (Exception Handling)",
+       "Segurança e controle: Throttling",
+       "Organização de código e “Code Smells”"
+      ]
+     },
+     {
+      "n": "18",
+      "title": "Segurança ofensiva e otimização extrema: o nível Principal Engineer",
+      "sections": [
+       "Segurança: além do básico",
+       "Performance: o gargalo invisível",
+       "Caching com Redis: velocidade da luz"
+      ]
+     },
+     {
+      "n": "A",
+      "title": "Apêndice A: cheat sheet (folha de cola)",
+      "sections": [
+       "Docker e Docker Compose",
+       "Django (gerenciamento)",
+       "HTTP status codes (os essenciais)",
+       "Django REST Framework (DRF)",
+       "Comandos de teste (Pytest/Unittest)"
+      ]
+     },
+     {
+      "n": "B",
+      "title": "Apêndice B: o caminho para Staff Engineer e Principal Engineer (roadmap)",
+      "sections": []
+     }
+    ]
+   }
+  ],
+  "theme": {
+   "bg": "#e48a8c",
+   "tint": "#f6d6d7",
+   "ink": "#2a0d0d",
+   "accent": "#a11d20"
+  },
+  "prices": null,
+  "cover": null,
+  "soon": true
+ }
+]

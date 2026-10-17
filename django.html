@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Django de A a Z · Tiago Silva</title>
+<meta name="description" content="Crie aplicações web rápidas, seguras e escaláveis com Python. O Django é o framework mais popular do Python: uma ferramenta completa para criar aplicações…">
+<meta name="theme-color" content="#16182c">
+<link rel="canonical" href="https://pythondeaaz.com.br/django.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tiago Silva">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Python de A a Z">
+<meta property="og:title" content="Django de A a Z · Tiago Silva">
+<meta property="og:description" content="Crie aplicações web rápidas, seguras e escaláveis com Python. O Django é o framework mais popular do Python: uma ferramenta completa para criar aplicações…">
+<meta property="og:url" content="https://pythondeaaz.com.br/django.html">
+<meta property="og:image" content="https://pythondeaaz.com.br/assets/img/og-django.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Django de A a Z · Tiago Silva">
+<meta name="twitter:description" content="Crie aplicações web rápidas, seguras e escaláveis com Python. O Django é o framework mais popular do Python: uma ferramenta completa para criar aplicações…">
+<meta name="twitter:image" content="https://pythondeaaz.com.br/assets/img/og-django.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Django de A a Z","url":"https://pythondeaaz.com.br/django.html","image":"https://pythondeaaz.com.br/assets/img/django.webp","description":"Crie aplicações web rápidas, seguras e escaláveis com Python","author":{"@type":"Person","name":"Tiago Silva","url":"https://www.linkedin.com/in/tiagoluizrs/"},"publisher":{"@type":"Organization","name":"Casa do Código","url":"https://www.casadocodigo.com.br"},"inLanguage":"pt-BR","datePublished":"2021-04","isbn":"9786586110685","numberOfPages":320,"offers":[{"@type":"Offer","name":"Impresso","price":"79.90","priceCurrency":"BRL","url":"https://www.casadocodigo.com.br/products/livro-django-a-z"},{"@type":"Offer","name":"E-book","price":"39.90","priceCurrency":"BRL","url":"https://www.casadocodigo.com.br/products/livro-django-a-z"},{"@type":"Offer","name":"E-book + impresso","price":"94.90","priceCurrency":"BRL","url":"https://www.casadocodigo.com.br/products/livro-django-a-z"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://pythondeaaz.com.br/index.html"},{"@type":"ListItem","position":2,"name":"Outras obras","item":"https://pythondeaaz.com.br/outras.html"},{"@type":"ListItem","position":3,"name":"Django de A a Z","item":"https://pythondeaaz.com.br/django.html"}]}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.min.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body style="--v-bg:#cfe9dc;--v-tint:#e3f3ea;--v-ink:#10291f;--v-accent:#0a6b49">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="topo">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Python de A a Z, página inicial">Python <span>de</span> <b>A a Z</b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#trilha">Trilha</a>
+      <a href="index.html#autor">O autor</a>
+      <a class="btn btn--dark btn--sm" href="index.html#colecao">Ver a coleção</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<div class="wrap crumbs" aria-label="Você está em"><nav><a href="index.html">Início</a><span>/</span><a href="outras.html">Outras obras</a><span>/</span><b>Django de A a Z</b></nav></div>
+<section class="bookhero" aria-labelledby="titulo">
+  <div class="wrap bookhero__grid">
+    <div class="bookhero__cover reveal"><img src="assets/img/django.webp" width="341" height="480" alt="Capa do livro Django de A a Z" fetchpriority="high" style="aspect-ratio:341/480"></div>
+    <div class="bookhero__info">
+      <span class="pill reveal">Casa do Código</span>
+      <h1 class="display reveal" id="titulo" style="--i:1">Django de A a Z</h1>
+      <p class="by reveal" style="--i:2">por Tiago Silva · Casa do Código</p>
+      <p class="lead reveal" style="--i:3">Crie aplicações web rápidas, seguras e escaláveis com Python</p>
+      <div class="buybox reveal" style="--i:4">
+        <div><small style="display:block;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--v-ink)">Preços na Casa do Código</small>
+        <div class="prices" style="margin-top:8px">
+          <div class="price"><small>Impresso</small><b style="font-size:28px">R$ 79,90</b></div>
+          <div class="price"><small>E-book</small><b style="font-size:28px">R$ 39,90</b></div>
+          <div class="price"><small>E-book + impresso</small><b style="font-size:28px">R$ 94,90</b></div>
+        </div></div>
+        <div class="buybox__actions"><a class="btn btn--v" href="https://www.casadocodigo.com.br/products/livro-django-a-z" target="_blank" rel="noopener">Comprar na Casa do Código <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
+      </div>
+      <p class="note">Quem compra o e-book tem acesso às atualizações futuras do livro.</p>
+      <dl class="ficha reveal" style="--i:5"><div><dt>Páginas</dt><dd>320</dd></div><div><dt>Publicação</dt><dd>04/2021</dd></div><div><dt>ISBN</dt><dd>978-65-86110-68-5</dd></div><div><dt>Formatos</dt><dd>Impresso, e-book (PDF e ePub) e e-book + impresso</dd></div></dl>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap about__grid">
+    <div class="about__text">
+      <p class="eyebrow reveal">Sobre este livro</p>
+      <h2 class="display reveal" style="--i:1">Uma aplicação de grande porte, completa e segura</h2>
+      <p>O Django é o framework mais popular do Python: uma ferramenta completa para criar aplicações web de forma rápida e consistente. Dominá-lo permite construir aplicações grandes, usadas por empresas de todos os portes, e avançar na carreira com Python.</p>
+<p>No livro você cria uma aplicação de grande porte, completa e segura, que se comunica via client/server, com painel administrativo, telas HTML, views, templates e formulários, além de um mergulho no Django ORM para trabalhar com banco de dados de forma avançada. O autor inclui dicas da sua experiência para aumentar a produtividade no uso do Django.</p>
+      <div class="card-soft reveal"><h3>Para quem é</h3><p>Para quem quer atuar ou ingressar no mercado de Python, com foco em desenvolvimento web com Django.</p></div>
+      
+      <div class="chips reveal"><span class="chip">Django ORM</span><span class="chip">Admin</span><span class="chip">Templates e forms</span><span class="chip">Autenticação social</span><span class="chip">Serviço de e-mail</span><span class="chip">Testes unitários</span><span class="chip">Deploy no Heroku</span></div>
+      <div class="card-soft reveal"><h3>O que você vai aprender</h3><ul>
+<li>Montar o projeto Django e as models, com upload de imagens</li>
+<li>Personalizar o painel administrativo</li>
+<li>Criar views, URLs, templates e formulários (incluindo model forms)</li>
+<li>Consultar e alterar dados com o Django ORM e o QuerySet</li>
+<li>Controlar o acesso com login_required e autenticação com redes sociais</li>
+<li>Configurar o serviço de e-mail e a recuperação de senha</li>
+<li>Escrever testes unitários, com TDD e cobertura de código</li>
+<li>Fazer o deploy no Heroku</li>
+</ul></div>
+    </div>
+    <div class="toc-wrap" id="sumario">
+      <h2>Sumário</h2>
+      <p>Toque em um capítulo para ver as seções.</p>
+      <div class="toc"><div class="toc__scroll" data-lenis-prevent>
+<div class="toc__part">Parte 1: Primeiros passos com Django</div>
+<details><summary><span class="toc__n">1</span><span class="toc__t">Configuração do Python</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Instalando o Python e suas dependências</li><li>Escolhendo uma IDE</li><li>Testando o ambiente para começar</li></ul></div></details>
+<details><summary><span class="toc__n">2</span><span class="toc__t">Primeiros passos com Django</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Instalando o Django</li><li>Criando um projeto no Django</li><li>Regra de negócios do sistema</li><li>Arquivos de configuração do projeto</li><li>Nosso primeiro Run</li></ul></div></details>
+<div class="toc__part">Parte 2: Admin e persistência de dados</div>
+<details><summary><span class="toc__n">3</span><span class="toc__t">Trabalhando com Models</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Configurando nossa estrutura de banco de dados</li><li>Criando um app</li><li>Tipos de dados e campos</li><li>Criando e customizando as models restantes</li><li>Fluxo de criação de um usuário no admin</li><li>Upload de imagens</li></ul></div></details>
+<details><summary><span class="toc__n">4</span><span class="toc__t">Área administrativa</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Customizando o admin</li><li>Customização avançada</li></ul></div></details>
+<div class="toc__part">Parte 3: Django avançado</div>
+<details><summary><span class="toc__n">5</span><span class="toc__t">Trabalhando com Views e Urls</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Criando a primeira view</li><li>Customizando urls no Django</li><li>Nomes dinâmicos para os links</li></ul></div></details>
+<details><summary><span class="toc__n">6</span><span class="toc__t">Django ORM</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Consultas no Django com QuerySet</li><li>Filtrando consultas no ORM do Django</li><li>Alterando dados com Django QuerySet</li></ul></div></details>
+<details><summary><span class="toc__n">7</span><span class="toc__t">Trabalhando com templates, parte I</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Criando o nosso template base</li><li>Arquivo home.html</li><li>Configurando a pasta static</li><li>Criando o template de médicos</li></ul></div></details>
+<details><summary><span class="toc__n">8</span><span class="toc__t">Trabalhando com templates, parte II</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Customizando um form no template</li><li>Criando o template de perfil</li></ul></div></details>
+<details><summary><span class="toc__n">9</span><span class="toc__t">Trabalhando com forms, parte I</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Criando um model form</li><li>Integrando nosso form a nossa view</li><li>Criando a url da nossa view</li><li>Template de perfil</li></ul></div></details>
+<details><summary><span class="toc__n">10</span><span class="toc__t">Trabalhando com forms, parte II</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Criando formulários customizados</li><li>Tela de cadastro</li><li>Avaliação do médico</li></ul></div></details>
+<details><summary><span class="toc__n">11</span><span class="toc__t">Trabalhando com autenticação</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>login_required</li><li>Urls do menu</li></ul></div></details>
+<div class="toc__part">Parte 4: Conteúdo extra</div>
+<details><summary><span class="toc__n">12</span><span class="toc__t">Autenticação com redes sociais</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Instalação</li><li>Configurando a url</li><li>Configurando as redes sociais</li></ul></div></details>
+<details><summary><span class="toc__n">13</span><span class="toc__t">Serviços de e-mail</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>View de recuperação de senha</li><li>Configurando o serviço de e-mail</li></ul></div></details>
+<details><summary><span class="toc__n">14</span><span class="toc__t">Testes unitários</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Introdução</li><li>O que são testes unitários</li><li>TDD</li><li>Testes unitários no Django</li><li>Primeiro teste unitário</li><li>Usando o Client para fazer requisições</li><li>Criando um teste de login</li><li>Cobertura de código</li></ul></div></details>
+<details><summary><span class="toc__n">15</span><span class="toc__t">Deploy no Heroku</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Introdução</li><li>Criando uma conta no Heroku</li><li>Instalando o Heroku CLI</li><li>Preparando o projeto</li><li>Login e deploy no Heroku</li><li>Situações específicas</li></ul></div></details>
+</div></div>
+      <a class="btn btn--white btn--sm" href="https://www.casadocodigo.com.br/pages/sumario-django-a-z" target="_blank" rel="noopener">Sumário completo na Casa do Código <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="authorbox reveal">
+      <img src="assets/img/autor-360.webp" width="360" height="360" alt="Tiago Silva" loading="lazy">
+      <div><h3>Tiago Silva</h3><p>Graduado em Análise e Desenvolvimento de Sistemas, pós-graduado em Engenharia de Software e em Desenvolvimento Back-end, com MBA em Gestão de Projetos pela USP. Professor universitário, atualmente trabalha como Analista de Sistemas. Especialista em Python, Java e JavaScript.</p></div>
+      <a class="btn btn--gold btn--sm" href="https://www.linkedin.com/in/tiagoluizrs/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:clamp(48px,7vw,88px)">
+  <div class="more reveal">
+    <div class="more__intro"><small>Do mesmo autor</small><strong>Conheça outras obras</strong><span>Livros sobre frameworks web em Python, pela Casa do Código.</span></div>
+    <div class="more__list"><a class="mini" href="flask.html"><img src="assets/img/flask.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Flask de A a Z</strong><span>Casa do Código</span></div></a><a class="mini" href="drf.html"><span class="soon" aria-hidden="true">Nov</span><div><strong>Django Rest Framework de A a Z</strong><span>Em breve · novembro</span></div></a></div>
+    <a class="btn btn--chip btn--sm" href="index.html#colecao">Ver a coleção Python de A a Z</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="logo">Python de A a Z</span>
+    <nav aria-label="Rodapé">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#autor">O autor</a>
+      <a href="outras.html">Outras obras</a>
+      <a href="#" data-todo="contato">Contato</a>
+      <a href="#" data-todo="termos">Termos</a>
+    </nav>
+    <span>© 2026 Tiago Silva</span>
+  </div>
+</footer>
+<script src="js/app.min.js" defer></script>
+</body>
+</html>

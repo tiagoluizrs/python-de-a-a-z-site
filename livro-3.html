@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python de A a Z · Volume 3: Engenharia e concorrência</title>
+<meta name="description" content="Escreva Python que outras pessoas conseguem manter e que faz várias coisas ao mesmo tempo: projetos, testes, tipagem, SOLID, segurança, performance,…">
+<meta name="theme-color" content="#16182c">
+<link rel="canonical" href="https://pythondeaaz.com.br/livro-3.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tiago Silva">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Python de A a Z">
+<meta property="og:title" content="Python de A a Z · Volume 3: Engenharia e concorrência">
+<meta property="og:description" content="Escreva Python que outras pessoas conseguem manter e que faz várias coisas ao mesmo tempo: projetos, testes, tipagem, SOLID, segurança, performance,…">
+<meta property="og:url" content="https://pythondeaaz.com.br/livro-3.html">
+<meta property="og:image" content="https://pythondeaaz.com.br/assets/img/og-livro-3.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Python de A a Z · Volume 3: Engenharia e concorrência">
+<meta name="twitter:description" content="Escreva Python que outras pessoas conseguem manter e que faz várias coisas ao mesmo tempo: projetos, testes, tipagem, SOLID, segurança, performance,…">
+<meta name="twitter:image" content="https://pythondeaaz.com.br/assets/img/og-livro-3.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Python de A a Z, Volume 3: Engenharia e concorrência","url":"https://pythondeaaz.com.br/livro-3.html","image":"https://pythondeaaz.com.br/assets/img/capa-3-960.webp","description":"Escreva Python que outras pessoas conseguem manter e que faz várias coisas ao mesmo tempo: projetos, testes, tipagem, SOLID, segurança, performance, threads, processos e asyncio.","author":{"@type":"Person","name":"Tiago Silva","url":"https://www.linkedin.com/in/tiagoluizrs/"},"inLanguage":"pt-BR","bookFormat":"https://schema.org/Paperback","numberOfPages":426,"datePublished":"2026-10","isPartOf":{"@type":"BookSeries","name":"Python de A a Z"},"position":3,"workExample":[{"@type":"Book","bookFormat":"https://schema.org/Paperback","inLanguage":"pt-BR"},{"@type":"Book","bookFormat":"https://schema.org/EBook","inLanguage":"pt-BR"}],"offers":[{"@type":"Offer","name":"Impresso","price":"79.97","priceCurrency":"BRL","url":"https://pythondeaaz.com.br/livro-3.html"},{"@type":"Offer","name":"E-book","price":"43.98","priceCurrency":"BRL","url":"https://pythondeaaz.com.br/livro-3.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://pythondeaaz.com.br/index.html"},{"@type":"ListItem","position":2,"name":"Os livros","item":"https://pythondeaaz.com.br/index.html#colecao"},{"@type":"ListItem","position":3,"name":"Volume 3","item":"https://pythondeaaz.com.br/livro-3.html"}]}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.min.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-vol="3">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="topo">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Python de A a Z, página inicial">Python <span>de</span> <b>A a Z</b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#trilha">Trilha</a>
+      <a href="index.html#autor">O autor</a>
+      <a class="btn btn--dark btn--sm" href="index.html#colecao">Ver a coleção</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<div class="wrap crumbs" aria-label="Você está em"><nav><a href="index.html">Início</a><span>/</span><a href="index.html#colecao">Os livros</a><span>/</span><b>Volume 3</b></nav></div>
+<section class="bookhero" aria-labelledby="titulo">
+  <div class="wrap bookhero__grid">
+    <div class="bookhero__cover reveal"><img src="assets/img/capa-3-960.webp" srcset="assets/img/capa-3-480.webp 480w, assets/img/capa-3-960.webp 960w" sizes="(max-width: 640px) 80vw, 400px" width="960" height="1380" alt="Capa do Volume 3: Engenharia e concorrência" fetchpriority="high"></div>
+    <div class="bookhero__info">
+      <span class="pill reveal">Volume 3 de 5</span>
+      <h1 class="display reveal" id="titulo" style="--i:1">Python de A a Z: <span>Engenharia e concorrência</span></h1>
+      <p class="by reveal" style="--i:2">por Tiago Silva</p>
+      <!-- avaliações (estrelas, nota e contagem) ocultas por enquanto -->
+      <p class="lead reveal" style="--i:3">Escreva Python que outras pessoas conseguem manter e que faz várias coisas ao mesmo tempo: projetos, testes, tipagem, SOLID, segurança, performance, threads, processos e asyncio.</p>
+      <div class="buybox reveal" style="--i:4">
+        <div class="prices">
+          <div class="price"><small>Impresso</small><b>R$ 79,97</b></div>
+          <div class="price"><small>E-book</small><b>R$ 43,98</b></div>
+        </div>
+        <div class="buybox__actions">
+          <a class="btn btn--v" href="#" data-todo="loja-3">Comprar na loja <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          <a class="btn btn--white" href="#" data-todo="amostra-3">Ler amostra</a>
+        </div>
+      </div>
+      <dl class="ficha reveal" style="--i:5">
+        <div><dt>Páginas</dt><dd>426</dd></div>
+        <div><dt>Idioma</dt><dd>Português</dd></div>
+        <div><dt>Publicação</dt><dd>10/2026</dd></div>
+        <div><dt>Versão do Python</dt><dd>3.15</dd></div>
+        <div><dt>Formatos</dt><dd>Impresso e e-book (ePub)</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap about__grid">
+    <div class="about__text">
+      <p class="eyebrow reveal">Sobre este livro</p>
+      <h2 class="display reveal" style="--i:1">Do script que funciona ao software profissional</h2>
+      <p>Escrever código que roda é só o começo. Fazê-lo sobreviver a anos de manutenção, a um time inteiro e a muitos usuários é engenharia. A primeira parte deste volume cobre estrutura de projetos, dependências, logging, testes automatizados, estilo, tipagem estática, os princípios SOLID, segurança, profiling, documentação, empacotamento e design de APIs: o que um projeto Python precisa ter para ser levado a sério.</p>
+<p>A segunda parte é de concorrência: como escolher entre threads, multiprocessamento, concurrent.futures e asyncio, o que o GIL realmente limita e o que muda com o free-threading do Python 3.15. Tudo com medições, para você decidir com números, e não por moda.</p>
+<p>É o volume que mais se aproxima do dia a dia de uma equipe: testes, qualidade, segurança e desempenho são cobrados em vagas de desenvolvimento Python plenas e sêniores. Dominar esses assuntos é o que transforma quem programa em quem projeta sistemas, e completa o caminho para ser um especialista Python.</p>
+      <div class="card-dark reveal"><h3>Por onde começar</h3><p>Se você nunca programou, comece pelo Volume 1. Este volume pressupõe a base dos Volumes 1 e 2, não os livros em si: se você já escreve classes com __init__, __repr__ e herança, usa decoradores e escreve geradores, pode começar daqui. Se faltar algo, o Volume 2 cobre. Os cinco volumes formam a coleção completa, mas cada um se sustenta sozinho.</p></div>
+      <div class="card-soft reveal"><h3>O que você vai aprender</h3><ul>
+<li>Estruturar projetos, gerenciar dependências e configurar logging</li>
+<li>Escrever testes automatizados e manter o estilo e a qualidade do código</li>
+<li>Usar tipagem estática e aplicar os princípios SOLID em Python</li>
+<li>Programar com segurança, medir a performance (profiling) e proteger segredos</li>
+<li>Documentar, empacotar e publicar no PyPI, e projetar APIs que se refatoram bem</li>
+<li>Escolher entre threads, multiprocessamento, concurrent.futures e asyncio</li>
+<li>Decidir sobre concorrência com base em medições, incluindo o free-threading do Python 3.15</li>
+</ul></div>
+    </div>
+    <div class="toc-wrap" id="sumario">
+      <h2>Sumário</h2>
+      <p>19 capítulos. Toque em um item para ver do que ele trata.</p>
+      <div class="toc"><div class="toc__scroll" data-lenis-prevent>
+<div class="toc__part">Parte 1: Engenharia de Software</div>
+<details><summary><span class="toc__n">1</span><span class="toc__t">Estrutura de Projetos</span><span class="toc__p">p. 39</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">O layout src/, o pyproject.toml e a separação das regras de negócio da entrada e saída: como organizar um projeto instalável.</div></details>
+<details><summary><span class="toc__n">2</span><span class="toc__t">Gerenciamento de Dependências</span><span class="toc__p">p. 57</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Declarar, resolver e travar dependências no uv.lock, para que o mesmo conjunto de pacotes rode em qualquer máquina.</div></details>
+<details><summary><span class="toc__n">3</span><span class="toc__t">Logging</span><span class="toc__p">p. 77</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Loggers, filtros, formatadores e handlers: registrar o que o programa faz de um jeito configurável e útil em produção.</div></details>
+<details><summary><span class="toc__n">4</span><span class="toc__t">Testes Automatizados</span><span class="toc__p">p. 101</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Escrever testes que dão uma rede de segurança para mudar o código sem medo.</div></details>
+<details><summary><span class="toc__n">5</span><span class="toc__t">Estilo e Qualidade de Código</span><span class="toc__p">p. 125</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">PEP 8, formatador, linter e métricas: deixar as máquinas discutirem estilo para você discutir o que importa.</div></details>
+<details><summary><span class="toc__n">6</span><span class="toc__t">Tipagem Estática</span><span class="toc__p">p. 147</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Anotar o código com tipos e deixar o verificador achar os erros antes de executar.</div></details>
+<details><summary><span class="toc__n">7</span><span class="toc__t">Princípios SOLID em Python</span><span class="toc__p">p. 171</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Os cinco princípios SOLID aplicados em Python, com exemplos antes e depois.</div></details>
+<details><summary><span class="toc__n">8</span><span class="toc__t">Segurança e Programação Defensiva</span><span class="toc__p">p. 193</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">As falhas de segurança mais comuns em código Python e como escrever código que não confia no que recebe.</div></details>
+<details><summary><span class="toc__n">9</span><span class="toc__t">Profiling e Performance</span><span class="toc__p">p. 215</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Medir antes de otimizar: onde o tempo e a memória realmente vão, e como achar o gargalo.</div></details>
+<details><summary><span class="toc__n">10</span><span class="toc__t">Documentação de Código e de Projetos</span><span class="toc__p">p. 237</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Docstrings, README e guias: escrever, junto do código, o que ele não consegue dizer sozinho.</div></details>
+<details><summary><span class="toc__n">11</span><span class="toc__t">Empacotamento e Publicação no PyPI</span><span class="toc__p">p. 257</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Gerar wheel e sdist e publicar no PyPI, para que qualquer pessoa rode pip install no seu pacote.</div></details>
+<details><summary><span class="toc__n">12</span><span class="toc__t">Configuração e Gerenciamento de Segredos</span><span class="toc__p">p. 279</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Separar a configuração do código e guardar segredos com segurança entre desenvolvimento e produção.</div></details>
+<details><summary><span class="toc__n">13</span><span class="toc__t">Design de APIs e Refatoração</span><span class="toc__p">p. 301</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Projetar interfaces fáceis de usar certo e difíceis de usar errado, e refatorar sem quebrar o que funciona.</div></details>
+<div class="toc__part">Parte 2: Concorrência e Paralelismo</div>
+<details><summary><span class="toc__n">14</span><span class="toc__t">Escolhendo o Modelo de Concorrência</span><span class="toc__p">p. 329</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Concorrência, paralelismo e como escolher entre threads, processos, asyncio, free-threading e subinterpretadores.</div></details>
+<details><summary><span class="toc__n">15</span><span class="toc__t">Threads e Concorrência</span><span class="toc__p">p. 345</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Threads: ótimas para esperar E/S, e como evitar corridas e deadlocks com travas, eventos e filas.</div></details>
+<details><summary><span class="toc__n">16</span><span class="toc__t">Multiprocessamento</span><span class="toc__p">p. 363</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Vários interpretadores, cada um com o seu GIL: usar todos os núcleos em tarefas de CPU e o preço disso.</div></details>
+<details><summary><span class="toc__n">17</span><span class="toc__t">concurrent.futures</span><span class="toc__p">p. 379</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Uma interface única para pools de threads, processos e subinterpretadores: troque o modelo trocando uma classe.</div></details>
+<details><summary><span class="toc__n">18</span><span class="toc__t">Programação Assíncrona com asyncio</span><span class="toc__p">p. 393</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">Milhares de tarefas cooperativas em uma só thread: o laço de eventos, await e as armadilhas do código assíncrono.</div></details>
+<details><summary><span class="toc__n">19</span><span class="toc__t">Free-Threading e Subinterpretadores</span><span class="toc__p">p. 411</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d">O Python sem GIL e os subinterpretadores: paralelismo de verdade, e quando vale a pena usá-lo.</div></details>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Avaliações: ocultas por enquanto (remova o atributo hidden quando houver avaliações reais) -->
+<section class="reviews section" id="avaliacoes" hidden>
+  <div class="wrap">
+    <p class="eyebrow">Avaliações</p>
+    <h2 class="display" style="margin-top:10px;font-size:clamp(32px,5vw,44px)">O que os leitores dizem</h2>
+    <div class="reviews__grid"><figure class="review" style="margin:0"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote style="margin:0">Texto da avaliação.</blockquote><figcaption><b>Nome Sobrenome</b></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="section others">
+  <div class="wrap">
+    <h2 class="display reveal">Continue a trilha</h2>
+    <div class="others__grid">
+<a class="reveal" data-vol="1" style="--i:0" href="livro-1.html"><span class="card__cover"><img src="assets/img/capa-1-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 1: Fundamentos</strong></a>
+<a class="reveal" data-vol="2" style="--i:1" href="livro-2.html"><span class="card__cover"><img src="assets/img/capa-2-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 2: Domínio da linguagem</strong></a>
+<a class="reveal" data-vol="4" style="--i:2" href="livro-4.html"><span class="card__cover"><img src="assets/img/capa-4-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 4: Dados, mundo real e produção</strong></a>
+<a class="reveal" data-vol="5" style="--i:3" href="livro-5.html"><span class="card__cover"><img src="assets/img/capa-5-480.webp" width="480" height="690" alt="" loading="lazy"></span><strong>Volume 5: Padrões de projeto</strong></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="logo">Python de A a Z</span>
+    <nav aria-label="Rodapé">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#autor">O autor</a>
+      <a href="outras.html">Outras obras</a>
+      <a href="#" data-todo="contato">Contato</a>
+      <a href="#" data-todo="termos">Termos</a>
+    </nav>
+    <span>© 2026 Tiago Silva</span>
+  </div>
+</footer>
+<script src="js/app.min.js" defer></script>
+</body>
+</html>
