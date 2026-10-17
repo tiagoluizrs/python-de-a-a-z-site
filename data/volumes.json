@@ -22,7 +22,7 @@
    "Escrever código idiomático, o que os profissionais chamam de \"pythônico\"",
    "Consultar depressa o que precisa, com uma referência rápida e um glossário de 130 termos"
   ],
-  "price_print": "79,98",
+  "price_print": "79,99",
   "price_ebook": "43,98",
   "pages_total": 465,
   "pages_miolo": 464,
@@ -160,7 +160,7 @@
    "Aplicar metaprogramação e programação funcional, e olhar por dentro do CPython",
    "Acompanhar o que mudou em cada versão, do Python 3.8 ao 3.15, e evitar 25 pegadinhas clássicas"
   ],
-  "price_print": "79,97",
+  "price_print": "79,99",
   "price_ebook": "43,98",
   "pages_total": 569,
   "pages_miolo": 568,
@@ -301,7 +301,7 @@
    }
   ],
   "links": {
-   "print": null,
+   "print": "https://loja.uiclap.com/titulo/ua213625/",
    "ebook": null
   }
  },
@@ -327,7 +327,7 @@
    "Escolher entre threads, multiprocessamento, concurrent.futures e asyncio",
    "Decidir sobre concorrência com base em medições, incluindo o free-threading do Python 3.15"
   ],
-  "price_print": "79,97",
+  "price_print": "79,98",
   "price_ebook": "43,98",
   "pages_total": 427,
   "pages_miolo": 426,
@@ -460,7 +460,7 @@
   ],
   "appendices": [],
   "links": {
-   "print": null,
+   "print": "https://loja.uiclap.com/titulo/ua213659",
    "ebook": null
   }
  },
@@ -644,7 +644,7 @@
    }
   ],
   "links": {
-   "print": null,
+   "print": "https://loja.uiclap.com/titulo/ua213664",
    "ebook": null
   }
  },
@@ -672,8 +672,8 @@
   ],
   "price_print": "79,98",
   "price_ebook": "43,98",
-  "pages_total": 543,
-  "pages_miolo": 542,
+  "pages_total": 547,
+  "pages_miolo": 546,
   "chapters_total": 32,
   "parts": [
    {
@@ -682,43 +682,43 @@
      {
       "n": 1,
       "title": "O que São Padrões de Projeto",
-      "page": 43,
+      "page": 45,
       "desc": "O que é um padrão de projeto, de onde vieram, como ler cada um neste volume e o que o Python muda."
      },
      {
       "n": 2,
       "title": "Factory Method",
-      "page": 59,
+      "page": 61,
       "desc": "Tirar de quem usa a decisão de qual classe instanciar: quase sempre, em Python, um dicionário resolve."
      },
      {
       "n": 3,
       "title": "Abstract Factory",
-      "page": 71,
+      "page": 75,
       "desc": "Criar famílias de objetos que combinam entre si, sem que o código saiba a qual família pertencem."
      },
      {
       "n": 4,
       "title": "Singleton",
-      "page": 83,
+      "page": 87,
       "desc": "Uma única instância, e por que em Python o próprio módulo já faz esse papel."
      },
      {
       "n": 5,
       "title": "Builder",
-      "page": 97,
+      "page": 101,
       "desc": "Montar objetos complexos passo a passo, e quando argumentos nomeados e dataclasses já bastam."
      },
      {
       "n": 6,
       "title": "Prototype",
-      "page": 109,
+      "page": 113,
       "desc": "Criar objetos copiando um modelo: copy, deepcopy e copy.replace, e as armadilhas da cópia rasa."
      },
      {
       "n": 7,
       "title": "Object Pool",
-      "page": 121,
+      "page": 125,
       "desc": "Reaproveitar objetos caros de criar, como conexões e buffers, com uma fila e um gerenciador de contexto."
      }
     ]
@@ -729,43 +729,43 @@
      {
       "n": 8,
       "title": "Adapter",
-      "page": 139,
+      "page": 143,
       "desc": "Fazer uma classe com a interface errada servir a quem espera outra, sem editar nenhuma das duas."
      },
      {
       "n": 9,
       "title": "Facade",
-      "page": 151,
+      "page": 155,
       "desc": "Uma porta de entrada simples para um subsistema complicado: muitas vezes, uma função ou o __init__.py."
      },
      {
       "n": 10,
       "title": "Decorator",
-      "page": 163,
+      "page": 167,
       "desc": "Acrescentar comportamento em camadas empilhadas, e a relação com o @decorador do Python."
      },
      {
       "n": 11,
       "title": "Composite",
-      "page": 177,
+      "page": 181,
       "desc": "Tratar um objeto e um grupo de objetos da mesma forma, em árvores como pastas e menus."
      },
      {
       "n": 12,
       "title": "Proxy",
-      "page": 191,
+      "page": 195,
       "desc": "Um substituto que controla o acesso ao objeto real: carga preguiçosa, proteção, cache e auditoria."
      },
      {
       "n": 13,
       "title": "Bridge",
-      "page": 205,
+      "page": 209,
       "desc": "Separar o que o objeto faz de como ele faz, para cada lado variar sozinho."
      },
      {
       "n": 14,
       "title": "Flyweight",
-      "page": 217,
+      "page": 221,
       "desc": "Economizar memória compartilhando o que se repete entre milhares de objetos."
      }
     ]
@@ -776,67 +776,67 @@
      {
       "n": 15,
       "title": "Strategy",
-      "page": 235,
+      "page": 239,
       "desc": "Algoritmos intercambiáveis: em Python, muitas vezes basta uma função."
      },
      {
       "n": 16,
       "title": "Observer",
-      "page": 247,
+      "page": 251,
       "desc": "Avisar vários interessados quando algo muda, sem acoplar quem avisa a quem escuta."
      },
      {
       "n": 17,
       "title": "Command",
-      "page": 261,
+      "page": 265,
       "desc": "Transformar uma ação em objeto para guardar, repetir, enfileirar e desfazer."
      },
      {
       "n": 18,
       "title": "Template Method",
-      "page": 275,
+      "page": 279,
       "desc": "Fixar o esqueleto de um algoritmo e deixar passos para outras partes preencherem."
      },
      {
       "n": 19,
       "title": "Iterator",
-      "page": 289,
+      "page": 293,
       "desc": "Percorrer uma coleção sem conhecer a sua estrutura: o protocolo embutido na linguagem e o gerador."
      },
      {
       "n": 20,
       "title": "State",
-      "page": 303,
+      "page": 307,
       "desc": "Mudar de comportamento conforme o estado, trocando a pilha de if por uma tabela de transições."
      },
      {
       "n": 21,
       "title": "Chain of Responsibility",
-      "page": 317,
+      "page": 321,
       "desc": "Passar um pedido por uma sequência de manipuladores, como nos middlewares de frameworks."
      },
      {
       "n": 22,
       "title": "Mediator",
-      "page": 331,
+      "page": 335,
       "desc": "Um objeto central que coordena colegas que não se conhecem, trocando uma teia por uma estrela."
      },
      {
       "n": 23,
       "title": "Memento",
-      "page": 347,
+      "page": 351,
       "desc": "Salvar e restaurar o estado de um objeto, o fundamento do desfazer, sem quebrar o encapsulamento."
      },
      {
       "n": 24,
       "title": "Visitor",
-      "page": 363,
+      "page": 367,
       "desc": "Acrescentar operações a uma hierarquia sem editar as classes, e como o singledispatch quase o faz desaparecer."
      },
      {
       "n": 25,
       "title": "Interpreter",
-      "page": 381,
+      "page": 385,
       "desc": "Representar a gramática de uma linguagem pequena e interpretá-la, e por que raramente você deve escrever tudo isso."
      }
     ]
@@ -847,43 +847,43 @@
      {
       "n": 26,
       "title": "Padrões Compostos: MVC",
-      "page": 403,
+      "page": 407,
       "desc": "Como os padrões se combinam: o MVC como composição de Observer, Command e Memento, no estilo Elm."
      },
      {
       "n": 27,
       "title": "Null Object",
-      "page": 421,
+      "page": 425,
       "desc": "Representar a ausência com um comportamento neutro, para nunca mais perguntar if x is None."
      },
      {
       "n": 28,
       "title": "Repository e Unit of Work",
-      "page": 441,
+      "page": 445,
       "desc": "Esconder onde os dados vivem e agrupar mudanças em uma transação que dá certo por inteiro ou não acontece."
      },
      {
       "n": 29,
       "title": "Specification",
-      "page": 461,
+      "page": 465,
       "desc": "Transformar regras de negócio em objetos que se combinam com E, OU e NÃO, e se reaproveitam em filtros e validações."
      },
      {
       "n": 30,
       "title": "Registry e Plugins",
-      "page": 481,
+      "page": 485,
       "desc": "Um catálogo em que as peças se cadastram sozinhas, e plugins vindos de outros módulos e pacotes."
      },
      {
       "n": 31,
       "title": "Injeção de Dependência",
-      "page": 501,
+      "page": 505,
       "desc": "Receber de fora o que o código precisa, em vez de criar por dentro: o caminho para código fácil de testar."
      },
      {
       "n": 32,
       "title": "Conclusão: Escolhendo o Padrão Certo",
-      "page": 521,
+      "page": 525,
       "desc": "Um guia para escolher o padrão certo, e para reconhecer quando a melhor escolha é não usar nenhum."
      }
     ]
@@ -891,7 +891,7 @@
   ],
   "appendices": [],
   "links": {
-   "print": null,
+   "print": "https://loja.uiclap.com/titulo/ua213677",
    "ebook": null
   }
  }
