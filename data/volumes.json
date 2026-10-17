@@ -52,19 +52,19 @@
      {
       "n": 4,
       "title": "Operadores e Expressões",
-      "page": 93,
+      "page": 95,
       "desc": "Operadores, precedência, curto-circuito e as expressões que parecem simples e surpreendem quem não conhece as regras."
      },
      {
       "n": 5,
       "title": "Estruturas de Dados: Sequências",
-      "page": 111,
+      "page": 113,
       "desc": "Listas, tuplas e ranges: como escolher entre elas sabendo o que cada operação custa."
      },
      {
       "n": 6,
       "title": "Estruturas de Dados: Coleções",
-      "page": 125,
+      "page": 127,
       "desc": "Dicionários e conjuntos: por que perguntar \"este item está aqui?\" custa o mesmo com dez ou com dez milhões de itens."
      },
      {
@@ -131,7 +131,11 @@
     "page": 451,
     "desc": "130 termos do volume em ordem alfabética, cada um com uma definição curta e o capítulo onde é explicado."
    }
-  ]
+  ],
+  "links": {
+   "print": "https://loja.uiclap.com/titulo/ua213612",
+   "ebook": null
+  }
  },
  {
   "n": 2,
@@ -295,7 +299,11 @@
     "page": 545,
     "desc": "25 armadilhas clássicas da linguagem, cada uma com código, saída real, a explicação e a correção."
    }
-  ]
+  ],
+  "links": {
+   "print": null,
+   "ebook": null
+  }
  },
  {
   "n": 3,
@@ -450,7 +458,11 @@
     ]
    }
   ],
-  "appendices": []
+  "appendices": [],
+  "links": {
+   "print": null,
+   "ebook": null
+  }
  },
  {
   "n": 4,
@@ -630,7 +642,11 @@
     "page": 449,
     "desc": "66 perguntas de entrevistas de Python, de júnior a sênior, com resposta curta, o que o entrevistador quer ouvir e onde estudar, mais exercícios de código ao vivo."
    }
-  ]
+  ],
+  "links": {
+   "print": null,
+   "ebook": null
+  }
  },
  {
   "n": 5,
@@ -873,6 +889,10 @@
     ]
    }
   ],
-  "appendices": []
+  "appendices": [],
+  "links": {
+   "print": null,
+   "ebook": null
+  }
  }
 ]

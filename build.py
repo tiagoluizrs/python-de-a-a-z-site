@@ -12,6 +12,8 @@ ROOT = Path(__file__).parent
 E = html.escape
 # Endereço público do site. Troque quando o domínio definitivo estiver no ar e rode `python build.py` de novo.
 SITE_URL = "https://pythondeaaz.com.br"
+CONTACT_EMAIL = "tiagoluizrs@gmail.com"
+DRF_MAILTO = f"mailto:{CONTACT_EMAIL}?subject=Quero%20saber%20quando%20sair%3A%20Django%20Rest%20Framework%20de%20A%20a%20Z"
 VOLUMES = json.loads((ROOT / "data" / "volumes.json").read_text(encoding="utf-8"))
 BOOKS = {b["key"]: b for b in json.loads((ROOT / "data" / "books.json").read_text(encoding="utf-8"))}
 
@@ -116,8 +118,8 @@ def layout(title, desc, body, extra_attrs="", og="assets/img/og-home.jpg", path=
       <a href="index.html#colecao">Os livros</a>
       <a href="index.html#autor">O autor</a>
       <a href="outras.html">Outras obras</a>
-      <a href="#" data-todo="contato">Contato</a>
-      <a href="#" data-todo="termos">Termos</a>
+      <a href="mailto:{CONTACT_EMAIL}">Contato</a>
+      <a href="termos.html">Termos</a>
     </nav>
     <span>© 2026 Tiago Silva</span>
   </div>
@@ -145,6 +147,12 @@ def accordion_row(n, title, right, content):
 
 
 # ---------------------------------------------------------------- volumes ---
+def buy_button(url, label, soon, cls):
+    if url:
+        return f'<a class="btn {cls}" href="{url}" target="_blank" rel="noopener">{label} {ARROW}</a>'
+    return f'<span class="btn {cls} is-soon" aria-disabled="true">{soon}</span>'
+
+
 def volume_page(v):
     n = v["n"]
     pages = v["pages_miolo"]
@@ -183,8 +191,8 @@ def volume_page(v):
           <div class="price"><small>E-book</small><b>R$ {v['price_ebook']}</b></div>
         </div>
         <div class="buybox__actions">
-          <a class="btn btn--v" href="#" data-todo="loja-{n}">Comprar na loja {ARROW}</a>
-          <a class="btn btn--white" href="#" data-todo="amostra-{n}">Ler amostra</a>
+          {buy_button(v['links']['print'], 'Comprar impresso na UICLAP', 'Impresso: em breve', 'btn--v')}
+          {buy_button(v['links']['ebook'], 'Comprar e-book na Amazon', 'E-book na Amazon: em breve', 'btn--white')}
         </div>
       </div>
       <dl class="ficha reveal" style="--i:5">
@@ -257,8 +265,8 @@ def volume_page(v):
             {"@type": "Book", "bookFormat": "https://schema.org/EBook", "inLanguage": "pt-BR"},
         ],
         "offers": [
-            {"@type": "Offer", "name": "Impresso", "price": v["price_print"].replace(",", "."), "priceCurrency": "BRL", "url": abs_url(path)},
-            {"@type": "Offer", "name": "E-book", "price": v["price_ebook"].replace(",", "."), "priceCurrency": "BRL", "url": abs_url(path)},
+            {"@type": "Offer", "name": "Impresso", "price": v["price_print"].replace(",", "."), "priceCurrency": "BRL", "url": v["links"]["print"] or abs_url(path)},
+            {"@type": "Offer", "name": "E-book", "price": v["price_ebook"].replace(",", "."), "priceCurrency": "BRL", "url": v["links"]["ebook"] or abs_url(path)},
         ],
     }
     return layout(
@@ -299,7 +307,7 @@ def external_page(b):
         pill = '<span class="pill pill--gold reveal">Lançamento · novembro de 2026</span>'
         buy = f"""<div class="buybox reveal" style="--i:4">
         <div><div class="price"><small>Formatos</small><b style="font-size:22px">Impresso e e-book (ePub)</b></div></div>
-        <div class="buybox__actions"><a class="btn btn--v" href="#" data-todo="avise-me-drf">Quero saber quando sair</a><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
+        <div class="buybox__actions"><a class="btn btn--v" href="{DRF_MAILTO}">Quero saber quando sair</a><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
       </div>"""
         og = "assets/img/capa-1-960.webp"
     else:
@@ -428,7 +436,7 @@ def outras_page():
   <h2 class="display"><a href="drf.html">{E(b['title'])}</a></h2><p class="sub">Casa do Código</p>
   <p class="txt">{E(b['subtitle'])}</p><div class="chips">{chips}</div>
   <p class="note" style="margin-top:16px"><b>Formatos:</b> impresso e e-book (ePub)</p>
-  <div class="actions"><a class="btn btn--v" href="drf.html">Ver detalhes e sumário</a><a class="btn btn--chip" href="#" data-todo="avise-me-drf">Quero saber quando sair</a></div></div>
+  <div class="actions"><a class="btn btn--v" href="drf.html">Ver detalhes e sumário</a><a class="btn btn--chip" href="{DRF_MAILTO}">Quero saber quando sair</a></div></div>
 </article>"""
             )
         else:
@@ -470,7 +478,50 @@ def outras_page():
     )
 
 
-PAGES = ["index.html"] + [f"livro-{n}.html" for n in range(1, 6)] + ["flask.html", "django.html", "drf.html", "outras.html"]
+def termos_page():
+    body = f"""{crumbs(("Início", "index.html"), ("Termos de uso e privacidade", None))}
+<section class="section">
+  <div class="wrap prose">
+    <p class="eyebrow reveal" style="color:var(--soft)">Atualizado em 17 de outubro de 2026</p>
+    <h1 class="display reveal" style="--i:1">Termos de uso e privacidade</h1>
+    <p class="lead reveal" style="--i:2">Regras simples para usar este site, e o que acontece com os seus dados: nenhum dado pessoal é coletado por aqui.</p>
+
+    <h2>1. Sobre este site</h2>
+    <p>Este site divulga a coleção <b>Python de A a Z</b> e outras obras de Tiago Silva. Ele não vende nada diretamente: as compras acontecem em lojas de terceiros, como a UICLAP, a Amazon e a Casa do Código, que têm seus próprios termos, preços e políticas.</p>
+
+    <h2>2. Preços e informações</h2>
+    <p>Preços, formatos, número de páginas, sumários e demais informações podem mudar. Procuramos mantê-los corretos, mas vale sempre o que a loja mostrar no momento da compra. Não há garantia de que as informações estejam livres de erros ou atualizadas.</p>
+
+    <h2>3. Direitos autorais</h2>
+    <p>Textos, sumários, capas, imagens e demais conteúdos deste site são © 2026 Tiago Silva, todos os direitos reservados. Você pode citar trechos curtos, com crédito e link para o site. A reprodução integral ou o uso comercial exigem autorização por escrito. Os exemplos de código dos livros ficam em um repositório público no GitHub, que traz a licença aplicável no próprio repositório.</p>
+
+    <h2>4. Marcas</h2>
+    <p>Python, Django, Flask e os demais nomes citados pertencem aos seus respectivos titulares. A citação não indica vínculo, patrocínio ou aprovação por parte deles.</p>
+
+    <h2>5. Privacidade</h2>
+    <p>Este site não tem cadastro, login, formulários, cookies próprios, ferramentas de análise de visitas nem publicidade. Por isso, <b>não coletamos dados pessoais</b> quando você navega por aqui. As fontes de texto e as imagens são servidas pelo próprio site.</p>
+    <p>O site é hospedado no GitHub Pages. O GitHub pode registrar dados técnicos de acesso, como o endereço IP, conforme a política de privacidade dele.</p>
+    <p>Se você escrever para o e-mail de contato, usaremos o seu endereço e a sua mensagem apenas para responder. Não compartilhamos esses dados com terceiros. Para pedir acesso, correção ou exclusão (direitos previstos na Lei Geral de Proteção de Dados, a LGPD), escreva para o mesmo e-mail.</p>
+
+    <h2>6. Links externos</h2>
+    <p>O site tem links para lojas, redes profissionais e outros endereços. Não controlamos esses sites e não nos responsabilizamos pelo conteúdo nem pelas políticas deles.</p>
+
+    <h2>7. Alterações</h2>
+    <p>Estes termos podem ser atualizados. A data da última atualização aparece no topo desta página.</p>
+
+    <h2>8. Contato</h2>
+    <p>Dúvidas, pedidos ou sugestões: <a href="mailto:{CONTACT_EMAIL}"><b>{CONTACT_EMAIL}</b></a>.</p>
+  </div>
+</section>"""
+    return layout(
+        "Termos de uso e privacidade · Python de A a Z",
+        "Termos de uso e privacidade do site Python de A a Z: preços e informações, direitos autorais, o que o site coleta (nenhum dado pessoal) e como falar com o autor.",
+        body, og="assets/img/og-home.jpg", path="termos.html",
+        crumbs_ld=[("Início", "index.html"), ("Termos de uso e privacidade", "termos.html")],
+    )
+
+
+PAGES = ["index.html"] + [f"livro-{n}.html" for n in range(1, 6)] + ["flask.html", "django.html", "drf.html", "outras.html", "termos.html"]
 
 
 def update_home():
@@ -543,6 +594,8 @@ def main():
         written.append(name)
     (ROOT / "outras.html").write_text(outras_page(), encoding="utf-8")
     written.append("outras.html")
+    (ROOT / "termos.html").write_text(termos_page(), encoding="utf-8")
+    written.append("termos.html")
     update_home()
     write_sitemap_and_robots()
     minify()

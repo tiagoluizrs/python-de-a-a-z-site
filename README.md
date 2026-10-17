@@ -35,7 +35,8 @@ O endereço público está em `SITE_URL` no topo do `build.py` (hoje `https://py
 - Celular: o leque fica parado; rolagem suave só com mouse/trackpad. Sem JavaScript o conteúdo continua visível.
 
 ## Pendências
-- Links da loja (`href="#"` com `data-todo`), "Contato" e "Termos".
+- Links da loja e da amostra (`href="#"` com `data-todo`): colocar quando as lojas estiverem no ar.
+- "Contato" abre o e-mail e "Termos" é a página `termos.html` (gerada pelo `build.py`; o texto está na função `termos_page`).
 - Avaliações: seções prontas e ocultas com `hidden` (remova o atributo quando houver avaliações reais).
 - Dados estruturados de preço dos volumes: confirmar quando as lojas estiverem no ar.
 
