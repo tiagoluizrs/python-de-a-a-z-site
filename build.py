@@ -78,12 +78,24 @@ AUTHOR_LD = {"@type": "Person", "name": "Tiago Silva", "url": "https://www.linke
 SERIES_LD = {"@type": "BookSeries", "name": "Python de A a Z"}
 
 
+GA_TAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-75W0L401ED"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-75W0L401ED');
+</script>
+"""
+
+
 def layout(title, desc, body, extra_attrs="", og="assets/img/og-home.jpg", path="index.html", ld=None, crumbs_ld=None):
     seo = seo_block(title, desc, path, og, (ld or []) + ([breadcrumb_ld(crumbs_ld)] if crumbs_ld else []))
     return f"""<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+{GA_TAG}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
