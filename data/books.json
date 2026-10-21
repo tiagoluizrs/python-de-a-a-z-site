@@ -429,7 +429,7 @@
  {
   "key": "drf",
   "title": "Django Rest Framework de A a Z",
-  "subtitle": "Aprenda a criar uma API REST segura, robusta e de alto desempenho com o Django REST Framework, preparada para ambientes reais de produção.",
+  "subtitle": "Domine o ecossistema das APIs REST com back-ends escaláveis",
   "headline": "Uma API REST segura, robusta e de alto desempenho, pronta para produção",
   "paragraphs": [
    "Neste livro, você aprenderá a criar uma API RESTful com o Django REST Framework, o maior toolkit para APIs REST que existe para o ecossistema Django. Considerado uma das soluções mais robustas da atualidade para esse tipo de desenvolvimento, o framework permite criar APIs de alta performance com facilidade de implementação e uma documentação excelente e extremamente útil.",
@@ -455,9 +455,26 @@
    "OpenAPI e Swagger",
    "Arquitetura limpa"
   ],
-  "facts": [],
-  "buy": null,
-  "toc_link": null,
+  "facts": [
+   [
+    "Páginas",
+    "334"
+   ],
+   [
+    "Publicação",
+    "10/2026"
+   ],
+   [
+    "ISBN",
+    "978-85-5519-442-9"
+   ],
+   [
+    "Formatos",
+    "Impresso, e-book (PDF e ePub) e e-book + impresso"
+   ]
+  ],
+  "buy": "https://www.casadocodigo.com.br/products/livro-django-rest",
+  "toc_link": "https://www.casadocodigo.com.br/pages/sumario-django-rest",
   "toc": [
    {
     "label": "Parte 1",
@@ -683,8 +700,12 @@
    "ink": "#2a0d0d",
    "accent": "#a11d20"
   },
-  "prices": null,
-  "cover": null,
-  "soon": true
+  "prices": {
+   "print": "69,90",
+   "ebook": "39,90",
+   "combo": "89,90"
+  },
+  "cover": "assets/img/drf.webp",
+  "soon": false
  }
 ]
