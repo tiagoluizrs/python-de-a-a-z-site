@@ -34,13 +34,18 @@ def abs_url(path):
     return SITE_URL.rstrip("/") + "/" + path.lstrip("/")
 
 
+def page_url(path):
+    """URL canônica: a Home é a raiz do domínio, não /index.html."""
+    return abs_url("" if path == "index.html" else path)
+
+
 def ld_script(data):
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "</script>"
 
 
 def seo_block(title, desc, path, og_image, ld_items, og_type="website"):
     """Todo o SEO do <head>: canonical, Open Graph, Twitter Card e dados estruturados (JSON-LD)."""
-    url = abs_url(path)
+    url = page_url(path)
     image = abs_url(og_image)
     lines = [
         f'<link rel="canonical" href="{url}">',
@@ -69,7 +74,7 @@ def breadcrumb_ld(items):
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": i, "name": name, "item": abs_url(path)} for i, (name, path) in enumerate(items, 1)
+            {"@type": "ListItem", "position": i, "name": name, "item": page_url(path)} for i, (name, path) in enumerate(items, 1)
         ],
     }
 
@@ -88,6 +93,22 @@ GA_TAG = """<!-- Google tag (gtag.js) -->
   gtag('config', 'G-75W0L401ED');
 </script>
 """
+
+
+# Frases que as pessoas buscam (título e descrição das páginas dos volumes).
+SEO_VOL = {
+    1: ("Livro de Python para iniciantes (Vol. 1)",
+        "Livro de Python do zero, para quem nunca programou: ambiente, tipos, memória, coleções, funções e arquivos, com exercícios e testes. Python 3.15."),
+    2: ("Livro de Python avançado (Vol. 2)",
+        "Python avançado: closures, decoradores, geradores, modelo de dados, orientação a objetos avançada e o CPython por dentro. Livro com exercícios e gabarito."),
+    3: ("Livro de Python profissional (Vol. 3)",
+        "Python profissional: estrutura de projetos, testes, tipagem, SOLID, segurança, desempenho, threads, processos e asyncio. Livro com exercícios e medições."),
+    4: ("Livro de Python com bancos de dados (Vol. 4)",
+        "Python com bancos de dados (PostgreSQL, MySQL, Oracle, SQL Server), APIs, Pandas, Polars, Docker, filas e pipelines, mais 66 perguntas de entrevista."),
+    5: ("Padrões de projeto em Python (Vol. 5)",
+        "Padrões de projeto em Python (design patterns): a versão clássica, a pythônica, quando não usar e o custo medido. Do Strategy ao Repository."),
+}
+
 
 
 def layout(title, desc, body, extra_attrs="", og="assets/img/og-home.jpg", path="index.html", ld=None, crumbs_ld=None):
@@ -129,6 +150,7 @@ def layout(title, desc, body, extra_attrs="", og="assets/img/og-home.jpg", path=
     <nav aria-label="Rodapé">
       <a href="index.html#colecao">Os livros</a>
       <a href="index.html#autor">O autor</a>
+      <a href="{GUIA_PATH}">Python do zero ao avançado</a>
       <a href="outras.html">Outras obras</a>
       <a href="mailto:{CONTACT_EMAIL}">Contato</a>
       <a href="termos.html">Termos</a>
@@ -256,7 +278,7 @@ def volume_page(v):
     </div>
   </div>
 </section>"""
-    title = f"Python de A a Z · Volume {n}: {v['topic']}"
+    title = f"{SEO_VOL[n][0]} | Python de A a Z"
     path = f"livro-{n}.html"
     book = {
         "@context": "https://schema.org",
@@ -264,7 +286,7 @@ def volume_page(v):
         "name": f"Python de A a Z, Volume {n}: {v['topic']}",
         "url": abs_url(path),
         "image": abs_url(f"assets/img/capa-{n}-960.webp"),
-        "description": v["lead"],
+        "description": SEO_VOL[n][1],
         "author": AUTHOR_LD,
         "inLanguage": "pt-BR",
         "bookFormat": "https://schema.org/Paperback",
@@ -277,12 +299,13 @@ def volume_page(v):
             {"@type": "Book", "bookFormat": "https://schema.org/EBook", "inLanguage": "pt-BR"},
         ],
         "offers": [
-            {"@type": "Offer", "name": "Impresso", "price": v["price_print"].replace(",", "."), "priceCurrency": "BRL", "url": v["links"]["print"] or abs_url(path)},
-            {"@type": "Offer", "name": "E-book", "price": v["price_ebook"].replace(",", "."), "priceCurrency": "BRL", "url": v["links"]["ebook"] or abs_url(path)},
+            {"@type": "Offer", "name": label, "price": v[price].replace(",", "."), "priceCurrency": "BRL", "url": v["links"][fmt],
+             "availability": "https://schema.org/InStock"}
+            for label, price, fmt in (("Impresso", "price_print", "print"), ("E-book", "price_ebook", "ebook")) if v["links"][fmt]
         ],
     }
     return layout(
-        title, trunc(v["lead"]), body, f' data-vol="{n}"', og=f"assets/img/og-livro-{n}.jpg", path=path, ld=[book],
+        title, SEO_VOL[n][1], body, f' data-vol="{n}"', og=f"assets/img/og-livro-{n}.jpg", path=path, ld=[book],
         crumbs_ld=[("Início", "index.html"), ("Os livros", "index.html#colecao"), (f"Volume {n}", path)],
     )
 
@@ -494,7 +517,7 @@ def termos_page():
     body = f"""{crumbs(("Início", "index.html"), ("Termos de uso e privacidade", None))}
 <section class="section">
   <div class="wrap prose">
-    <p class="eyebrow reveal" style="color:var(--soft)">Atualizado em 17 de outubro de 2026</p>
+    <p class="eyebrow reveal" style="color:var(--soft)">Atualizado em 21 de outubro de 2026</p>
     <h1 class="display reveal" style="--i:1">Termos de uso e privacidade</h1>
     <p class="lead reveal" style="--i:2">Regras simples para usar este site, e o que acontece com os seus dados: nenhum dado pessoal é coletado por aqui.</p>
 
@@ -511,7 +534,8 @@ def termos_page():
     <p>Python, Django, Flask e os demais nomes citados pertencem aos seus respectivos titulares. A citação não indica vínculo, patrocínio ou aprovação por parte deles.</p>
 
     <h2>5. Privacidade</h2>
-    <p>Este site não tem cadastro, login, formulários, cookies próprios, ferramentas de análise de visitas nem publicidade. Por isso, <b>não coletamos dados pessoais</b> quando você navega por aqui. As fontes de texto e as imagens são servidas pelo próprio site.</p>
+    <p>Este site não tem cadastro, login, formulários nem publicidade, e não pede nenhum dado pessoal para você navegar. As fontes de texto e as imagens são servidas pelo próprio site.</p>
+    <p>Para entender quantas pessoas visitam o site e quais páginas interessam mais, usamos o <b>Google Analytics</b>. Ele pode usar cookies e coletar dados de uso de forma agregada, como as páginas visitadas, o tipo de dispositivo, o navegador e a localização aproximada. Esses dados são tratados pelo Google, conforme a política de privacidade dele, e não usamos o Analytics para identificar você. Você pode bloquear os cookies nas configurações do navegador ou usar um bloqueador de rastreamento.</p>
     <p>O site é hospedado no GitHub Pages. O GitHub pode registrar dados técnicos de acesso, como o endereço IP, conforme a política de privacidade dele.</p>
     <p>Se você escrever para o e-mail de contato, usaremos o seu endereço e a sua mensagem apenas para responder. Não compartilhamos esses dados com terceiros. Para pedir acesso, correção ou exclusão (direitos previstos na Lei Geral de Proteção de Dados, a LGPD), escreva para o mesmo e-mail.</p>
 
@@ -533,20 +557,107 @@ def termos_page():
     )
 
 
-PAGES = ["index.html"] + [f"livro-{n}.html" for n in range(1, 6)] + ["flask.html", "django.html", "drf.html", "outras.html", "termos.html"]
+GUIA_PATH = "livro-python-do-basico-ao-avancado.html"
+GUIA_FAQ = [
+    ("Qual livro de Python devo ler se nunca programei?",
+     "O Volume 1, Fundamentos. Ele parte do zero absoluto e não exige nenhum conhecimento prévio de programação: instala o ambiente, explica variáveis, tipos e memória, e avança por coleções, funções, texto, arquivos, datas e a biblioteca padrão."),
+    ("Esta coleção ensina Python do básico ao avançado?",
+     "Sim. O Volume 1 cobre a base. O Volume 2 aprofunda a linguagem (decoradores, geradores, modelo de dados, orientação a objetos avançada). O Volume 3 trata de engenharia e concorrência, o Volume 4 de bancos de dados, APIs, análise de dados e produção, e o Volume 5 de padrões de projeto."),
+    ("Preciso ler os 5 volumes em ordem?",
+     "Não. Cada volume foi escrito para ser lido sozinho, com a lista de pré-requisitos no começo. Quem está começando deve seguir a ordem; quem já programa pode entrar direto no volume de que precisa."),
+    ("Qual versão do Python os livros usam?",
+     "O Python 3.15, lançado em outubro de 2026. Recursos de versões anteriores trazem o selo da versão em que surgiram, e o Apêndice A do Volume 2 reúne as novidades do Python 3.8 ao 3.15."),
+    ("Os livros têm exercícios?",
+     "Sim. Todo capítulo traz exercícios com gabarito e testes automatizados. Todo o código, os exercícios e os testes estão em um repositório público no GitHub, organizado por volume e por capítulo."),
+    ("Onde comprar?",
+     "A versão impressa de cada volume está na UICLAP, com o link na página de cada livro. O e-book na Amazon ainda não foi lançado."),
+    ("Quem escreveu a coleção?",
+     "Tiago Silva, professor universitário e analista de sistemas, com mais de 10 anos de experiência com Python. A coleção reúne as experiências de mercado, as recomendações e as dores que ele viveu nesses anos."),
+]
+
+
+def guia_page():
+    rows = []
+    levels = {1: "Iniciante", 2: "Intermediário a avançado", 3: "Avançado", 4: "Avançado, com foco em mercado", 5: "Avançado"}
+    for v in VOLUMES:
+        n = v["n"]
+        rows.append(
+            f'<li><a href="livro-{n}.html"><b>Volume {n}: {E(v["topic"])}</b></a> ({levels[n]}). {E(v["short"])}</li>'
+        )
+    learn = "".join(f"<li>{E(x)}</li>" for x in (
+        "Montar um ambiente profissional com ambientes virtuais e o uv",
+        "Entender variáveis, tipos, memória, listas, dicionários e conjuntos",
+        "Dominar decoradores, geradores, o modelo de dados e a orientação a objetos avançada",
+        "Estruturar projetos, escrever testes, usar tipagem estática e aplicar SOLID",
+        "Escolher entre threads, multiprocessamento e asyncio com base em medições",
+        "Trabalhar com SQL, PostgreSQL, MySQL, SQLAlchemy, Redis e MongoDB",
+        "Consumir APIs, validar dados com Pydantic e analisar dados com Pandas e Polars",
+        "Levar o código para produção com Docker, filas e pipelines",
+        "Aplicar padrões de projeto na versão pythônica, sabendo quando não usar",
+    ))
+    faq = "".join(f"<h3>{E(q)}</h3>\n    <p>{E(a)}</p>\n    " for q, a in GUIA_FAQ)
+    body = f"""{crumbs(("Início", "index.html"), ("Livro de Python do básico ao avançado", None))}
+<section class="section">
+  <div class="wrap prose">
+    <p class="eyebrow reveal" style="color:var(--soft)">Python do zero ao avançado</p>
+    <h1 class="display reveal" style="--i:1">Livro de Python do básico ao avançado</h1>
+    <p class="lead reveal" style="--i:2">Python de A a Z é uma coleção de 5 volumes para aprender Python do zero ao avançado, em português: do primeiro print() ao código em produção, com exercícios, testes automatizados e todo o código em um repositório público.</p>
+
+    <h2>Python do zero ao avançado em 5 volumes</h2>
+    <p>A coleção foi pensada como um caminho. O primeiro volume é um livro de Python para iniciantes. Os seguintes levam você, volume a volume, até o nível profissional: dominar a linguagem, escrever software que outras pessoas conseguem manter, trabalhar com dados e produção, e projetar com padrões de projeto.</p>
+    <ul>{"".join(rows)}</ul>
+
+    <h2>Qual volume ler primeiro?</h2>
+    <ul>
+      <li><b>Nunca programou:</b> comece pelo <a href="livro-1.html">Volume 1</a>. Nenhum conhecimento prévio é necessário.</li>
+      <li><b>Já programa em outra linguagem:</b> use o Volume 1 como referência (capítulos 3 a 9) ou vá ao <a href="livro-2.html">Volume 2</a>.</li>
+      <li><b>Já escreve scripts em Python e quer entender a linguagem a fundo:</b> <a href="livro-2.html">Volume 2</a>.</li>
+      <li><b>Quer escrever Python profissional, com testes, tipagem e concorrência:</b> <a href="livro-3.html">Volume 3</a>.</li>
+      <li><b>Quer trabalhar com bancos de dados, APIs, análise de dados e produção:</b> <a href="livro-4.html">Volume 4</a>.</li>
+      <li><b>Quer aprender padrões de projeto em Python:</b> <a href="livro-5.html">Volume 5</a>, que pressupõe a base dos volumes anteriores.</li>
+    </ul>
+
+    <h2>O que você vai aprender</h2>
+    <ul>{learn}</ul>
+
+    <h2>Python e o mercado de trabalho</h2>
+    <p>Vagas de Python costumam pedir mais do que sintaxe: uma base sólida, engenharia (testes, segurança e desempenho) e produção (bancos de dados, APIs, Docker e filas). Cada volume cobre uma etapa desse caminho. O Volume 4 reúne ainda 66 perguntas de entrevista técnica, com respostas, de júnior a sênior.</p>
+
+    <h2>Como são os livros</h2>
+    <p>São 2.490 páginas no total, escritas com o <b>Python 3.15</b>. Todo capítulo traz exemplos executáveis, as pegadinhas que derrubam quem está começando, exercícios com gabarito e testes automatizados. O código, os exercícios e os testes ficam no <a href="https://github.com/tiagoluizrs/python-de-a-a-z-codigos" target="_blank" rel="noopener">repositório da coleção no GitHub</a>. Cada volume é uma obra de referência: não é preciso lê-lo de capa a capa.</p>
+
+    <h2>Perguntas frequentes</h2>
+    {faq}
+    <p><a class="btn btn--dark" href="index.html#colecao">Ver os 5 volumes</a> <a class="btn btn--gold" href="https://loja.uiclap.com/titulo/ua213612" target="_blank" rel="noopener">Comprar o Volume 1</a></p>
+  </div>
+</section>"""
+    faq_ld = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in GUIA_FAQ],
+    }
+    return layout(
+        "Livro de Python do básico ao avançado | Python de A a Z",
+        "Livro de Python do zero ao avançado em 5 volumes: fundamentos, domínio da linguagem, engenharia, dados e produção e padrões de projeto. Veja qual ler primeiro.",
+        body, og="assets/img/og-home.jpg", path=GUIA_PATH, ld=[faq_ld],
+        crumbs_ld=[("Início", "index.html"), ("Livro de Python do básico ao avançado", GUIA_PATH)],
+    )
+
+
+PAGES = ["index.html", GUIA_PATH] + [f"livro-{n}.html" for n in range(1, 6)] + ["flask.html", "django.html", "drf.html", "outras.html", "termos.html"]
 
 
 def update_home():
     """Injeta o SEO na Home (index.html é escrita à mão; o bloco entre os marcadores é gerado aqui)."""
     p = ROOT / "index.html"
     text = p.read_text(encoding="utf-8")
-    title = "Python de A a Z · A bíblia do programador Python em 5 volumes"
+    title = "Livro de Python do zero ao avançado | Python de A a Z (5 volumes)"
     m = __import__("re").search(r'<meta name="description" content="([^"]*)">', text)
     desc = html.unescape(m.group(1))
     graph = {
         "@context": "https://schema.org",
         "@graph": [
-            {"@type": "WebSite", "@id": abs_url("#site"), "name": "Python de A a Z", "url": abs_url("index.html"), "inLanguage": "pt-BR", "publisher": {"@id": abs_url("#autor")}},
+            {"@type": "WebSite", "@id": abs_url("#site"), "name": "Python de A a Z", "url": abs_url(""), "inLanguage": "pt-BR", "publisher": {"@id": abs_url("#autor")}},
             {"@type": "Person", "@id": abs_url("#autor"), "name": "Tiago Silva", "url": "https://www.linkedin.com/in/tiagoluizrs/", "image": abs_url("assets/img/autor-720.webp"),
              "jobTitle": "Analista de Sistemas e professor universitário", "knowsAbout": ["Python", "Java", "JavaScript", "Engenharia de software"]},
             {"@type": "ItemList", "name": "A coleção Python de A a Z", "itemListElement": [
@@ -560,9 +671,24 @@ def update_home():
     assert t == title, "o <title> da Home mudou; ajuste o título em update_home()"
 
 
+def lastmod(path):
+    """Data do último commit do arquivo; se ele foi alterado e ainda não commitado (ou é novo), a data de hoje."""
+    import datetime
+    import subprocess
+
+    try:
+        dirty = subprocess.run(["git", "status", "--porcelain", "--", path], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        if dirty:
+            return datetime.date.today().isoformat()
+        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", path], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        return out or datetime.date.today().isoformat()
+    except OSError:
+        return datetime.date.today().isoformat()
+
+
 def write_sitemap_and_robots():
     urls = "\n".join(
-        f"  <url><loc>{abs_url('' if p == 'index.html' else p)}</loc><changefreq>monthly</changefreq><priority>{'1.0' if p == 'index.html' else '0.8'}</priority></url>"
+        f"  <url><loc>{page_url(p)}</loc><lastmod>{lastmod(p)}</lastmod><changefreq>monthly</changefreq><priority>{'1.0' if p == 'index.html' else '0.9' if p == GUIA_PATH or p.startswith('livro-') else '0.8'}</priority></url>"
         for p in PAGES
     )
     (ROOT / "sitemap.xml").write_text(
@@ -608,6 +734,8 @@ def main():
     written.append("outras.html")
     (ROOT / "termos.html").write_text(termos_page(), encoding="utf-8")
     written.append("termos.html")
+    (ROOT / GUIA_PATH).write_text(guia_page(), encoding="utf-8")
+    written.append(GUIA_PATH)
     update_home()
     write_sitemap_and_robots()
     minify()

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pythondeaaz.com.br/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://pythondeaaz.com.br/livro-1.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/livro-2.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/livro-3.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/livro-4.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/livro-5.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/flask.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/django.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/drf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/outras.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pythondeaaz.com.br/termos.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pythondeaaz.com.br/</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://pythondeaaz.com.br/livro-python-do-basico-ao-avancado.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pythondeaaz.com.br/livro-1.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pythondeaaz.com.br/livro-2.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pythondeaaz.com.br/livro-3.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pythondeaaz.com.br/livro-4.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pythondeaaz.com.br/livro-5.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pythondeaaz.com.br/flask.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pythondeaaz.com.br/django.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pythondeaaz.com.br/drf.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pythondeaaz.com.br/outras.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pythondeaaz.com.br/termos.html</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
