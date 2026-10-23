@@ -558,6 +558,17 @@ def termos_page():
 
 
 GUIA_PATH = "livro-python-do-basico-ao-avancado.html"
+def ebook_resposta():
+    """Texto sobre o e-book conforme os links da Amazon já existentes em data/volumes.json."""
+    ns = [v["n"] for v in VOLUMES if v["links"]["ebook"]]
+    if not ns:
+        return "O e-book na Amazon ainda não foi lançado."
+    if len(ns) == len(VOLUMES):
+        return "O e-book de todos os volumes está disponível na Amazon."
+    nomes = ", ".join(str(n) for n in ns[:-1]) + (" e " if len(ns) > 1 else "") + str(ns[-1])
+    return f"O e-book já está na Amazon para o{'s Volumes' if len(ns) > 1 else ' Volume'} {nomes}. Os demais chegam em breve."
+
+
 GUIA_FAQ = [
     ("Qual livro de Python devo ler se nunca programei?",
      "O Volume 1, Fundamentos. Ele parte do zero absoluto e não exige nenhum conhecimento prévio de programação: instala o ambiente, explica variáveis, tipos e memória, e avança por coleções, funções, texto, arquivos, datas e a biblioteca padrão."),
@@ -570,7 +581,7 @@ GUIA_FAQ = [
     ("Os livros têm exercícios?",
      "Sim. Todo capítulo traz exercícios com gabarito e testes automatizados. Todo o código, os exercícios e os testes estão em um repositório público no GitHub, organizado por volume e por capítulo."),
     ("Onde comprar?",
-     "A versão impressa de cada volume está na UICLAP, com o link na página de cada livro. O e-book na Amazon ainda não foi lançado."),
+     "A versão impressa de cada volume está na UICLAP, com o link na página de cada livro. " + ebook_resposta()),
     ("Quem escreveu a coleção?",
      "Tiago Silva, professor universitário e analista de sistemas, com mais de 10 anos de experiência com Python. A coleção reúne as experiências de mercado, as recomendações e as dores que ele viveu nesses anos."),
 ]
