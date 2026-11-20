@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-75W0L401ED"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-75W0L401ED');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast API de A a Z · Tiago Silva</title>
+<meta name="description" content="Construa APIs assíncronas, rápidas e prontas para produção em Python. Neste livro, você aprenderá a criar APIs com o FastAPI, um dos frameworks mais…">
+<meta name="theme-color" content="#16182c">
+<link rel="canonical" href="https://pythondeaaz.com.br/fastapi.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tiago Silva">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Python de A a Z">
+<meta property="og:title" content="Fast API de A a Z · Tiago Silva">
+<meta property="og:description" content="Construa APIs assíncronas, rápidas e prontas para produção em Python. Neste livro, você aprenderá a criar APIs com o FastAPI, um dos frameworks mais…">
+<meta property="og:url" content="https://pythondeaaz.com.br/fastapi.html">
+<meta property="og:image" content="https://pythondeaaz.com.br/assets/img/og-fastapi.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fast API de A a Z · Tiago Silva">
+<meta name="twitter:description" content="Construa APIs assíncronas, rápidas e prontas para produção em Python. Neste livro, você aprenderá a criar APIs com o FastAPI, um dos frameworks mais…">
+<meta name="twitter:image" content="https://pythondeaaz.com.br/assets/img/og-fastapi.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Fast API de A a Z","url":"https://pythondeaaz.com.br/fastapi.html","image":"https://pythondeaaz.com.br/assets/img/fastapi.webp","description":"Construa APIs assíncronas, rápidas e prontas para produção em Python","author":{"@type":"Person","name":"Tiago Silva","url":"https://www.linkedin.com/in/tiagoluizrs/"},"publisher":{"@type":"Organization","name":"Casa do Código","url":"https://www.casadocodigo.com.br"},"inLanguage":"pt-BR"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://pythondeaaz.com.br/"},{"@type":"ListItem","position":2,"name":"Outras obras","item":"https://pythondeaaz.com.br/outras.html"},{"@type":"ListItem","position":3,"name":"Fast API de A a Z","item":"https://pythondeaaz.com.br/fastapi.html"}]}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.min.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body style="--v-bg:#a9ddd3;--v-tint:#d6eee9;--v-ink:#0c2b29;--v-accent:#06817c">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="topo">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Python de A a Z, página inicial">Python <span>de</span> <b>A a Z</b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#trilha">Trilha</a>
+      <a href="index.html#autor">O autor</a>
+      <a class="btn btn--dark btn--sm" href="index.html#colecao">Ver a coleção</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<div class="wrap crumbs" aria-label="Você está em"><nav><a href="index.html">Início</a><span>/</span><a href="outras.html">Outras obras</a><span>/</span><b>Fast API de A a Z</b></nav></div>
+<section class="bookhero" aria-labelledby="titulo">
+  <div class="wrap bookhero__grid">
+    <div class="bookhero__cover reveal"><img src="assets/img/fastapi.webp" width="341" height="480" alt="Capa do livro Fast API de A a Z" style="aspect-ratio:341/480"></div>
+    <div class="bookhero__info">
+      <span class="pill pill--gold reveal">Em breve</span>
+      <h1 class="display reveal" id="titulo" style="--i:1">Fast API de A a Z</h1>
+      <p class="by reveal" style="--i:2">por Tiago Silva · Casa do Código</p>
+      <p class="lead reveal" style="--i:3">Construa APIs assíncronas, rápidas e prontas para produção em Python</p>
+      <div class="buybox reveal" style="--i:4">
+        <div><div class="price"><small>Formatos</small><b style="font-size:22px">Impresso e e-book (ePub)</b></div></div>
+        <div class="buybox__actions"><a class="btn btn--v" href="mailto:tiagoluizrs@gmail.com?subject=Quero%20saber%20quando%20sair%3A%20Fast%20API%20de%20A%20a%20Z">Quero saber quando sair</a><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap about__grid">
+    <div class="about__text">
+      <p class="eyebrow reveal">Sobre este livro</p>
+      <h2 class="display reveal" style="--i:1">Uma API assíncrona de loja virtual, do primeiro endpoint ao Docker</h2>
+      <p>Neste livro, você aprenderá a criar APIs com o FastAPI, um dos frameworks mais modernos e mais usados do Python para esse fim.</p>
+<p>O que diferencia o FastAPI de outros frameworks é que ele foi pensado desde o início para a programação assíncrona. Isso significa que sua aplicação consegue atender muitas requisições ao mesmo tempo, sem ficar parada esperando o banco de dados, outro serviço ou um e-mail responderem. Por isso, o assíncrono é o assunto central do livro e aparece em praticamente todos os capítulos.</p>
+<p>O FastAPI é construído sobre duas bibliotecas muito conhecidas, o Starlette, que cuida da parte web, e o Pydantic, que cuida da validação dos dados. Ele também gera, de forma automática, a documentação interativa da sua API, a partir do próprio código que você escreve.</p>
+<p>Ao longo dos capítulos, você constrói uma API completa para um sistema de pedidos de loja virtual, com cadastro de produtos, autenticação, perfis de acesso e um checkout que consulta vários serviços ao mesmo tempo.</p>
+      <div class="card-soft reveal"><h3>Para quem é</h3><p>Desenvolvedores que já conhecem a linguagem Python e desejam criar APIs rápidas e preparadas para o mercado.</p></div>
+      <div class="card-soft reveal"><h3>Pré-requisitos</h3><p>Conhecimento básico em Python, em criação de ambientes virtuais (virtualenvs) e em banco de dados relacionais. Não é necessário conhecer o FastAPI, o Pydantic ou programação assíncrona: o livro explica tudo desde o início.</p></div>
+      <div class="chips reveal"><span class="chip">FastAPI</span><span class="chip">asyncio</span><span class="chip">Pydantic</span><span class="chip">SQLAlchemy</span><span class="chip">Alembic</span><span class="chip">PostgreSQL</span><span class="chip">JWT</span><span class="chip">WebSocket</span><span class="chip">Redis</span><span class="chip">Docker</span></div>
+      <div class="card-soft reveal"><h3>O que você vai aprender</h3><ul>
+<li>Entender a programação assíncrona do Python e usá-la a seu favor</li>
+<li>Validar dados com o Pydantic e separar bem os schemas das models</li>
+<li>Trabalhar com o PostgreSQL, o SQLAlchemy e o Alembic de forma assíncrona</li>
+<li>Organizar o projeto em camadas e usar a injeção de dependências do FastAPI</li>
+<li>Proteger a API com JWT e perfis de acesso</li>
+<li>Receber webhooks, executar tarefas em segundo plano e enviar notificações em tempo real</li>
+<li>Melhorar o desempenho com cache e proteger a API contra excesso de requisições</li>
+<li>Testar, documentar, monitorar e colocar a aplicação para rodar com o Docker</li>
+</ul></div>
+    </div>
+    <div class="toc-wrap" id="sumario">
+      <h2>Sumário</h2>
+      <p>Toque em um capítulo para ver as seções.</p>
+      <div class="toc"><div class="toc__scroll" data-lenis-prevent>
+<div class="toc__part">Parte 1: Introdução e fundamentos</div>
+<details><summary><span class="toc__n">1</span><span class="toc__t">Configuração do Python</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Instalando o Python e suas dependências</li><li>Escolhendo uma IDE</li><li>Testando o ambiente para começar</li></ul></div></details>
+<details><summary><span class="toc__n">2</span><span class="toc__t">Programação assíncrona em Python</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O problema de esperar</li><li>Concorrência, paralelismo e threads</li><li>async e await</li><li>O laço de eventos</li><li>Rodando tarefas ao mesmo tempo com asyncio.gather</li><li>Quando o assíncrono não ajuda</li></ul></div></details>
+<details><summary><span class="toc__n">3</span><span class="toc__t">Primeiros passos com FastAPI</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O que é o FastAPI e por que ele é assíncrono</li><li>Instalando o FastAPI</li><li>Estrutura do projeto</li><li>Regras de negócio do sistema</li><li>Configurações e variáveis de ambiente</li><li>Nosso primeiro run</li><li>A documentação automática</li></ul></div></details>
+<details><summary><span class="toc__n">4</span><span class="toc__t">Rotas e parâmetros</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Entendendo as rotas</li><li>Nossa primeira rota</li><li>Parâmetros de caminho</li><li>Parâmetros de consulta</li><li>Corpo da requisição</li><li>Verbos HTTP</li><li>Códigos de status</li></ul></div></details>
+<div class="toc__part">Parte 2: O essencial do FastAPI</div>
+<details><summary><span class="toc__n">5</span><span class="toc__t">Schemas com Pydantic</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O que são schemas</li><li>Criando nossos primeiros schemas</li><li>Tipos e restrições dos campos</li><li>Validadores</li><li>Schemas de entrada e de saída</li><li>Schemas aninhados</li></ul></div></details>
+<details><summary><span class="toc__n">6</span><span class="toc__t">Models com SQLAlchemy</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O banco de dados PostgreSQL</li><li>Conexão assíncrona com o banco</li><li>Criando as models</li><li>Relacionamentos</li><li>Constraints e índices</li><li>A sessão assíncrona</li></ul></div></details>
+<details><summary><span class="toc__n">7</span><span class="toc__t">Migrações com Alembic</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O que são migrações</li><li>Instalando e configurando o Alembic</li><li>Gerando a primeira migração</li><li>Aplicando e revertendo migrações</li><li>Boas práticas</li></ul></div></details>
+<details><summary><span class="toc__n">8</span><span class="toc__t">Models x Schemas</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Por que separar models e schemas</li><li>Ligando um ao outro com from_attributes</li><li>O response_model</li><li>Schemas de criação, atualização e leitura</li><li>Erros comuns</li></ul></div></details>
+<details><summary><span class="toc__n">9</span><span class="toc__t">APIRouter e arquitetura em camadas</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O APIRouter</li><li>Organizando o projeto em módulos</li><li>A camada de rotas</li><li>A camada de serviços</li><li>A camada de repositórios</li><li>Rotas gordas e como evitá-las</li></ul></div></details>
+<details><summary><span class="toc__n">10</span><span class="toc__t">Injeção de dependências</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O que é injeção de dependências</li><li>Nossa primeira dependência com Depends</li><li>Dependências com yield: a sessão do banco</li><li>Dependências em cadeia</li><li>Dependências em um router inteiro</li><li>Sobrescrevendo dependências</li></ul></div></details>
+<details><summary><span class="toc__n">11</span><span class="toc__t">CRUD completo</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Criando e listando</li><li>Buscando por id</li><li>Editando e removendo</li><li>Paginação</li><li>Filtros e busca</li><li>Tratamento de erros</li><li>Respostas padronizadas</li></ul></div></details>
+<details><summary><span class="toc__n">12</span><span class="toc__t">Autenticação JWT e perfis de acesso</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Como funciona a autenticação por token</li><li>Guardando senhas com segurança</li><li>O endpoint de login</li><li>Protegendo rotas com OAuth2PasswordBearer</li><li>Perfis de acesso: cliente, lojista e admin</li><li>Renovando o token</li></ul></div></details>
+<div class="toc__part">Parte 3: Recursos assíncronos</div>
+<details><summary><span class="toc__n">13</span><span class="toc__t">Checkout assíncrono</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O problema do checkout</li><li>Chamando serviços externos com httpx</li><li>Consultas em paralelo com asyncio.gather</li><li>Timeouts e falhas parciais</li><li>Transações e baixa de estoque</li><li>Testando o checkout</li></ul></div></details>
+<details><summary><span class="toc__n">14</span><span class="toc__t">Webhooks e idempotência</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>O que são webhooks</li><li>Recebendo a confirmação de pagamento</li><li>Validando a assinatura do webhook</li><li>O que é idempotência</li><li>Chave de idempotência</li><li>Evitando processar duas vezes</li></ul></div></details>
+<details><summary><span class="toc__n">15</span><span class="toc__t">Tarefas em segundo plano</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>BackgroundTasks</li><li>Enviando e-mails sem travar a resposta</li><li>Os limites das tarefas em segundo plano</li><li>Uma fila assíncrona com Redis</li></ul></div></details>
+<details><summary><span class="toc__n">16</span><span class="toc__t">Tempo real com WebSocket e SSE</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Tempo real na web</li><li>WebSocket no FastAPI</li><li>Acompanhando o status do pedido</li><li>Server-Sent Events</li><li>Gerenciando conexões</li><li>Segurança em conexões em tempo real</li></ul></div></details>
+<details><summary><span class="toc__n">17</span><span class="toc__t">Cache com Redis e limite de requisições</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Por que usar cache</li><li>Redis assíncrono</li><li>Cache do catálogo de produtos</li><li>Invalidando o cache</li><li>Limite de requisições</li></ul></div></details>
+<div class="toc__part">Parte 4: Qualidade e produção</div>
+<details><summary><span class="toc__n">18</span><span class="toc__t">Testes</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Por que testar</li><li>pytest e httpx.AsyncClient</li><li>O banco de dados de testes</li><li>Testando rotas</li><li>Testando a autenticação</li><li>Testando código assíncrono</li><li>Cobertura de testes</li></ul></div></details>
+<details><summary><span class="toc__n">19</span><span class="toc__t">Documentação com OpenAPI</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>A documentação que já vem pronta</li><li>Descrevendo as rotas</li><li>Exemplos nos schemas</li><li>Documentando os erros</li><li>Agrupando com tags</li><li>Personalizando o Swagger e o ReDoc</li></ul></div></details>
+<details><summary><span class="toc__n">20</span><span class="toc__t">Logs, monitoramento e teste de carga</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Logs</li><li>Métricas com Prometheus</li><li>Erros com Sentry</li><li>Teste de carga com Locust</li><li>Interpretando os resultados</li></ul></div></details>
+<details><summary><span class="toc__n">21</span><span class="toc__t">Docker e Docker Compose</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Preparando o projeto</li><li>O Dockerfile</li><li>O docker-compose com PostgreSQL e Redis</li><li>Rodando as migrações no container</li><li>Variáveis de ambiente e segredos</li><li>Rodando em produção com Uvicorn</li></ul></div></details>
+<details><summary><span class="toc__n">22</span><span class="toc__t">Segurança e performance</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Segurança em APIs e o OWASP</li><li>CORS</li><li>Protegendo dados sensíveis</li><li>O problema N+1</li><li>Índices</li><li>O pool de conexões</li></ul></div></details>
+<details><summary><span class="toc__n">A</span><span class="toc__t">Apêndice A: cheat sheet</span><svg class="toc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="toc__d"><ul><li>Docker e Docker Compose</li><li>FastAPI</li><li>SQLAlchemy e Alembic</li><li>Códigos de status HTTP</li><li>pytest</li></ul></div></details>
+</div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="authorbox reveal">
+      <img src="assets/img/autor-360.webp" width="360" height="360" alt="Tiago Silva" loading="lazy">
+      <div><h3>Tiago Silva</h3><p>Graduado em Análise e Desenvolvimento de Sistemas, pós-graduado em Engenharia de Software e em Desenvolvimento Back-end, com MBA em Gestão de Projetos pela USP. Professor universitário, atualmente trabalha como Analista de Sistemas. Especialista em Python, Java e JavaScript.</p></div>
+      <a class="btn btn--gold btn--sm" href="https://www.linkedin.com/in/tiagoluizrs/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:clamp(48px,7vw,88px)">
+  <div class="more reveal">
+    <div class="more__intro"><small>Do mesmo autor</small><strong>Conheça outras obras</strong><span>Livros sobre frameworks web em Python, pela Casa do Código.</span></div>
+    <div class="more__list"><a class="mini" href="flask.html"><img src="assets/img/flask.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Flask de A a Z</strong><span>Casa do Código</span></div></a><a class="mini" href="django.html"><img src="assets/img/django.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Django de A a Z</strong><span>Casa do Código</span></div></a><a class="mini" href="drf.html"><img src="assets/img/drf.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Django Rest Framework de A a Z</strong><span>Casa do Código</span></div></a></div>
+    <a class="btn btn--chip btn--sm" href="index.html#colecao">Ver a coleção Python de A a Z</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="logo">Python de A a Z</span>
+    <nav aria-label="Rodapé">
+      <a href="index.html#colecao">Os livros</a>
+      <a href="index.html#autor">O autor</a>
+      <a href="livro-python-do-basico-ao-avancado.html">Python do zero ao avançado</a>
+      <a href="outras.html">Outras obras</a>
+      <a href="mailto:tiagoluizrs@gmail.com">Contato</a>
+      <a href="termos.html">Termos</a>
+    </nav>
+    <span>© 2026 Tiago Silva</span>
+  </div>
+</footer>
+<script src="js/app.min.js" defer></script>
+</body>
+</html>

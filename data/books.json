@@ -707,5 +707,349 @@
   },
   "cover": "assets/img/drf.webp",
   "soon": false
+ },
+ {
+  "key": "fastapi",
+  "title": "Fast API de A a Z",
+  "subtitle": "Construa APIs assíncronas, rápidas e prontas para produção em Python",
+  "headline": "Uma API assíncrona de loja virtual, do primeiro endpoint ao Docker",
+  "paragraphs": [
+   "Neste livro, você aprenderá a criar APIs com o FastAPI, um dos frameworks mais modernos e mais usados do Python para esse fim.",
+   "O que diferencia o FastAPI de outros frameworks é que ele foi pensado desde o início para a programação assíncrona. Isso significa que sua aplicação consegue atender muitas requisições ao mesmo tempo, sem ficar parada esperando o banco de dados, outro serviço ou um e-mail responderem. Por isso, o assíncrono é o assunto central do livro e aparece em praticamente todos os capítulos.",
+   "O FastAPI é construído sobre duas bibliotecas muito conhecidas, o Starlette, que cuida da parte web, e o Pydantic, que cuida da validação dos dados. Ele também gera, de forma automática, a documentação interativa da sua API, a partir do próprio código que você escreve.",
+   "Ao longo dos capítulos, você constrói uma API completa para um sistema de pedidos de loja virtual, com cadastro de produtos, autenticação, perfis de acesso e um checkout que consulta vários serviços ao mesmo tempo."
+  ],
+  "audience": "Desenvolvedores que já conhecem a linguagem Python e desejam criar APIs rápidas e preparadas para o mercado.",
+  "prereq": "Conhecimento básico em Python, em criação de ambientes virtuais (virtualenvs) e em banco de dados relacionais. Não é necessário conhecer o FastAPI, o Pydantic ou programação assíncrona: o livro explica tudo desde o início.",
+  "learn": [
+   "Entender a programação assíncrona do Python e usá-la a seu favor",
+   "Validar dados com o Pydantic e separar bem os schemas das models",
+   "Trabalhar com o PostgreSQL, o SQLAlchemy e o Alembic de forma assíncrona",
+   "Organizar o projeto em camadas e usar a injeção de dependências do FastAPI",
+   "Proteger a API com JWT e perfis de acesso",
+   "Receber webhooks, executar tarefas em segundo plano e enviar notificações em tempo real",
+   "Melhorar o desempenho com cache e proteger a API contra excesso de requisições",
+   "Testar, documentar, monitorar e colocar a aplicação para rodar com o Docker"
+  ],
+  "chips": [
+   "FastAPI",
+   "asyncio",
+   "Pydantic",
+   "SQLAlchemy",
+   "Alembic",
+   "PostgreSQL",
+   "JWT",
+   "WebSocket",
+   "Redis",
+   "Docker"
+  ],
+  "facts": [],
+  "buy": null,
+  "toc_link": null,
+  "toc": [
+   {
+    "label": "Parte 1",
+    "name": "Introdução e fundamentos",
+    "chapters": [
+     {
+      "n": "1",
+      "title": "Configuração do Python",
+      "sections": [
+       "Instalando o Python e suas dependências",
+       "Escolhendo uma IDE",
+       "Testando o ambiente para começar"
+      ]
+     },
+     {
+      "n": "2",
+      "title": "Programação assíncrona em Python",
+      "sections": [
+       "O problema de esperar",
+       "Concorrência, paralelismo e threads",
+       "async e await",
+       "O laço de eventos",
+       "Rodando tarefas ao mesmo tempo com asyncio.gather",
+       "Quando o assíncrono não ajuda"
+      ]
+     },
+     {
+      "n": "3",
+      "title": "Primeiros passos com FastAPI",
+      "sections": [
+       "O que é o FastAPI e por que ele é assíncrono",
+       "Instalando o FastAPI",
+       "Estrutura do projeto",
+       "Regras de negócio do sistema",
+       "Configurações e variáveis de ambiente",
+       "Nosso primeiro run",
+       "A documentação automática"
+      ]
+     },
+     {
+      "n": "4",
+      "title": "Rotas e parâmetros",
+      "sections": [
+       "Entendendo as rotas",
+       "Nossa primeira rota",
+       "Parâmetros de caminho",
+       "Parâmetros de consulta",
+       "Corpo da requisição",
+       "Verbos HTTP",
+       "Códigos de status"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 2",
+    "name": "O essencial do FastAPI",
+    "chapters": [
+     {
+      "n": "5",
+      "title": "Schemas com Pydantic",
+      "sections": [
+       "O que são schemas",
+       "Criando nossos primeiros schemas",
+       "Tipos e restrições dos campos",
+       "Validadores",
+       "Schemas de entrada e de saída",
+       "Schemas aninhados"
+      ]
+     },
+     {
+      "n": "6",
+      "title": "Models com SQLAlchemy",
+      "sections": [
+       "O banco de dados PostgreSQL",
+       "Conexão assíncrona com o banco",
+       "Criando as models",
+       "Relacionamentos",
+       "Constraints e índices",
+       "A sessão assíncrona"
+      ]
+     },
+     {
+      "n": "7",
+      "title": "Migrações com Alembic",
+      "sections": [
+       "O que são migrações",
+       "Instalando e configurando o Alembic",
+       "Gerando a primeira migração",
+       "Aplicando e revertendo migrações",
+       "Boas práticas"
+      ]
+     },
+     {
+      "n": "8",
+      "title": "Models x Schemas",
+      "sections": [
+       "Por que separar models e schemas",
+       "Ligando um ao outro com from_attributes",
+       "O response_model",
+       "Schemas de criação, atualização e leitura",
+       "Erros comuns"
+      ]
+     },
+     {
+      "n": "9",
+      "title": "APIRouter e arquitetura em camadas",
+      "sections": [
+       "O APIRouter",
+       "Organizando o projeto em módulos",
+       "A camada de rotas",
+       "A camada de serviços",
+       "A camada de repositórios",
+       "Rotas gordas e como evitá-las"
+      ]
+     },
+     {
+      "n": "10",
+      "title": "Injeção de dependências",
+      "sections": [
+       "O que é injeção de dependências",
+       "Nossa primeira dependência com Depends",
+       "Dependências com yield: a sessão do banco",
+       "Dependências em cadeia",
+       "Dependências em um router inteiro",
+       "Sobrescrevendo dependências"
+      ]
+     },
+     {
+      "n": "11",
+      "title": "CRUD completo",
+      "sections": [
+       "Criando e listando",
+       "Buscando por id",
+       "Editando e removendo",
+       "Paginação",
+       "Filtros e busca",
+       "Tratamento de erros",
+       "Respostas padronizadas"
+      ]
+     },
+     {
+      "n": "12",
+      "title": "Autenticação JWT e perfis de acesso",
+      "sections": [
+       "Como funciona a autenticação por token",
+       "Guardando senhas com segurança",
+       "O endpoint de login",
+       "Protegendo rotas com OAuth2PasswordBearer",
+       "Perfis de acesso: cliente, lojista e admin",
+       "Renovando o token"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 3",
+    "name": "Recursos assíncronos",
+    "chapters": [
+     {
+      "n": "13",
+      "title": "Checkout assíncrono",
+      "sections": [
+       "O problema do checkout",
+       "Chamando serviços externos com httpx",
+       "Consultas em paralelo com asyncio.gather",
+       "Timeouts e falhas parciais",
+       "Transações e baixa de estoque",
+       "Testando o checkout"
+      ]
+     },
+     {
+      "n": "14",
+      "title": "Webhooks e idempotência",
+      "sections": [
+       "O que são webhooks",
+       "Recebendo a confirmação de pagamento",
+       "Validando a assinatura do webhook",
+       "O que é idempotência",
+       "Chave de idempotência",
+       "Evitando processar duas vezes"
+      ]
+     },
+     {
+      "n": "15",
+      "title": "Tarefas em segundo plano",
+      "sections": [
+       "BackgroundTasks",
+       "Enviando e-mails sem travar a resposta",
+       "Os limites das tarefas em segundo plano",
+       "Uma fila assíncrona com Redis"
+      ]
+     },
+     {
+      "n": "16",
+      "title": "Tempo real com WebSocket e SSE",
+      "sections": [
+       "Tempo real na web",
+       "WebSocket no FastAPI",
+       "Acompanhando o status do pedido",
+       "Server-Sent Events",
+       "Gerenciando conexões",
+       "Segurança em conexões em tempo real"
+      ]
+     },
+     {
+      "n": "17",
+      "title": "Cache com Redis e limite de requisições",
+      "sections": [
+       "Por que usar cache",
+       "Redis assíncrono",
+       "Cache do catálogo de produtos",
+       "Invalidando o cache",
+       "Limite de requisições"
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Parte 4",
+    "name": "Qualidade e produção",
+    "chapters": [
+     {
+      "n": "18",
+      "title": "Testes",
+      "sections": [
+       "Por que testar",
+       "pytest e httpx.AsyncClient",
+       "O banco de dados de testes",
+       "Testando rotas",
+       "Testando a autenticação",
+       "Testando código assíncrono",
+       "Cobertura de testes"
+      ]
+     },
+     {
+      "n": "19",
+      "title": "Documentação com OpenAPI",
+      "sections": [
+       "A documentação que já vem pronta",
+       "Descrevendo as rotas",
+       "Exemplos nos schemas",
+       "Documentando os erros",
+       "Agrupando com tags",
+       "Personalizando o Swagger e o ReDoc"
+      ]
+     },
+     {
+      "n": "20",
+      "title": "Logs, monitoramento e teste de carga",
+      "sections": [
+       "Logs",
+       "Métricas com Prometheus",
+       "Erros com Sentry",
+       "Teste de carga com Locust",
+       "Interpretando os resultados"
+      ]
+     },
+     {
+      "n": "21",
+      "title": "Docker e Docker Compose",
+      "sections": [
+       "Preparando o projeto",
+       "O Dockerfile",
+       "O docker-compose com PostgreSQL e Redis",
+       "Rodando as migrações no container",
+       "Variáveis de ambiente e segredos",
+       "Rodando em produção com Uvicorn"
+      ]
+     },
+     {
+      "n": "22",
+      "title": "Segurança e performance",
+      "sections": [
+       "Segurança em APIs e o OWASP",
+       "CORS",
+       "Protegendo dados sensíveis",
+       "O problema N+1",
+       "Índices",
+       "O pool de conexões"
+      ]
+     },
+     {
+      "n": "A",
+      "title": "Apêndice A: cheat sheet",
+      "sections": [
+       "Docker e Docker Compose",
+       "FastAPI",
+       "SQLAlchemy e Alembic",
+       "Códigos de status HTTP",
+       "pytest"
+      ]
+     }
+    ]
+   }
+  ],
+  "theme": {
+   "bg": "#a9ddd3",
+   "tint": "#d6eee9",
+   "ink": "#0c2b29",
+   "accent": "#06817c"
+  },
+  "prices": null,
+  "cover": "assets/img/fastapi.webp",
+  "soon": true
  }
 ]

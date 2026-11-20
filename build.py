@@ -13,7 +13,20 @@ E = html.escape
 # Endereço público do site. Troque quando o domínio definitivo estiver no ar e rode `python build.py` de novo.
 SITE_URL = "https://pythondeaaz.com.br"
 CONTACT_EMAIL = "tiagoluizrs@gmail.com"
-DRF_MAILTO = f"mailto:{CONTACT_EMAIL}?subject=Quero%20saber%20quando%20sair%3A%20Django%20Rest%20Framework%20de%20A%20a%20Z"
+
+
+def book_mailto(b):
+    """Link 'Quero saber quando sair' de um livro que ainda não foi lançado."""
+    from urllib.parse import quote
+    return f"mailto:{CONTACT_EMAIL}?subject=" + quote(f"Quero saber quando sair: {b['title']}")
+
+
+def soon_cover(b, wrapper_class):
+    """Capa real do livro em breve (ou o selo 'Em breve', se ainda não houver capa)."""
+    if b.get("cover"):
+        return f'<img src="{b["cover"]}" width="341" height="480" alt="Capa do livro {E(b["title"])}" style="aspect-ratio:341/480">'
+    return '<div class="soon-tile"><b>Em<br>breve</b></div>'
+
 VOLUMES = json.loads((ROOT / "data" / "volumes.json").read_text(encoding="utf-8"))
 BOOKS = {b["key"]: b for b in json.loads((ROOT / "data" / "books.json").read_text(encoding="utf-8"))}
 
@@ -338,13 +351,13 @@ def external_page(b):
     audience = f'<div class="card-soft reveal"><h3>Para quem é</h3><p>{E(b["audience"])}</p></div>' if b["audience"] else ""
     prereq = f'<div class="card-soft reveal"><h3>Pré-requisitos</h3><p>{E(b["prereq"])}</p></div>' if b["prereq"] else ""
     if b["soon"]:
-        cover = f'<div class="bookhero__cover reveal"><div class="soon-tile"><b>Em<br>breve</b><span>novembro de 2026</span></div></div>'
-        pill = '<span class="pill pill--gold reveal">Lançamento · novembro de 2026</span>'
+        cover = f'<div class="bookhero__cover reveal">{soon_cover(b, "bookhero__cover")}</div>'
+        pill = '<span class="pill pill--gold reveal">Em breve</span>'
         buy = f"""<div class="buybox reveal" style="--i:4">
         <div><div class="price"><small>Formatos</small><b style="font-size:22px">Impresso e e-book (ePub)</b></div></div>
-        <div class="buybox__actions"><a class="btn btn--v" href="{DRF_MAILTO}">Quero saber quando sair</a><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
+        <div class="buybox__actions"><a class="btn btn--v" href="{book_mailto(b)}">Quero saber quando sair</a><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
       </div>"""
-        og = "assets/img/capa-1-960.webp"
+        og = b["cover"] or "assets/img/og-home.jpg"
     else:
         cover = f'<div class="bookhero__cover reveal"><img src="{b["cover"]}" width="341" height="480" alt="Capa do livro {E(b["title"])}" fetchpriority="high" style="aspect-ratio:341/480"></div>'
         pill = '<span class="pill reveal">Casa do Código</span>'
@@ -365,8 +378,8 @@ def external_page(b):
     )
     mini = "".join(
         f'<a class="mini" href="{o["key"]}.html">'
-        + (f'<img src="{o["cover"]}" width="341" height="480" alt="" loading="lazy">' if o["cover"] else '<span class="soon" aria-hidden="true">Nov</span>')
-        + f'<div><strong>{E(o["title"])}</strong><span>{"Em breve · novembro" if o["soon"] else "Casa do Código"}</span></div></a>'
+        + (f'<img src="{o["cover"]}" width="341" height="480" alt="" loading="lazy">' if o["cover"] else '<span class="soon" aria-hidden="true">Breve</span>')
+        + f'<div><strong>{E(o["title"])}</strong><span>{"Em breve" if o["soon"] else "Casa do Código"}</span></div></a>'
         for o in others
     )
     body = f"""{crumbs(("Início", "index.html"), ("Outras obras", "outras.html"), (b["title"], None))}
@@ -435,12 +448,12 @@ def external_page(b):
         "@type": "Book",
         "name": b["title"],
         "url": abs_url(path),
-        "image": abs_url(og if not b["soon"] else "assets/img/og-home.jpg"),
+        "image": abs_url(og),
         "description": b["subtitle"],
         "author": AUTHOR_LD,
         "publisher": {"@type": "Organization", "name": "Casa do Código", "url": "https://www.casadocodigo.com.br"},
         "inLanguage": "pt-BR",
-        "datePublished": "2026-11" if b["soon"] else (f"{pub[3:]}-{pub[:2]}" if pub else None),
+        "datePublished": (f"{pub[3:]}-{pub[:2]}" if pub else None),
     }
     if isbn:
         book["isbn"] = isbn.replace("-", "")
@@ -458,20 +471,23 @@ def external_page(b):
     )
 
 
+OUTRAS = ("flask", "django", "drf", "fastapi")
+
+
 def outras_page():
     cards = []
-    for k in ("flask", "django", "drf"):
+    for k in OUTRAS:
         b = BOOKS[k]
         chips = "".join(f'<span class="chip">{E(c)}</span>' for c in b["chips"][:6])
         if b["soon"]:
             cards.append(
                 f"""<article class="outra outra--soon reveal"{theme_style(b['theme'])}>
-  <a class="outra__cover" href="drf.html" aria-hidden="true" tabindex="-1"><div class="soon-tile"><b>Em<br>breve</b><span>novembro de 2026</span></div></a>
-  <div><span class="pill pill--gold">Lançamento · novembro de 2026</span>
-  <h2 class="display"><a href="drf.html">{E(b['title'])}</a></h2><p class="sub">Casa do Código</p>
+  <a class="outra__cover" href="{k}.html" aria-hidden="true" tabindex="-1">{soon_cover(b, "outra__cover")}</a>
+  <div><span class="pill pill--gold">Em breve</span>
+  <h2 class="display"><a href="{k}.html">{E(b['title'])}</a></h2><p class="sub">Casa do Código</p>
   <p class="txt">{E(b['subtitle'])}</p><div class="chips">{chips}</div>
   <p class="note" style="margin-top:16px"><b>Formatos:</b> impresso e e-book (ePub)</p>
-  <div class="actions"><a class="btn btn--v" href="drf.html">Ver detalhes e sumário</a><a class="btn btn--chip" href="{DRF_MAILTO}">Quero saber quando sair</a></div></div>
+  <div class="actions"><a class="btn btn--v" href="{k}.html">Ver detalhes e sumário</a><a class="btn btn--chip" href="{book_mailto(b)}">Quero saber quando sair</a></div></div>
 </article>"""
             )
         else:
@@ -507,7 +523,7 @@ def outras_page():
 </section>"""
     return layout(
         "Outras obras do autor · Python de A a Z",
-        "Livros sobre frameworks web em Python, de Tiago Silva, pela Casa do Código: Flask de A a Z, Django de A a Z e Django Rest Framework de A a Z.",
+        "Livros sobre frameworks web em Python, de Tiago Silva, pela Casa do Código: Flask de A a Z, Django de A a Z, Django Rest Framework de A a Z e Fast API de A a Z.",
         body, og="assets/img/og-home.jpg", path="outras.html",
         crumbs_ld=[("Início", "index.html"), ("Outras obras", "outras.html")],
     )
@@ -655,7 +671,7 @@ def guia_page():
     )
 
 
-PAGES = ["index.html", GUIA_PATH] + [f"livro-{n}.html" for n in range(1, 6)] + ["flask.html", "django.html", "drf.html", "outras.html", "termos.html"]
+PAGES = ["index.html", GUIA_PATH] + [f"livro-{n}.html" for n in range(1, 6)] + ["flask.html", "django.html", "drf.html", "fastapi.html", "outras.html", "termos.html"]
 
 
 def update_home():
@@ -737,7 +753,7 @@ def main():
         name = f"livro-{v['n']}.html"
         (ROOT / name).write_text(volume_page(v), encoding="utf-8")
         written.append(name)
-    for k in ("flask", "django", "drf"):
+    for k in OUTRAS:
         name = f"{k}.html"
         (ROOT / name).write_text(external_page(BOOKS[k]), encoding="utf-8")
         written.append(name)
