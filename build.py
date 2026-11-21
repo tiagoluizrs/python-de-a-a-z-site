@@ -97,13 +97,20 @@ SERIES_LD = {"@type": "BookSeries", "name": "Python de A a Z"}
 
 
 GA_TAG = """<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-75W0L401ED"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-75W0L401ED');
+  /* o script do Google Analytics só é baixado depois que a página terminou de carregar */
+  addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-75W0L401ED';
+      document.head.appendChild(s);
+    }, 0);
+  });
 </script>
 """
 
@@ -397,7 +404,7 @@ def external_page(b):
     )
     mini = "".join(
         f'<a class="mini" href="{o["key"]}.html">'
-        + (f'<img src="{o["cover"]}" width="341" height="480" alt="" loading="lazy">' if o["cover"] else '<span class="soon" aria-hidden="true">Breve</span>')
+        + (f'<img src="{o["cover"].replace(".webp", "-160.webp")}" width="341" height="480" alt="" loading="lazy">' if o["cover"] else '<span class="soon" aria-hidden="true">Breve</span>')
         + f'<div><strong>{E(o["title"])}</strong><span>{"Em breve" if o["soon"] else "Casa do Código"}</span></div></a>'
         for o in others
     )

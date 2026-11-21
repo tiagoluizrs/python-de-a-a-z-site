@@ -2,13 +2,20 @@
 <html lang="pt-BR">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-75W0L401ED"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-75W0L401ED');
+  /* o script do Google Analytics só é baixado depois que a página terminou de carregar */
+  addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-75W0L401ED';
+      document.head.appendChild(s);
+    }, 0);
+  });
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,19 +81,19 @@
       </div>
       <div class="fan" aria-label="Os cinco volumes da coleção">
         <div class="fan__book" style="--i:0;--x:-38%;--w:30%;--rot:-14deg;--drop:30px;--par:40px;--spin:-6deg;--z:1">
-          <a href="livro-1.html" aria-label="Volume 1: Fundamentos"><img src="assets/img/capa-1-480.webp" srcset="assets/img/capa-1-480.webp 480w, assets/img/capa-1-960.webp 960w" sizes="(max-width: 820px) 30vw, 180px" width="480" height="690" alt="Capa do Volume 1: Fundamentos" fetchpriority="high"></a>
+          <a href="livro-1.html" aria-label="Volume 1: Fundamentos"><img src="assets/img/capa-1-480.webp" srcset="assets/img/capa-1-320.webp 320w, assets/img/capa-1-480.webp 480w, assets/img/capa-1-960.webp 960w" sizes="(max-width: 820px) 30vw, 180px" width="480" height="690" alt="Capa do Volume 1: Fundamentos" fetchpriority="high"></a>
         </div>
         <div class="fan__book" style="--i:1;--x:-19%;--w:32%;--rot:-7deg;--drop:8px;--par:70px;--spin:-3deg;--z:2">
-          <a href="livro-2.html" aria-label="Volume 2: Domínio da linguagem"><img src="assets/img/capa-2-480.webp" srcset="assets/img/capa-2-480.webp 480w, assets/img/capa-2-960.webp 960w" sizes="(max-width: 820px) 32vw, 190px" width="480" height="690" alt="Capa do Volume 2: Domínio da linguagem" fetchpriority="high"></a>
+          <a href="livro-2.html" aria-label="Volume 2: Domínio da linguagem"><img src="assets/img/capa-2-480.webp" srcset="assets/img/capa-2-320.webp 320w, assets/img/capa-2-480.webp 480w, assets/img/capa-2-960.webp 960w" sizes="(max-width: 820px) 32vw, 190px" width="480" height="690" alt="Capa do Volume 2: Domínio da linguagem" fetchpriority="high"></a>
         </div>
         <div class="fan__book" style="--i:2;--x:0%;--w:36%;--rot:0deg;--drop:0px;--par:110px;--spin:0deg;--z:4">
-          <a href="livro-3.html" aria-label="Volume 3: Engenharia e concorrência"><img src="assets/img/capa-3-480.webp" srcset="assets/img/capa-3-480.webp 480w, assets/img/capa-3-960.webp 960w" sizes="(max-width: 820px) 36vw, 210px" width="480" height="690" alt="Capa do Volume 3: Engenharia e concorrência" fetchpriority="high"></a>
+          <a href="livro-3.html" aria-label="Volume 3: Engenharia e concorrência"><img src="assets/img/capa-3-480.webp" srcset="assets/img/capa-3-320.webp 320w, assets/img/capa-3-480.webp 480w, assets/img/capa-3-960.webp 960w" sizes="(max-width: 820px) 36vw, 210px" width="480" height="690" alt="Capa do Volume 3: Engenharia e concorrência" fetchpriority="high"></a>
         </div>
         <div class="fan__book" style="--i:3;--x:19%;--w:32%;--rot:7deg;--drop:8px;--par:70px;--spin:3deg;--z:3">
-          <a href="livro-4.html" aria-label="Volume 4: Dados, mundo real e produção"><img src="assets/img/capa-4-480.webp" srcset="assets/img/capa-4-480.webp 480w, assets/img/capa-4-960.webp 960w" sizes="(max-width: 820px) 32vw, 190px" width="480" height="690" alt="Capa do Volume 4: Dados, mundo real e produção" fetchpriority="high"></a>
+          <a href="livro-4.html" aria-label="Volume 4: Dados, mundo real e produção"><img src="assets/img/capa-4-480.webp" srcset="assets/img/capa-4-320.webp 320w, assets/img/capa-4-480.webp 480w, assets/img/capa-4-960.webp 960w" sizes="(max-width: 820px) 32vw, 190px" width="480" height="690" alt="Capa do Volume 4: Dados, mundo real e produção" fetchpriority="high"></a>
         </div>
         <div class="fan__book" style="--i:4;--x:38%;--w:30%;--rot:14deg;--drop:30px;--par:40px;--spin:6deg;--z:2">
-          <a href="livro-5.html" aria-label="Volume 5: Padrões de projeto"><img src="assets/img/capa-5-480.webp" srcset="assets/img/capa-5-480.webp 480w, assets/img/capa-5-960.webp 960w" sizes="(max-width: 820px) 30vw, 180px" width="480" height="690" alt="Capa do Volume 5: Padrões de projeto" fetchpriority="high"></a>
+          <a href="livro-5.html" aria-label="Volume 5: Padrões de projeto"><img src="assets/img/capa-5-480.webp" srcset="assets/img/capa-5-320.webp 320w, assets/img/capa-5-480.webp 480w, assets/img/capa-5-960.webp 960w" sizes="(max-width: 820px) 30vw, 180px" width="480" height="690" alt="Capa do Volume 5: Padrões de projeto" fetchpriority="high"></a>
         </div>
       </div>
     </div>
@@ -114,27 +121,27 @@
       </div>
       <div class="books">
         <article class="card reveal" data-vol="1" style="--i:0">
-          <a class="card__cover" href="livro-1.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-1-480.webp" srcset="assets/img/capa-1-480.webp 480w, assets/img/capa-1-960.webp 960w" sizes="(max-width: 480px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
+          <a class="card__cover" href="livro-1.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-1-480.webp" srcset="assets/img/capa-1-320.webp 320w, assets/img/capa-1-480.webp 480w, assets/img/capa-1-960.webp 960w" sizes="(max-width: 820px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
           <div><p class="card__vol">Volume 1</p><h3>Fundamentos</h3><p>Do ambiente ao Python do dia a dia: tipos, estruturas de dados, funções, texto, arquivos e biblioteca padrão.</p></div>
           <div class="card__actions"><a class="btn btn--dark btn--sm" href="livro-1.html">Ver detalhes</a><a class="btn btn--gold btn--sm" href="https://loja.uiclap.com/titulo/ua213612" target="_blank" rel="noopener">Comprar</a></div>
         </article>
         <article class="card reveal" data-vol="2" style="--i:1">
-          <a class="card__cover" href="livro-2.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-2-480.webp" srcset="assets/img/capa-2-480.webp 480w, assets/img/capa-2-960.webp 960w" sizes="(max-width: 480px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
+          <a class="card__cover" href="livro-2.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-2-480.webp" srcset="assets/img/capa-2-320.webp 320w, assets/img/capa-2-480.webp 480w, assets/img/capa-2-960.webp 960w" sizes="(max-width: 820px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
           <div><p class="card__vol">Volume 2</p><h3>Domínio da linguagem</h3><p>Closures, geradores, o modelo de dados, orientação a objetos avançada e o CPython por dentro.</p></div>
           <div class="card__actions"><a class="btn btn--dark btn--sm" href="livro-2.html">Ver detalhes</a><a class="btn btn--gold btn--sm" href="https://loja.uiclap.com/titulo/ua213625/" target="_blank" rel="noopener">Comprar</a></div>
         </article>
         <article class="card reveal" data-vol="3" style="--i:2">
-          <a class="card__cover" href="livro-3.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-3-480.webp" srcset="assets/img/capa-3-480.webp 480w, assets/img/capa-3-960.webp 960w" sizes="(max-width: 480px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
+          <a class="card__cover" href="livro-3.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-3-480.webp" srcset="assets/img/capa-3-320.webp 320w, assets/img/capa-3-480.webp 480w, assets/img/capa-3-960.webp 960w" sizes="(max-width: 820px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
           <div><p class="card__vol">Volume 3</p><h3>Engenharia e concorrência</h3><p>Projetos, testes, tipagem, SOLID, segurança e performance; threads, processos e asyncio.</p></div>
           <div class="card__actions"><a class="btn btn--dark btn--sm" href="livro-3.html">Ver detalhes</a><a class="btn btn--gold btn--sm" href="https://loja.uiclap.com/titulo/ua213659" target="_blank" rel="noopener">Comprar</a></div>
         </article>
         <article class="card reveal" data-vol="4" style="--i:3">
-          <a class="card__cover" href="livro-4.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-4-480.webp" srcset="assets/img/capa-4-480.webp 480w, assets/img/capa-4-960.webp 960w" sizes="(max-width: 480px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
+          <a class="card__cover" href="livro-4.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-4-480.webp" srcset="assets/img/capa-4-320.webp 320w, assets/img/capa-4-480.webp 480w, assets/img/capa-4-960.webp 960w" sizes="(max-width: 820px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
           <div><p class="card__vol">Volume 4</p><h3>Dados, mundo real e produção</h3><p>Bancos de dados, HTTP, Pandas e Polars, automação web, Docker, filas e pipelines.</p></div>
           <div class="card__actions"><a class="btn btn--dark btn--sm" href="livro-4.html">Ver detalhes</a><a class="btn btn--gold btn--sm" href="https://loja.uiclap.com/titulo/ua213664" target="_blank" rel="noopener">Comprar</a></div>
         </article>
         <article class="card reveal" data-vol="5" style="--i:4">
-          <a class="card__cover" href="livro-5.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-5-480.webp" srcset="assets/img/capa-5-480.webp 480w, assets/img/capa-5-960.webp 960w" sizes="(max-width: 480px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
+          <a class="card__cover" href="livro-5.html" tabindex="-1" aria-hidden="true"><img src="assets/img/capa-5-480.webp" srcset="assets/img/capa-5-320.webp 320w, assets/img/capa-5-480.webp 480w, assets/img/capa-5-960.webp 960w" sizes="(max-width: 820px) 45vw, (max-width: 1080px) 30vw, 220px" width="480" height="690" alt="" loading="lazy"></a>
           <div><p class="card__vol">Volume 5</p><h3>Padrões de projeto</h3><p>Os padrões de projeto clássicos e os do dia a dia, na forma pythônica e com o custo medido.</p></div>
           <div class="card__actions"><a class="btn btn--dark btn--sm" href="livro-5.html">Ver detalhes</a><a class="btn btn--gold btn--sm" href="https://loja.uiclap.com/titulo/ua213677" target="_blank" rel="noopener">Comprar</a></div>
         </article>
@@ -186,10 +193,10 @@
     <div class="more reveal">
       <div class="more__intro"><small>Do mesmo autor</small><strong>Conheça outras obras</strong><em>Coleção Frameworks Python de A a Z</em><span>Livros sobre frameworks web em Python, pela Casa do Código.</span></div>
       <div class="more__list">
-        <a class="mini" href="flask.html"><img src="assets/img/flask.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Flask de A a Z</strong><span>Casa do Código</span></div></a>
-        <a class="mini" href="django.html"><img src="assets/img/django.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Django de A a Z</strong><span>Casa do Código</span></div></a>
-        <a class="mini" href="drf.html"><img src="assets/img/drf.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Django Rest Framework de A a Z</strong><span>Casa do Código</span></div></a>
-        <a class="mini" href="fastapi.html"><img src="assets/img/fastapi.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Fast API de A a Z</strong><span>Em breve</span></div></a>
+        <a class="mini" href="flask.html"><img src="assets/img/flask-160.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Flask de A a Z</strong><span>Casa do Código</span></div></a>
+        <a class="mini" href="django.html"><img src="assets/img/django-160.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Django de A a Z</strong><span>Casa do Código</span></div></a>
+        <a class="mini" href="drf.html"><img src="assets/img/drf-160.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Django Rest Framework de A a Z</strong><span>Casa do Código</span></div></a>
+        <a class="mini" href="fastapi.html"><img src="assets/img/fastapi-160.webp" width="341" height="480" alt="" loading="lazy"><div><strong>Fast API de A a Z</strong><span>Em breve</span></div></a>
       </div>
       <a class="btn btn--chip btn--sm" href="outras.html">Ver outras obras</a>
     </div>
