@@ -328,6 +328,25 @@ def theme_style(t):
     return f' style="--v-bg:{t["bg"]};--v-tint:{t["tint"]};--v-ink:{t["ink"]};--v-accent:{t["accent"]}"'
 
 
+EXT_SERIES_LD = {"@type": "BookSeries", "name": "Frameworks Python de A a Z"}
+
+# Título e descrição pensados para o que as pessoas buscam (o nome do framework vem primeiro).
+SEO_EXT = {
+    "flask": ("Livro de Flask em Python: Flask de A a Z | Tiago Silva",
+              "Livro de Flask em Python: padrão MVC, SQLAlchemy, área administrativa, API REST e autenticação JWT. Flask de A a Z, de Tiago Silva, pela Casa do Código.",
+              "Flask"),
+    "django": ("Livro de Django em Python: Django de A a Z | Tiago Silva",
+               "Livro de Django em Python: models, admin, views, templates, ORM, autenticação, testes e deploy. Django de A a Z, de Tiago Silva, pela Casa do Código.",
+               "Django"),
+    "drf": ("Livro de Django REST Framework (DRF) | Tiago Silva",
+            "Livro de Django REST Framework: serializers, ViewSets, JWT, testes, Docker, Redis, Celery e segurança para criar APIs REST em Python. Por Tiago Silva.",
+            "Django REST Framework"),
+    "fastapi": ("Livro de FastAPI em Python: Fast API de A a Z | Tiago Silva",
+                "Livro de FastAPI em Python: APIs assíncronas com Pydantic, SQLAlchemy, JWT, WebSocket, Redis e Docker. Fast API de A a Z, de Tiago Silva. Em breve.",
+                "FastAPI"),
+}
+
+
 def external_page(b):
     t = b["theme"]
     key = b["key"]
@@ -438,7 +457,7 @@ def external_page(b):
     <a class="btn btn--chip btn--sm" href="index.html#colecao">Ver a coleção Python de A a Z</a>
   </div>
 </section>"""
-    desc = trunc(b["subtitle"] + ". " + b["paragraphs"][0], 158)
+    seo_title, desc, framework = SEO_EXT[key]
     path = f"{key}.html"
     isbn = next((val for name, val in b["facts"] if name == "ISBN"), None)
     pages = next((val for name, val in b["facts"] if name == "Páginas"), None)
@@ -449,10 +468,16 @@ def external_page(b):
         "name": b["title"],
         "url": abs_url(path),
         "image": abs_url(og),
-        "description": b["subtitle"],
+        "description": desc,
         "author": AUTHOR_LD,
         "publisher": {"@type": "Organization", "name": "Casa do Código", "url": "https://www.casadocodigo.com.br"},
         "inLanguage": "pt-BR",
+        "bookFormat": "https://schema.org/Paperback",
+        "genre": "Programação de computadores",
+        "about": [{"@type": "Thing", "name": framework}, {"@type": "Thing", "name": "Python"}],
+        "keywords": ", ".join(dict.fromkeys([framework, "Python", "livro de programação"] + b["chips"])),
+        "isPartOf": EXT_SERIES_LD,
+        "alternateName": f"{framework} de A a Z" if f"{framework} de A a Z" != b["title"] else None,
         "datePublished": (f"{pub[3:]}-{pub[:2]}" if pub else None),
     }
     if isbn:
@@ -461,17 +486,37 @@ def external_page(b):
         book["numberOfPages"] = int(pages)
     if b["prices"] and b["buy"]:
         book["offers"] = [
-            {"@type": "Offer", "name": name, "price": b["prices"][k].replace(",", "."), "priceCurrency": "BRL", "url": b["buy"]}
+            {"@type": "Offer", "name": name, "price": b["prices"][k].replace(",", "."), "priceCurrency": "BRL", "url": b["buy"],
+             "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition",
+             "seller": {"@type": "Organization", "name": "Casa do Código"}}
             for name, k in (("Impresso", "print"), ("E-book", "ebook"), ("E-book + impresso", "combo"))
         ]
     book = {k: v for k, v in book.items() if v is not None}
     return layout(
-        f"{b['title']} · Tiago Silva", desc, body, theme_style(t), og=f"assets/img/og-{key}.jpg", path=path, ld=[book],
+        seo_title, desc, body, theme_style(t), og=f"assets/img/og-{key}.jpg", path=path, ld=[book],
         crumbs_ld=[("Início", "index.html"), ("Outras obras", "outras.html"), (b["title"], path)],
     )
 
 
 OUTRAS = ("flask", "django", "drf", "fastapi")
+
+
+def outras_ld():
+    return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Frameworks Python de A a Z",
+        "url": abs_url("outras.html"),
+        "inLanguage": "pt-BR",
+        "author": AUTHOR_LD,
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": i, "url": abs_url(f"{k}.html"), "name": BOOKS[k]["title"]}
+                for i, k in enumerate(OUTRAS, 1)
+            ],
+        },
+    }
 
 
 def outras_page():
@@ -524,7 +569,7 @@ def outras_page():
     return layout(
         "Outras obras do autor – Frameworks Python de A a Z",
         "Livros sobre frameworks web em Python, de Tiago Silva, pela Casa do Código: Flask de A a Z, Django de A a Z, Django Rest Framework de A a Z e Fast API de A a Z.",
-        body, og="assets/img/og-home.jpg", path="outras.html",
+        body, og="assets/img/og-home.jpg", path="outras.html", ld=[outras_ld()],
         crumbs_ld=[("Início", "index.html"), ("Outras obras", "outras.html")],
     )
 
@@ -714,12 +759,22 @@ def lastmod(path):
 
 
 def write_sitemap_and_robots():
+    def cover_of(p):
+        if p.startswith("livro-") and p[6:-5].isdigit():
+            return f"assets/img/capa-{p[6:-5]}-960.webp"
+        k = p[:-5]
+        return BOOKS[k]["cover"] if k in BOOKS and BOOKS[k]["cover"] else None
+
+    def image_tag(p):
+        img = cover_of(p)
+        return f"<image:image><image:loc>{abs_url(img)}</image:loc></image:image>" if img else ""
+
     urls = "\n".join(
-        f"  <url><loc>{page_url(p)}</loc><lastmod>{lastmod(p)}</lastmod><changefreq>monthly</changefreq><priority>{'1.0' if p == 'index.html' else '0.9' if p == GUIA_PATH or p.startswith('livro-') else '0.8'}</priority></url>"
+        f"  <url><loc>{page_url(p)}</loc><lastmod>{lastmod(p)}</lastmod><changefreq>monthly</changefreq><priority>{'1.0' if p == 'index.html' else '0.9' if p == GUIA_PATH or p.startswith('livro-') else '0.8'}</priority>{image_tag(p)}</url>"
         for p in PAGES
     )
     (ROOT / "sitemap.xml").write_text(
-        f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n', encoding="utf-8"
+        f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n{urls}\n</urlset>\n', encoding="utf-8"
     )
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {abs_url('sitemap.xml')}\n", encoding="utf-8")
 
