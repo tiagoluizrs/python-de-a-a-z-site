@@ -508,7 +508,7 @@ def outras_page():
 <section class="section" style="padding-bottom:24px">
   <div class="wrap">
     <p class="eyebrow reveal" style="color:var(--soft)">Tiago Silva</p>
-    <h1 class="display reveal" style="--i:1;margin-top:12px;font-size:clamp(40px,7vw,64px);line-height:.98;letter-spacing:-0.03em">Outras obras do autor</h1>
+    <h1 class="display reveal" style="--i:1;margin-top:12px;font-size:clamp(40px,7vw,64px);line-height:.98;letter-spacing:-0.03em">Outras obras do autor – Frameworks Python de A a Z</h1>
     <p class="lead reveal" style="--i:2;max-width:620px">Livros sobre frameworks web em Python, publicados pela Casa do Código. Se você já domina os fundamentos da coleção Python de A a Z, estes são o próximo passo na prática.</p>
   </div>
 </section>
@@ -522,7 +522,7 @@ def outras_page():
   </div>
 </section>"""
     return layout(
-        "Outras obras do autor · Python de A a Z",
+        "Outras obras do autor – Frameworks Python de A a Z",
         "Livros sobre frameworks web em Python, de Tiago Silva, pela Casa do Código: Flask de A a Z, Django de A a Z, Django Rest Framework de A a Z e Fast API de A a Z.",
         body, og="assets/img/og-home.jpg", path="outras.html",
         crumbs_ld=[("Início", "index.html"), ("Outras obras", "outras.html")],
