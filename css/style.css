@@ -151,6 +151,7 @@ h1, h2, h3, p { margin: 0; }
 .more__intro { flex: 1 1 280px; display: flex; flex-direction: column; gap: 8px; }
 .more__intro small { font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--soft); }
 .more__intro strong { font-family: var(--font-display); font-weight: 800; font-size: 28px; line-height: 1.1; letter-spacing: -0.01em; }
+.more__intro em { font-style: normal; font-family: var(--font-display); font-weight: 800; font-size: 20px; line-height: 1.2; color: var(--v-accent, var(--ink)); }
 .more__intro span { font-size: 15px; color: var(--muted); }
 .more__list { flex: 2 1 420px; display: flex; flex-wrap: wrap; gap: 16px 28px; }
 .mini { flex: 1 1 160px; display: flex; align-items: center; gap: 14px; transition: transform .3s var(--ease); }

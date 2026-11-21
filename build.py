@@ -433,7 +433,7 @@ def external_page(b):
 
 <section class="wrap" style="padding-bottom:clamp(48px,7vw,88px)">
   <div class="more reveal">
-    <div class="more__intro"><small>Do mesmo autor</small><strong>Conheça outras obras</strong><span>Livros sobre frameworks web em Python, pela Casa do Código.</span></div>
+    <div class="more__intro"><small>Do mesmo autor</small><strong>Conheça outras obras</strong><em>Coleção Frameworks Python de A a Z</em><span>Livros sobre frameworks web em Python, pela Casa do Código.</span></div>
     <div class="more__list">{mini}</div>
     <a class="btn btn--chip btn--sm" href="index.html#colecao">Ver a coleção Python de A a Z</a>
   </div>
