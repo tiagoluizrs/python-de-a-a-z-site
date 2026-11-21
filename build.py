@@ -355,7 +355,7 @@ def external_page(b):
         pill = '<span class="pill pill--gold reveal">Em breve</span>'
         buy = f"""<div class="buybox reveal" style="--i:4">
         <div><div class="price"><small>Formatos</small><b style="font-size:22px">Impresso e e-book (ePub)</b></div></div>
-        <div class="buybox__actions"><a class="btn btn--v" href="{book_mailto(b)}">Quero saber quando sair</a><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
+        <div class="buybox__actions"><a class="btn btn--white" href="#sumario">Ver sumário</a></div>
       </div>"""
         og = b["cover"] or "assets/img/og-home.jpg"
     else:
@@ -487,7 +487,7 @@ def outras_page():
   <h2 class="display"><a href="{k}.html">{E(b['title'])}</a></h2><p class="sub">Casa do Código</p>
   <p class="txt">{E(b['subtitle'])}</p><div class="chips">{chips}</div>
   <p class="note" style="margin-top:16px"><b>Formatos:</b> impresso e e-book (ePub)</p>
-  <div class="actions"><a class="btn btn--v" href="{k}.html">Ver detalhes e sumário</a><a class="btn btn--chip" href="{book_mailto(b)}">Quero saber quando sair</a></div></div>
+  <div class="actions"><a class="btn btn--v" href="{k}.html">Ver detalhes e sumário</a></div></div>
 </article>"""
             )
         else:
